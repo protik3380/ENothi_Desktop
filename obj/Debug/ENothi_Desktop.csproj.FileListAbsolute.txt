@@ -1,0 +1,14 @@
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\ENothi_Desktop.exe.config
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\ENothi_Desktop.exe
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\ENothi_Desktop.pdb
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.csprojResolveAssemblyReference.cache
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.Properties.Resources.resources
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.csproj.GenerateResource.Cache
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.exe
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.pdb
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.Ui.LoginUi.resources
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\MetroFramework.Design.dll
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\MetroFramework.dll
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\MetroFramework.Fonts.dll
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\Newtonsoft.Json.dll
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\Newtonsoft.Json.xml
