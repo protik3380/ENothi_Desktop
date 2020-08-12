@@ -9,5 +9,7 @@ namespace ENothi_Desktop.Models.Interface.IManager
     public interface ILoginManager
     {
         string AutoCompleteUserId(string userId);
+        string GetMacAddress();
+        LoginResponse ValidateUser(LoginCredential credential);
     }
 }

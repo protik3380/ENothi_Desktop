@@ -13,3 +13,6 @@ c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desk
 c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\Newtonsoft.Json.dll
 c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\Newtonsoft.Json.xml
 c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.Ui.AlertUi.Form_Alert.resources
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\System.Net.Http.Extensions.dll
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\System.Net.Http.Formatting.dll
+c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\System.Net.Http.Primitives.dll

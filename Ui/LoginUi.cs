@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENothi_Desktop.Manager;
+using ENothi_Desktop.Models;
 using ENothi_Desktop.Models.Interface.IManager;
 using ENothi_Desktop.Ui.AlertUi;
 
@@ -48,7 +43,7 @@ namespace ENothi_Desktop.Ui
             ControlPaint.DrawBorder(e.Graphics, leftPanel.ClientRectangle,
                 Color.White, 1, ButtonBorderStyle.Solid, // left
                 Color.White, 1, ButtonBorderStyle.Solid, // top
-                Color.FromArgb(220,220,220), 1, ButtonBorderStyle.Solid, // right
+                Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // right
                 Color.White, 1, ButtonBorderStyle.Solid);// bottom
         }
 
@@ -71,21 +66,23 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
-                string userId = userIdTextBox.Text;
-                string password = passwordUserIdTextBox.Text;
-                if (userId != "" && password != "")
-                {
-                    //LoginResponse response = ApiHelper.ValidateUser(userId, password);
-                    //if (response != null)
-                    //{
-                    //    DashboardUi dashboardUi = new DashboardUi(response);
-                    //    dashboardUi.Show();
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show(@"Access denied", @"Info", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    //}
 
+                LoginCredential credential = new LoginCredential();
+                credential.Username = userIdTextBox.Text;
+                credential.Password = passwordUserIdTextBox.Text;
+                if (credential.Username != "" && credential.Password != "")
+                {
+                    LoginResponse response = _loginManager.ValidateUser(credential);
+
+                    if (response != null)
+                    {
+                        //DashboardUi dashboardUi = new DashboardUi(response);
+                        //dashboardUi.Show();
+                    }
+                    else
+                    {
+                        this.Alert("Invalid username or password");
+                    }
                 }
                 else
                 {
@@ -97,6 +94,8 @@ namespace ENothi_Desktop.Ui
                 MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+
 
         private void userIdTextBox_Leave(object sender, EventArgs e)
         {
