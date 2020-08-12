@@ -7,19 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENothi_Desktop.Manager;
+using ENothi_Desktop.Models.Interface.IManager;
+using ENothi_Desktop.Ui.AlertUi;
 
 namespace ENothi_Desktop.Ui
 {
     public partial class LoginUi : Form
     {
+        private readonly ILoginManager _loginManager;
         public LoginUi()
         {
+            _loginManager = new LoginManager();
             InitializeComponent();
         }
 
         private void LoginUi_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                loginTabControl.SelectedTab = userIdTabPage;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void footerPanel_Paint(object sender, PaintEventArgs e)
@@ -47,6 +59,57 @@ namespace ENothi_Desktop.Ui
                 Color.FromArgb(94, 18, 152), 2, ButtonBorderStyle.Solid, // top
                 Color.White, 1, ButtonBorderStyle.Solid, // right
                 Color.FromArgb(94, 18, 152), 2, ButtonBorderStyle.Solid);// bottom
+        }
+
+        private void Alert(string message)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.ShowAlert(message);
+        }
+
+        private void userIdLoginButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string userId = userIdTextBox.Text;
+                string password = passwordUserIdTextBox.Text;
+                if (userId != "" && password != "")
+                {
+                    //LoginResponse response = ApiHelper.ValidateUser(userId, password);
+                    //if (response != null)
+                    //{
+                    //    DashboardUi dashboardUi = new DashboardUi(response);
+                    //    dashboardUi.Show();
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show(@"Access denied", @"Info", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    //}
+
+                }
+                else
+                {
+                    this.Alert("Username or password empty");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void userIdTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                string userId = userIdTextBox.Text;
+                string autocompleteUserId = _loginManager.AutoCompleteUserId(userId);
+                userIdTextBox.Text = autocompleteUserId;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

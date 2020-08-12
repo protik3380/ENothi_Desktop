@@ -33,7 +33,7 @@
             this.leftPanel = new System.Windows.Forms.Panel();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.loginTabControl = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.userIdTabPage = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.userIdTextBox = new MetroFramework.Controls.MetroTextBox();
@@ -85,9 +85,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.userIdLoginButton = new System.Windows.Forms.Button();
+            this.userNameLoginButton = new System.Windows.Forms.Button();
+            this.passwordResetRequestButton = new System.Windows.Forms.Button();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
@@ -99,7 +99,7 @@
             this.leftPanel.SuspendLayout();
             this.footerPanel.SuspendLayout();
             this.loginTabControl.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
+            this.userIdTabPage.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -176,42 +176,42 @@
             // 
             // loginTabControl
             // 
-            this.loginTabControl.Controls.Add(this.metroTabPage1);
+            this.loginTabControl.Controls.Add(this.userIdTabPage);
             this.loginTabControl.Controls.Add(this.metroTabPage2);
             this.loginTabControl.Controls.Add(this.metroTabPage3);
             this.loginTabControl.Location = new System.Drawing.Point(4, 4);
             this.loginTabControl.Multiline = true;
             this.loginTabControl.Name = "loginTabControl";
-            this.loginTabControl.SelectedIndex = 2;
+            this.loginTabControl.SelectedIndex = 0;
             this.loginTabControl.Size = new System.Drawing.Size(363, 238);
             this.loginTabControl.TabIndex = 0;
             this.loginTabControl.UseSelectable = true;
             // 
-            // metroTabPage1
+            // userIdTabPage
             // 
-            this.metroTabPage1.Controls.Add(this.panel1);
-            this.metroTabPage1.Controls.Add(this.button1);
-            this.metroTabPage1.Controls.Add(this.passwordUserIdTextBox);
-            this.metroTabPage1.Controls.Add(this.userIdTextBox);
-            this.metroTabPage1.Font = new System.Drawing.Font("SolaimanLipi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(355, 196);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "ইউজার আইডি";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.userIdTabPage.Controls.Add(this.panel1);
+            this.userIdTabPage.Controls.Add(this.userIdLoginButton);
+            this.userIdTabPage.Controls.Add(this.passwordUserIdTextBox);
+            this.userIdTabPage.Controls.Add(this.userIdTextBox);
+            this.userIdTabPage.Font = new System.Drawing.Font("SolaimanLipi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userIdTabPage.HorizontalScrollbarBarColor = true;
+            this.userIdTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.userIdTabPage.HorizontalScrollbarSize = 10;
+            this.userIdTabPage.Location = new System.Drawing.Point(4, 38);
+            this.userIdTabPage.Name = "userIdTabPage";
+            this.userIdTabPage.Size = new System.Drawing.Size(355, 196);
+            this.userIdTabPage.TabIndex = 0;
+            this.userIdTabPage.Text = "ইউজার আইডি";
+            this.userIdTabPage.VerticalScrollbarBarColor = true;
+            this.userIdTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.userIdTabPage.VerticalScrollbarSize = 10;
             // 
             // metroTabPage2
             // 
             this.metroTabPage2.Controls.Add(this.panel2);
             this.metroTabPage2.Controls.Add(this.metroTextBox1);
             this.metroTabPage2.Controls.Add(this.metroTextBox2);
-            this.metroTabPage2.Controls.Add(this.button2);
+            this.metroTabPage2.Controls.Add(this.userNameLoginButton);
             this.metroTabPage2.Font = new System.Drawing.Font("SolaimanLipi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
@@ -228,7 +228,7 @@
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.panel3);
-            this.metroTabPage3.Controls.Add(this.button3);
+            this.metroTabPage3.Controls.Add(this.passwordResetRequestButton);
             this.metroTabPage3.Controls.Add(this.metroTextBox3);
             this.metroTabPage3.Controls.Add(this.metroTextBox4);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
@@ -274,6 +274,7 @@
             this.userIdTextBox.WaterMark = "ইউজার আইডি";
             this.userIdTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.userIdTextBox.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userIdTextBox.Leave += new System.EventHandler(this.userIdTextBox_Leave);
             // 
             // passwordUserIdTextBox
             // 
@@ -921,59 +922,60 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // userIdLoginButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::ENothi_Desktop.Properties.Resources.enter;
-            this.button1.Location = new System.Drawing.Point(254, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 34);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "  প্রবেশ";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.userIdLoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.userIdLoginButton.FlatAppearance.BorderSize = 0;
+            this.userIdLoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.userIdLoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.userIdLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userIdLoginButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userIdLoginButton.ForeColor = System.Drawing.Color.Black;
+            this.userIdLoginButton.Image = global::ENothi_Desktop.Properties.Resources.enter;
+            this.userIdLoginButton.Location = new System.Drawing.Point(254, 59);
+            this.userIdLoginButton.Name = "userIdLoginButton";
+            this.userIdLoginButton.Size = new System.Drawing.Size(86, 34);
+            this.userIdLoginButton.TabIndex = 4;
+            this.userIdLoginButton.Text = "  প্রবেশ";
+            this.userIdLoginButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.userIdLoginButton.UseVisualStyleBackColor = false;
+            this.userIdLoginButton.Click += new System.EventHandler(this.userIdLoginButton_Click);
             // 
-            // button2
+            // userNameLoginButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::ENothi_Desktop.Properties.Resources.enter;
-            this.button2.Location = new System.Drawing.Point(255, 57);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 34);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "  প্রবেশ";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.userNameLoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.userNameLoginButton.FlatAppearance.BorderSize = 0;
+            this.userNameLoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.userNameLoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.userNameLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userNameLoginButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameLoginButton.ForeColor = System.Drawing.Color.Black;
+            this.userNameLoginButton.Image = global::ENothi_Desktop.Properties.Resources.enter;
+            this.userNameLoginButton.Location = new System.Drawing.Point(255, 57);
+            this.userNameLoginButton.Name = "userNameLoginButton";
+            this.userNameLoginButton.Size = new System.Drawing.Size(86, 34);
+            this.userNameLoginButton.TabIndex = 8;
+            this.userNameLoginButton.Text = "  প্রবেশ";
+            this.userNameLoginButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.userNameLoginButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // passwordResetRequestButton
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::ENothi_Desktop.Properties.Resources.enter;
-            this.button3.Location = new System.Drawing.Point(227, 58);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 34);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "অনুরোধ করুন";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.passwordResetRequestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.passwordResetRequestButton.FlatAppearance.BorderSize = 0;
+            this.passwordResetRequestButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.passwordResetRequestButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.passwordResetRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passwordResetRequestButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordResetRequestButton.ForeColor = System.Drawing.Color.Black;
+            this.passwordResetRequestButton.Image = global::ENothi_Desktop.Properties.Resources.enter;
+            this.passwordResetRequestButton.Location = new System.Drawing.Point(227, 58);
+            this.passwordResetRequestButton.Name = "passwordResetRequestButton";
+            this.passwordResetRequestButton.Size = new System.Drawing.Size(115, 34);
+            this.passwordResetRequestButton.TabIndex = 12;
+            this.passwordResetRequestButton.Text = "  অনুরোধ করুন";
+            this.passwordResetRequestButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.passwordResetRequestButton.UseVisualStyleBackColor = false;
             // 
             // pictureBox15
             // 
@@ -1054,7 +1056,7 @@
             this.footerPanel.ResumeLayout(false);
             this.footerPanel.PerformLayout();
             this.loginTabControl.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
+            this.userIdTabPage.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -1096,22 +1098,22 @@
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel footerPanel;
         private MetroFramework.Controls.MetroTabControl loginTabControl;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage userIdTabPage;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private MetroFramework.Controls.MetroTextBox passwordUserIdTextBox;
         private MetroFramework.Controls.MetroTextBox userIdTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button userIdLoginButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button userNameLoginButton;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button passwordResetRequestButton;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
         private System.Windows.Forms.Panel panel4;
