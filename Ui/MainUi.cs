@@ -1,26 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENothi_Desktop.Manager;
 using ENothi_Desktop.Models;
 using ENothi_Desktop.Models.Interface.IManager;
+using ENothi_Desktop.Ui;
 using ENothi_Desktop.Ui.AlertUi;
 
-namespace ENothi_Desktop.Ui
+namespace ENothi_Desktop
 {
-    public partial class LoginUi : Form
+    public partial class MainUi : Form
     {
         private readonly ILoginManager _loginManager;
-        public LoginUi()
+        public MainUi()
         {
             _loginManager = new LoginManager();
             InitializeComponent();
         }
-
-        private void LoginUi_Load(object sender, EventArgs e)
+        private void MainUi_Load(object sender, EventArgs e)
         {
             try
             {
+                this.WindowState = FormWindowState.Maximized;
                 loginTabControl.SelectedTab = userIdTabPage;
             }
             catch (Exception ex)
@@ -28,7 +35,6 @@ namespace ENothi_Desktop.Ui
                 MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void footerPanel_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, footerPanel.ClientRectangle,
@@ -38,9 +44,11 @@ namespace ENothi_Desktop.Ui
                 Color.White, 1, ButtonBorderStyle.Solid);// bottom
         }
 
+       
+
         private void leftPanel_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, leftPanel.ClientRectangle,
+            ControlPaint.DrawBorder(e.Graphics, leftPannel.ClientRectangle,
                 Color.White, 1, ButtonBorderStyle.Solid, // left
                 Color.White, 1, ButtonBorderStyle.Solid, // top
                 Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // right
@@ -55,11 +63,24 @@ namespace ENothi_Desktop.Ui
                 Color.White, 1, ButtonBorderStyle.Solid, // right
                 Color.FromArgb(94, 18, 152), 2, ButtonBorderStyle.Solid);// bottom
         }
-
         private void Alert(string message)
         {
             Form_Alert frm = new Form_Alert();
             frm.ShowAlert(message);
+        }
+
+        private void userIdTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                string userId = userIdTextBox.Text;
+                string autocompleteUserId = _loginManager.AutoCompleteUserId(userId);
+                userIdTextBox.Text = autocompleteUserId;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void userIdLoginButton_Click(object sender, EventArgs e)
@@ -76,9 +97,9 @@ namespace ENothi_Desktop.Ui
 
                     if (response != null)
                     {
-                        //DashboardUi dashboardUi = new DashboardUi();
-                        //dashboardUi.Show();
-                        
+                        DashboardUi dashboardUi = new DashboardUi();
+                        dashboardUi.Show();
+
                     }
                     else
                     {
@@ -89,22 +110,6 @@ namespace ENothi_Desktop.Ui
                 {
                     this.Alert("Username or password empty");
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-
-
-        private void userIdTextBox_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                string userId = userIdTextBox.Text;
-                string autocompleteUserId = _loginManager.AutoCompleteUserId(userId);
-                userIdTextBox.Text = autocompleteUserId;
             }
             catch (Exception ex)
             {

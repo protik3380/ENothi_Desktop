@@ -78,6 +78,18 @@
     <Compile Include="ApiUtility\BaseUrl.cs" />
     <Compile Include="ApiUtility\HttpClientDemo.cs" />
     <Compile Include="ApiUtility\LoginApiHelper.cs" />
+    <Compile Include="Ui\DashboardUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\DashboardUi.Designer.cs">
+      <DependentUpon>DashboardUi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\MainUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\MainUi.Designer.cs">
+      <DependentUpon>MainUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\LoginManager.cs" />
     <Compile Include="Interface\IManager\ILoginManager.cs" />
     <Compile Include="Models\EmployeeInfo.cs" />
@@ -100,6 +112,12 @@
     <Compile Include="Ui\LoginUi.Designer.cs">
       <DependentUpon>LoginUi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ui\DashboardUi.resx">
+      <DependentUpon>DashboardUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\MainUi.resx">
+      <DependentUpon>MainUi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -203,6 +221,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_warning_shield_45px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-webp-to-png1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

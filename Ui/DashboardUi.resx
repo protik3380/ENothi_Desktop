@@ -117,14 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label19.Text" xml:space="preserve">
-    <value>ই-নথি সিস্টেমের নতুন আপডেট: পত্র প্রেরণের সময় মোবাইল নম্বরে মেসেজ দেওয়ার অপশন তৈরি করা হয়েছে। এই ক্ষেত্রে পত্রের খসড়া তৈরির সময় প্রাপকের মোবাইল নম্বর দিয়ে সংশ্লিষ্ট মেসেজ দেওয়া যাবে। প্রাপক ই-মেইলে সংশ্লিষ্ট পত্রটি এবং মোবাইলে মেসেজ যাবে।
-
-বাংলা বানান নিরীক্ষক (Spell Checker) অর্ন্তভূক্ত করা হয়েছে। কোন শব্দের বানান নিরীক্ষা করতে হলে, সংশ্লিষ্ট শব্দের উপর কার্সর রেখে ডান বাটন ক্লিক করলে সিস্টেম ইউজারকে সঠিক শব্দটি সাজেশন দিবে।
-
-ই-নথি সিস্টেম: পত্র প্রেরণের সময় মোবাইল নম্বরে মেসেজ দেওয়ার অপশন তৈরি করা হয়েছে। এই ক্ষেত্রে পত্রের খসড়া তৈরির সময় প্রাপকের মোবাইল নম্বর দিয়ে সংশ্লিষ্ট মেসেজ দেওয়া যাবে। প্রাপক ই-মেইলে সংশ্লিষ্ট পত্রটি এবং মোবাইলে মেসেজ যাবে।</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>65</value>
-  </metadata>
 </root>
