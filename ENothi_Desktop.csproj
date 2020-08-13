@@ -76,8 +76,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiUtility\BaseUrl.cs" />
+    <Compile Include="ApiUtility\DakInboxApiHelper.cs" />
     <Compile Include="ApiUtility\HttpClientDemo.cs" />
     <Compile Include="ApiUtility\LoginApiHelper.cs" />
+    <Compile Include="Dto\RequestDto\ModuleCountDto.cs" />
+    <Compile Include="Interface\IManager\IDakInboxManager.cs" />
+    <Compile Include="Manager\DakInboxManager.cs" />
+    <Compile Include="Models\ModulePendingCount.cs" />
+    <Compile Include="Ui\CustomUserControl\DashBoardHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\CustomUserControl\DashBoardHeader.Designer.cs">
+      <DependentUpon>DashBoardHeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\DashboardUi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +123,13 @@
     <Compile Include="Ui\LoginUi.Designer.cs">
       <DependentUpon>LoginUi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\BengaliTextFormatter.cs" />
+    <Compile Include="Utilities\EnglishTextFormatter.cs" />
+    <Compile Include="Utilities\PriorityLevelGenerator.cs" />
+    <Compile Include="Utilities\SecurityLevelGenerator.cs" />
+    <EmbeddedResource Include="Ui\CustomUserControl\DashBoardHeader.resx">
+      <DependentUpon>DashBoardHeader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ui\DashboardUi.resx">
       <DependentUpon>DashboardUi.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,7 +169,6 @@
   <ItemGroup>
     <Folder Include="DAL\" />
     <Folder Include="Ui\CustomControl\" />
-    <Folder Include="Ui\CustomUserControl\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-nothi.59f8d850.png" />

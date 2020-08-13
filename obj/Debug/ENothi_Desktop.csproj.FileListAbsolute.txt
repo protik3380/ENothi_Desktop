@@ -18,3 +18,4 @@ c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desk
 c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\bin\Debug\System.Net.Http.Primitives.dll
 c:\users\protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.MainUi.resources
 C:\Users\Protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.Ui.DashboardUi.resources
+C:\Users\Protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.Ui.CustomUserControl.DashBoardHeader.resources

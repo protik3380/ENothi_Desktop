@@ -19,7 +19,7 @@ namespace ENothi_Desktop.ApiUtility
             DefaultRequestHeaders.Add("Accept-Language", "en-US,en;q=0.9");
             DefaultRequestHeaders.Add("Cache-Control", "no-cache");
             DefaultRequestHeaders.Add("Upgrade-Insecure-Requests", "1");
-            DefaultRequestHeaders.Add("api-version", "1");
+            
 
             DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             BaseAddress = new Uri(BaseUrl.baseUrl);

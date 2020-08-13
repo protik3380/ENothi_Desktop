@@ -97,7 +97,7 @@ namespace ENothi_Desktop
 
                     if (response != null)
                     {
-                        DashboardUi dashboardUi = new DashboardUi();
+                        DashboardUi dashboardUi = new DashboardUi(response);
                         dashboardUi.Show();
 
                     }

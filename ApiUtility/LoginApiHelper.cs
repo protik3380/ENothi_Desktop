@@ -17,7 +17,7 @@ namespace ENothi_Desktop.ApiUtility
 
             using (var client = new HttpClientDemo())
             {
-
+                client.DefaultRequestHeaders.Add("api-version", "1");
                 client.DefaultRequestHeaders.Add("device-id", deviceId);
                 client.DefaultRequestHeaders.Add("device-type", machineName);
 
