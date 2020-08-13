@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Interface.IManager;
 using ENothi_Desktop.Manager;
 using ENothi_Desktop.Models;
-using ENothi_Desktop.Ui.CustomUserControl;
 using ENothi_Desktop.Utilities;
 
 namespace ENothi_Desktop.Ui
@@ -29,7 +22,6 @@ namespace ENothi_Desktop.Ui
         public DashboardUi(LoginResponse loginResponse) : this()
         {
             _loginResponse = loginResponse;
-
         }
 
         private void DashboardUi_Load(object sender, EventArgs e)
@@ -37,6 +29,7 @@ namespace ENothi_Desktop.Ui
             try
             {
                 LoadModulePendingCount();
+                LoadProfileName();
             }
             catch (Exception ex)
             {
@@ -44,6 +37,13 @@ namespace ENothi_Desktop.Ui
             }
         }
 
+        private void LoadProfileName()
+        {
+            var nameWithDesignation = _loginResponse.Data.EmployeeInfo.NameBng + " (" +
+                                      _loginResponse.Data.OfficeInfo.FirstOrDefault().Designation + "," +
+                                      _loginResponse.Data.OfficeInfo.FirstOrDefault().UnitNameBn + " )";
+            profilerButton.Text = nameWithDesignation;
+        }
         private void LoadModulePendingCount()
         {
             ModuleCountDto moduleCountRequest = new ModuleCountDto();

@@ -39,6 +39,28 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.downloadAppLabel = new System.Windows.Forms.LinkLabel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.nothiOnlineCourselabel = new System.Windows.Forms.LinkLabel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.facebookGroupLink = new System.Windows.Forms.LinkLabel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.supportMailLabel = new System.Windows.Forms.LinkLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.generalQues = new System.Windows.Forms.LinkLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.phoneCallLabel = new System.Windows.Forms.LinkLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.helpDeskPanel = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.leftPannel = new System.Windows.Forms.Panel();
             this.loginTabControl = new MetroFramework.Controls.MetroTabControl();
             this.userIdTabPage = new MetroFramework.Controls.MetroTabPage();
@@ -59,28 +81,6 @@
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
             this.passwordResetRequestButton = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.helpDeskPanel = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.downloadAppLabel = new System.Windows.Forms.LinkLabel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.nothiOnlineCourselabel = new System.Windows.Forms.LinkLabel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.facebookGroupLink = new System.Windows.Forms.LinkLabel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.supportMailLabel = new System.Windows.Forms.LinkLabel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.generalQues = new System.Windows.Forms.LinkLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.phoneCallLabel = new System.Windows.Forms.LinkLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.footerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -89,15 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel1.SuspendLayout();
-            this.leftPannel.SuspendLayout();
-            this.loginTabControl.SuspendLayout();
-            this.userIdTabPage.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.helpDeskPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -108,6 +99,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.helpDeskPanel.SuspendLayout();
+            this.leftPannel.SuspendLayout();
+            this.loginTabControl.SuspendLayout();
+            this.userIdTabPage.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.metroTabPage3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -222,422 +222,6 @@
             this.panel1.Size = new System.Drawing.Size(763, 580);
             this.panel1.TabIndex = 2;
             // 
-            // leftPannel
-            // 
-            this.leftPannel.Controls.Add(this.loginTabControl);
-            this.leftPannel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPannel.Location = new System.Drawing.Point(0, 0);
-            this.leftPannel.Name = "leftPannel";
-            this.leftPannel.Size = new System.Drawing.Size(379, 521);
-            this.leftPannel.TabIndex = 4;
-            this.leftPannel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
-            // 
-            // loginTabControl
-            // 
-            this.loginTabControl.Controls.Add(this.userIdTabPage);
-            this.loginTabControl.Controls.Add(this.metroTabPage2);
-            this.loginTabControl.Controls.Add(this.metroTabPage3);
-            this.loginTabControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.loginTabControl.Location = new System.Drawing.Point(0, 0);
-            this.loginTabControl.Multiline = true;
-            this.loginTabControl.Name = "loginTabControl";
-            this.loginTabControl.SelectedIndex = 0;
-            this.loginTabControl.Size = new System.Drawing.Size(363, 521);
-            this.loginTabControl.TabIndex = 1;
-            this.loginTabControl.UseSelectable = true;
-            // 
-            // userIdTabPage
-            // 
-            this.userIdTabPage.Controls.Add(this.panel2);
-            this.userIdTabPage.Controls.Add(this.userIdLoginButton);
-            this.userIdTabPage.Controls.Add(this.passwordUserIdTextBox);
-            this.userIdTabPage.Controls.Add(this.userIdTextBox);
-            this.userIdTabPage.Font = new System.Drawing.Font("SolaimanLipi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userIdTabPage.HorizontalScrollbarBarColor = true;
-            this.userIdTabPage.HorizontalScrollbarHighlightOnWheel = false;
-            this.userIdTabPage.HorizontalScrollbarSize = 10;
-            this.userIdTabPage.Location = new System.Drawing.Point(4, 38);
-            this.userIdTabPage.Name = "userIdTabPage";
-            this.userIdTabPage.Size = new System.Drawing.Size(355, 479);
-            this.userIdTabPage.TabIndex = 0;
-            this.userIdTabPage.Text = "ইউজার আইডি";
-            this.userIdTabPage.VerticalScrollbarBarColor = true;
-            this.userIdTabPage.VerticalScrollbarHighlightOnWheel = false;
-            this.userIdTabPage.VerticalScrollbarSize = 10;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(211)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(9, 59);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 34);
-            this.panel2.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(4, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ইউজার আইডি ব্যবহার করে প্রবেশ করুন";
-            // 
-            // userIdLoginButton
-            // 
-            this.userIdLoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.userIdLoginButton.FlatAppearance.BorderSize = 0;
-            this.userIdLoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.userIdLoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.userIdLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userIdLoginButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userIdLoginButton.ForeColor = System.Drawing.Color.Black;
-            this.userIdLoginButton.Image = global::ENothi_Desktop.Properties.Resources.enter;
-            this.userIdLoginButton.Location = new System.Drawing.Point(254, 59);
-            this.userIdLoginButton.Name = "userIdLoginButton";
-            this.userIdLoginButton.Size = new System.Drawing.Size(86, 34);
-            this.userIdLoginButton.TabIndex = 4;
-            this.userIdLoginButton.Text = "  প্রবেশ";
-            this.userIdLoginButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.userIdLoginButton.UseVisualStyleBackColor = false;
-            this.userIdLoginButton.Click += new System.EventHandler(this.userIdLoginButton_Click);
-            // 
-            // passwordUserIdTextBox
-            // 
-            // 
-            // 
-            // 
-            this.passwordUserIdTextBox.CustomButton.Image = null;
-            this.passwordUserIdTextBox.CustomButton.Location = new System.Drawing.Point(135, 1);
-            this.passwordUserIdTextBox.CustomButton.Name = "";
-            this.passwordUserIdTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.passwordUserIdTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.passwordUserIdTextBox.CustomButton.TabIndex = 1;
-            this.passwordUserIdTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.passwordUserIdTextBox.CustomButton.UseSelectable = true;
-            this.passwordUserIdTextBox.CustomButton.Visible = false;
-            this.passwordUserIdTextBox.Lines = new string[0];
-            this.passwordUserIdTextBox.Location = new System.Drawing.Point(185, 21);
-            this.passwordUserIdTextBox.MaxLength = 32767;
-            this.passwordUserIdTextBox.Name = "passwordUserIdTextBox";
-            this.passwordUserIdTextBox.PasswordChar = '*';
-            this.passwordUserIdTextBox.PromptText = "পাসওয়ার্ড";
-            this.passwordUserIdTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.passwordUserIdTextBox.SelectedText = "";
-            this.passwordUserIdTextBox.SelectionLength = 0;
-            this.passwordUserIdTextBox.SelectionStart = 0;
-            this.passwordUserIdTextBox.ShortcutsEnabled = true;
-            this.passwordUserIdTextBox.Size = new System.Drawing.Size(157, 23);
-            this.passwordUserIdTextBox.TabIndex = 3;
-            this.passwordUserIdTextBox.UseSelectable = true;
-            this.passwordUserIdTextBox.WaterMark = "পাসওয়ার্ড";
-            this.passwordUserIdTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.passwordUserIdTextBox.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // userIdTextBox
-            // 
-            // 
-            // 
-            // 
-            this.userIdTextBox.CustomButton.Image = null;
-            this.userIdTextBox.CustomButton.Location = new System.Drawing.Point(136, 1);
-            this.userIdTextBox.CustomButton.Name = "";
-            this.userIdTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.userIdTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.userIdTextBox.CustomButton.TabIndex = 1;
-            this.userIdTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.userIdTextBox.CustomButton.UseSelectable = true;
-            this.userIdTextBox.CustomButton.Visible = false;
-            this.userIdTextBox.Lines = new string[0];
-            this.userIdTextBox.Location = new System.Drawing.Point(9, 21);
-            this.userIdTextBox.MaxLength = 32767;
-            this.userIdTextBox.Name = "userIdTextBox";
-            this.userIdTextBox.PasswordChar = '\0';
-            this.userIdTextBox.PromptText = "ইউজার আইডি";
-            this.userIdTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.userIdTextBox.SelectedText = "";
-            this.userIdTextBox.SelectionLength = 0;
-            this.userIdTextBox.SelectionStart = 0;
-            this.userIdTextBox.ShortcutsEnabled = true;
-            this.userIdTextBox.Size = new System.Drawing.Size(158, 23);
-            this.userIdTextBox.TabIndex = 2;
-            this.userIdTextBox.UseSelectable = true;
-            this.userIdTextBox.WaterMark = "ইউজার আইডি";
-            this.userIdTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.userIdTextBox.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userIdTextBox.Leave += new System.EventHandler(this.userIdTextBox_Leave);
-            // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.Controls.Add(this.panel3);
-            this.metroTabPage2.Controls.Add(this.metroTextBox1);
-            this.metroTabPage2.Controls.Add(this.metroTextBox2);
-            this.metroTabPage2.Controls.Add(this.userNameLoginButton);
-            this.metroTabPage2.Font = new System.Drawing.Font("SolaimanLipi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(355, 196);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "  ইউজার নেম";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(211)))));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(10, 57);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(230, 34);
-            this.panel3.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(4, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ইউজার নেম ব্যবহার করে প্রবেশ করুন";
-            // 
-            // metroTextBox1
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(135, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(186, 19);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '*';
-            this.metroTextBox1.PromptText = "পাসওয়ার্ড";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(157, 23);
-            this.metroTextBox1.TabIndex = 7;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "পাসওয়ার্ড";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // metroTextBox2
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(136, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(10, 19);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.PromptText = "ইউজার নেম";
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(158, 23);
-            this.metroTextBox2.TabIndex = 6;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMark = "ইউজার নেম";
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // userNameLoginButton
-            // 
-            this.userNameLoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.userNameLoginButton.FlatAppearance.BorderSize = 0;
-            this.userNameLoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.userNameLoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.userNameLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userNameLoginButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameLoginButton.ForeColor = System.Drawing.Color.Black;
-            this.userNameLoginButton.Image = global::ENothi_Desktop.Properties.Resources.enter;
-            this.userNameLoginButton.Location = new System.Drawing.Point(255, 57);
-            this.userNameLoginButton.Name = "userNameLoginButton";
-            this.userNameLoginButton.Size = new System.Drawing.Size(86, 34);
-            this.userNameLoginButton.TabIndex = 8;
-            this.userNameLoginButton.Text = "  প্রবেশ";
-            this.userNameLoginButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.userNameLoginButton.UseVisualStyleBackColor = false;
-            // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.Controls.Add(this.panel4);
-            this.metroTabPage3.Controls.Add(this.metroTextBox3);
-            this.metroTabPage3.Controls.Add(this.metroTextBox4);
-            this.metroTabPage3.Controls.Add(this.passwordResetRequestButton);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.HorizontalScrollbarSize = 10;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(355, 199);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "  পাসওয়ার্ড রিসেট";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.VerticalScrollbarSize = 10;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(211)))));
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(11, 58);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(193, 34);
-            this.panel4.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(4, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "ইউজার আইডি ও ইমেইল পাঠান";
-            // 
-            // metroTextBox3
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(135, 1);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(187, 20);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '*';
-            this.metroTextBox3.PromptText = "ইমেইল";
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(157, 23);
-            this.metroTextBox3.TabIndex = 11;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.WaterMark = "ইমেইল";
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // metroTextBox4
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(136, 1);
-            this.metroTextBox4.CustomButton.Name = "";
-            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox4.CustomButton.TabIndex = 1;
-            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox4.CustomButton.UseSelectable = true;
-            this.metroTextBox4.CustomButton.Visible = false;
-            this.metroTextBox4.Lines = new string[0];
-            this.metroTextBox4.Location = new System.Drawing.Point(11, 20);
-            this.metroTextBox4.MaxLength = 32767;
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.PasswordChar = '\0';
-            this.metroTextBox4.PromptText = "ইউজার আইডি / নেম";
-            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox4.SelectedText = "";
-            this.metroTextBox4.SelectionLength = 0;
-            this.metroTextBox4.SelectionStart = 0;
-            this.metroTextBox4.ShortcutsEnabled = true;
-            this.metroTextBox4.Size = new System.Drawing.Size(158, 23);
-            this.metroTextBox4.TabIndex = 10;
-            this.metroTextBox4.UseSelectable = true;
-            this.metroTextBox4.WaterMark = "ইউজার আইডি / নেম";
-            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // passwordResetRequestButton
-            // 
-            this.passwordResetRequestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.passwordResetRequestButton.FlatAppearance.BorderSize = 0;
-            this.passwordResetRequestButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.passwordResetRequestButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
-            this.passwordResetRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.passwordResetRequestButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordResetRequestButton.ForeColor = System.Drawing.Color.Black;
-            this.passwordResetRequestButton.Image = global::ENothi_Desktop.Properties.Resources.enter;
-            this.passwordResetRequestButton.Location = new System.Drawing.Point(227, 58);
-            this.passwordResetRequestButton.Name = "passwordResetRequestButton";
-            this.passwordResetRequestButton.Size = new System.Drawing.Size(115, 34);
-            this.passwordResetRequestButton.TabIndex = 12;
-            this.passwordResetRequestButton.Text = "  অনুরোধ করুন";
-            this.passwordResetRequestButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.passwordResetRequestButton.UseVisualStyleBackColor = false;
-            // 
-            // label19
-            // 
-            this.label19.Font = new System.Drawing.Font("SolaimanLipi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(384, 8);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(367, 229);
-            this.label19.TabIndex = 5;
-            this.label19.Text = resources.GetString("label19.Text");
-            // 
-            // helpDeskPanel
-            // 
-            this.helpDeskPanel.Controls.Add(this.label17);
-            this.helpDeskPanel.Location = new System.Drawing.Point(379, 240);
-            this.helpDeskPanel.Name = "helpDeskPanel";
-            this.helpDeskPanel.Size = new System.Drawing.Size(381, 45);
-            this.helpDeskPanel.TabIndex = 6;
-            this.helpDeskPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.helpDeskPanel_Paint);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(6, 8);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 24);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "হেল্প ডেস্ক";
-            // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -663,7 +247,7 @@
             this.panel5.Location = new System.Drawing.Point(381, 291);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(370, 206);
-            this.panel5.TabIndex = 11;
+            this.panel5.TabIndex = 4;
             // 
             // downloadAppLabel
             // 
@@ -674,7 +258,7 @@
             this.downloadAppLabel.Location = new System.Drawing.Point(36, 100);
             this.downloadAppLabel.Name = "downloadAppLabel";
             this.downloadAppLabel.Size = new System.Drawing.Size(99, 13);
-            this.downloadAppLabel.TabIndex = 17;
+            this.downloadAppLabel.TabIndex = 3;
             this.downloadAppLabel.TabStop = true;
             this.downloadAppLabel.Text = "নথি মোবাইল অ্যাপ";
             // 
@@ -697,7 +281,7 @@
             this.nothiOnlineCourselabel.Location = new System.Drawing.Point(228, 124);
             this.nothiOnlineCourselabel.Name = "nothiOnlineCourselabel";
             this.nothiOnlineCourselabel.Size = new System.Drawing.Size(112, 13);
-            this.nothiOnlineCourselabel.TabIndex = 15;
+            this.nothiOnlineCourselabel.TabIndex = 5;
             this.nothiOnlineCourselabel.TabStop = true;
             this.nothiOnlineCourselabel.Text = "ই নথি অনলাইন কোর্স";
             // 
@@ -720,7 +304,7 @@
             this.linkLabel8.Location = new System.Drawing.Point(228, 97);
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.Size = new System.Drawing.Size(136, 13);
-            this.linkLabel8.TabIndex = 13;
+            this.linkLabel8.TabIndex = 4;
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "ই-নথি ভিডিও টিউটোরিয়াল";
             // 
@@ -812,7 +396,7 @@
             this.supportMailLabel.Location = new System.Drawing.Point(37, 41);
             this.supportMailLabel.Name = "supportMailLabel";
             this.supportMailLabel.Size = new System.Drawing.Size(109, 13);
-            this.supportMailLabel.TabIndex = 5;
+            this.supportMailLabel.TabIndex = 2;
             this.supportMailLabel.TabStop = true;
             this.supportMailLabel.Text = "support@nothi.org.bd";
             // 
@@ -835,7 +419,7 @@
             this.generalQues.Location = new System.Drawing.Point(228, 13);
             this.generalQues.Name = "generalQues";
             this.generalQues.Size = new System.Drawing.Size(91, 13);
-            this.generalQues.TabIndex = 3;
+            this.generalQues.TabIndex = 1;
             this.generalQues.TabStop = true;
             this.generalQues.Text = "আপনার জিজ্ঞাসা";
             // 
@@ -858,7 +442,7 @@
             this.phoneCallLabel.Location = new System.Drawing.Point(36, 10);
             this.phoneCallLabel.Name = "phoneCallLabel";
             this.phoneCallLabel.Size = new System.Drawing.Size(115, 13);
-            this.phoneCallLabel.TabIndex = 1;
+            this.phoneCallLabel.TabIndex = 0;
             this.phoneCallLabel.TabStop = true;
             this.phoneCallLabel.Text = "+৮৮০১৩১৫-৬৫৪০৪৭";
             // 
@@ -871,6 +455,422 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // helpDeskPanel
+            // 
+            this.helpDeskPanel.Controls.Add(this.label17);
+            this.helpDeskPanel.Location = new System.Drawing.Point(379, 240);
+            this.helpDeskPanel.Name = "helpDeskPanel";
+            this.helpDeskPanel.Size = new System.Drawing.Size(381, 45);
+            this.helpDeskPanel.TabIndex = 6;
+            this.helpDeskPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.helpDeskPanel_Paint);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(6, 8);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 24);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "হেল্প ডেস্ক";
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("SolaimanLipi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(384, 8);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(367, 229);
+            this.label19.TabIndex = 5;
+            this.label19.Text = resources.GetString("label19.Text");
+            // 
+            // leftPannel
+            // 
+            this.leftPannel.Controls.Add(this.loginTabControl);
+            this.leftPannel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftPannel.Location = new System.Drawing.Point(0, 0);
+            this.leftPannel.Name = "leftPannel";
+            this.leftPannel.Size = new System.Drawing.Size(379, 521);
+            this.leftPannel.TabIndex = 1;
+            this.leftPannel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
+            // 
+            // loginTabControl
+            // 
+            this.loginTabControl.Controls.Add(this.userIdTabPage);
+            this.loginTabControl.Controls.Add(this.metroTabPage2);
+            this.loginTabControl.Controls.Add(this.metroTabPage3);
+            this.loginTabControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.loginTabControl.Location = new System.Drawing.Point(0, 0);
+            this.loginTabControl.Multiline = true;
+            this.loginTabControl.Name = "loginTabControl";
+            this.loginTabControl.SelectedIndex = 2;
+            this.loginTabControl.Size = new System.Drawing.Size(363, 521);
+            this.loginTabControl.TabIndex = 0;
+            this.loginTabControl.UseSelectable = true;
+            // 
+            // userIdTabPage
+            // 
+            this.userIdTabPage.Controls.Add(this.panel2);
+            this.userIdTabPage.Controls.Add(this.userIdLoginButton);
+            this.userIdTabPage.Controls.Add(this.passwordUserIdTextBox);
+            this.userIdTabPage.Controls.Add(this.userIdTextBox);
+            this.userIdTabPage.Font = new System.Drawing.Font("SolaimanLipi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userIdTabPage.HorizontalScrollbarBarColor = true;
+            this.userIdTabPage.HorizontalScrollbarHighlightOnWheel = false;
+            this.userIdTabPage.HorizontalScrollbarSize = 10;
+            this.userIdTabPage.Location = new System.Drawing.Point(4, 38);
+            this.userIdTabPage.Name = "userIdTabPage";
+            this.userIdTabPage.Size = new System.Drawing.Size(355, 479);
+            this.userIdTabPage.TabIndex = 0;
+            this.userIdTabPage.Text = "ইউজার আইডি";
+            this.userIdTabPage.VerticalScrollbarBarColor = true;
+            this.userIdTabPage.VerticalScrollbarHighlightOnWheel = false;
+            this.userIdTabPage.VerticalScrollbarSize = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(211)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(9, 59);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(230, 34);
+            this.panel2.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(4, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(207, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ইউজার আইডি ব্যবহার করে প্রবেশ করুন";
+            // 
+            // userIdLoginButton
+            // 
+            this.userIdLoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.userIdLoginButton.FlatAppearance.BorderSize = 0;
+            this.userIdLoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.userIdLoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.userIdLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userIdLoginButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userIdLoginButton.ForeColor = System.Drawing.Color.Black;
+            this.userIdLoginButton.Image = global::ENothi_Desktop.Properties.Resources.enter;
+            this.userIdLoginButton.Location = new System.Drawing.Point(254, 59);
+            this.userIdLoginButton.Name = "userIdLoginButton";
+            this.userIdLoginButton.Size = new System.Drawing.Size(86, 34);
+            this.userIdLoginButton.TabIndex = 2;
+            this.userIdLoginButton.Text = "  প্রবেশ";
+            this.userIdLoginButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.userIdLoginButton.UseVisualStyleBackColor = false;
+            this.userIdLoginButton.Click += new System.EventHandler(this.userIdLoginButton_Click);
+            // 
+            // passwordUserIdTextBox
+            // 
+            // 
+            // 
+            // 
+            this.passwordUserIdTextBox.CustomButton.Image = null;
+            this.passwordUserIdTextBox.CustomButton.Location = new System.Drawing.Point(135, 1);
+            this.passwordUserIdTextBox.CustomButton.Name = "";
+            this.passwordUserIdTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.passwordUserIdTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.passwordUserIdTextBox.CustomButton.TabIndex = 1;
+            this.passwordUserIdTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.passwordUserIdTextBox.CustomButton.UseSelectable = true;
+            this.passwordUserIdTextBox.CustomButton.Visible = false;
+            this.passwordUserIdTextBox.Lines = new string[0];
+            this.passwordUserIdTextBox.Location = new System.Drawing.Point(185, 21);
+            this.passwordUserIdTextBox.MaxLength = 32767;
+            this.passwordUserIdTextBox.Name = "passwordUserIdTextBox";
+            this.passwordUserIdTextBox.PasswordChar = '*';
+            this.passwordUserIdTextBox.PromptText = "পাসওয়ার্ড";
+            this.passwordUserIdTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.passwordUserIdTextBox.SelectedText = "";
+            this.passwordUserIdTextBox.SelectionLength = 0;
+            this.passwordUserIdTextBox.SelectionStart = 0;
+            this.passwordUserIdTextBox.ShortcutsEnabled = true;
+            this.passwordUserIdTextBox.Size = new System.Drawing.Size(157, 23);
+            this.passwordUserIdTextBox.TabIndex = 1;
+            this.passwordUserIdTextBox.UseSelectable = true;
+            this.passwordUserIdTextBox.WaterMark = "পাসওয়ার্ড";
+            this.passwordUserIdTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.passwordUserIdTextBox.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // userIdTextBox
+            // 
+            // 
+            // 
+            // 
+            this.userIdTextBox.CustomButton.Image = null;
+            this.userIdTextBox.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.userIdTextBox.CustomButton.Name = "";
+            this.userIdTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.userIdTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.userIdTextBox.CustomButton.TabIndex = 1;
+            this.userIdTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.userIdTextBox.CustomButton.UseSelectable = true;
+            this.userIdTextBox.CustomButton.Visible = false;
+            this.userIdTextBox.Lines = new string[0];
+            this.userIdTextBox.Location = new System.Drawing.Point(9, 21);
+            this.userIdTextBox.MaxLength = 32767;
+            this.userIdTextBox.Name = "userIdTextBox";
+            this.userIdTextBox.PasswordChar = '\0';
+            this.userIdTextBox.PromptText = "ইউজার আইডি";
+            this.userIdTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.userIdTextBox.SelectedText = "";
+            this.userIdTextBox.SelectionLength = 0;
+            this.userIdTextBox.SelectionStart = 0;
+            this.userIdTextBox.ShortcutsEnabled = true;
+            this.userIdTextBox.Size = new System.Drawing.Size(158, 23);
+            this.userIdTextBox.TabIndex = 0;
+            this.userIdTextBox.UseSelectable = true;
+            this.userIdTextBox.WaterMark = "ইউজার আইডি";
+            this.userIdTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.userIdTextBox.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userIdTextBox.Leave += new System.EventHandler(this.userIdTextBox_Leave);
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.panel3);
+            this.metroTabPage2.Controls.Add(this.metroTextBox1);
+            this.metroTabPage2.Controls.Add(this.metroTextBox2);
+            this.metroTabPage2.Controls.Add(this.userNameLoginButton);
+            this.metroTabPage2.Font = new System.Drawing.Font("SolaimanLipi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(355, 479);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "  ইউজার নেম";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(211)))));
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(10, 57);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(230, 34);
+            this.panel3.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(4, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ইউজার নেম ব্যবহার করে প্রবেশ করুন";
+            // 
+            // metroTextBox1
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(135, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(186, 19);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '*';
+            this.metroTextBox1.PromptText = "পাসওয়ার্ড";
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(157, 23);
+            this.metroTextBox1.TabIndex = 1;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMark = "পাসওয়ার্ড";
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTextBox2
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox2.CustomButton.Image = null;
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.metroTextBox2.CustomButton.Name = "";
+            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox2.CustomButton.TabIndex = 1;
+            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox2.CustomButton.UseSelectable = true;
+            this.metroTextBox2.CustomButton.Visible = false;
+            this.metroTextBox2.Lines = new string[0];
+            this.metroTextBox2.Location = new System.Drawing.Point(10, 19);
+            this.metroTextBox2.MaxLength = 32767;
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.PasswordChar = '\0';
+            this.metroTextBox2.PromptText = "ইউজার নেম";
+            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox2.SelectedText = "";
+            this.metroTextBox2.SelectionLength = 0;
+            this.metroTextBox2.SelectionStart = 0;
+            this.metroTextBox2.ShortcutsEnabled = true;
+            this.metroTextBox2.Size = new System.Drawing.Size(158, 23);
+            this.metroTextBox2.TabIndex = 0;
+            this.metroTextBox2.UseSelectable = true;
+            this.metroTextBox2.WaterMark = "ইউজার নেম";
+            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // userNameLoginButton
+            // 
+            this.userNameLoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.userNameLoginButton.FlatAppearance.BorderSize = 0;
+            this.userNameLoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.userNameLoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.userNameLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userNameLoginButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameLoginButton.ForeColor = System.Drawing.Color.Black;
+            this.userNameLoginButton.Image = global::ENothi_Desktop.Properties.Resources.enter;
+            this.userNameLoginButton.Location = new System.Drawing.Point(255, 57);
+            this.userNameLoginButton.Name = "userNameLoginButton";
+            this.userNameLoginButton.Size = new System.Drawing.Size(86, 34);
+            this.userNameLoginButton.TabIndex = 2;
+            this.userNameLoginButton.Text = "  প্রবেশ";
+            this.userNameLoginButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.userNameLoginButton.UseVisualStyleBackColor = false;
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.Controls.Add(this.panel4);
+            this.metroTabPage3.Controls.Add(this.metroTextBox3);
+            this.metroTabPage3.Controls.Add(this.metroTextBox4);
+            this.metroTabPage3.Controls.Add(this.passwordResetRequestButton);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(355, 479);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "  পাসওয়ার্ড রিসেট";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(211)))));
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(11, 58);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(193, 34);
+            this.panel4.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(4, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "ইউজার আইডি ও ইমেইল পাঠান";
+            // 
+            // metroTextBox3
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox3.CustomButton.Image = null;
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(135, 1);
+            this.metroTextBox3.CustomButton.Name = "";
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox3.CustomButton.TabIndex = 1;
+            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox3.CustomButton.UseSelectable = true;
+            this.metroTextBox3.CustomButton.Visible = false;
+            this.metroTextBox3.Lines = new string[0];
+            this.metroTextBox3.Location = new System.Drawing.Point(187, 20);
+            this.metroTextBox3.MaxLength = 32767;
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.PasswordChar = '*';
+            this.metroTextBox3.PromptText = "ইমেইল";
+            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox3.SelectedText = "";
+            this.metroTextBox3.SelectionLength = 0;
+            this.metroTextBox3.SelectionStart = 0;
+            this.metroTextBox3.ShortcutsEnabled = true;
+            this.metroTextBox3.Size = new System.Drawing.Size(157, 23);
+            this.metroTextBox3.TabIndex = 1;
+            this.metroTextBox3.UseSelectable = true;
+            this.metroTextBox3.WaterMark = "ইমেইল";
+            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTextBox4
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox4.CustomButton.Image = null;
+            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.metroTextBox4.CustomButton.Name = "";
+            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox4.CustomButton.TabIndex = 1;
+            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox4.CustomButton.UseSelectable = true;
+            this.metroTextBox4.CustomButton.Visible = false;
+            this.metroTextBox4.Lines = new string[0];
+            this.metroTextBox4.Location = new System.Drawing.Point(11, 20);
+            this.metroTextBox4.MaxLength = 32767;
+            this.metroTextBox4.Name = "metroTextBox4";
+            this.metroTextBox4.PasswordChar = '\0';
+            this.metroTextBox4.PromptText = "ইউজার আইডি / নেম";
+            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox4.SelectedText = "";
+            this.metroTextBox4.SelectionLength = 0;
+            this.metroTextBox4.SelectionStart = 0;
+            this.metroTextBox4.ShortcutsEnabled = true;
+            this.metroTextBox4.Size = new System.Drawing.Size(158, 23);
+            this.metroTextBox4.TabIndex = 0;
+            this.metroTextBox4.UseSelectable = true;
+            this.metroTextBox4.WaterMark = "ইউজার আইডি / নেম";
+            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // passwordResetRequestButton
+            // 
+            this.passwordResetRequestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.passwordResetRequestButton.FlatAppearance.BorderSize = 0;
+            this.passwordResetRequestButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.passwordResetRequestButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(74)))), ((int)(((byte)(215)))));
+            this.passwordResetRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passwordResetRequestButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordResetRequestButton.ForeColor = System.Drawing.Color.Black;
+            this.passwordResetRequestButton.Image = global::ENothi_Desktop.Properties.Resources.enter;
+            this.passwordResetRequestButton.Location = new System.Drawing.Point(227, 58);
+            this.passwordResetRequestButton.Name = "passwordResetRequestButton";
+            this.passwordResetRequestButton.Size = new System.Drawing.Size(115, 34);
+            this.passwordResetRequestButton.TabIndex = 2;
+            this.passwordResetRequestButton.Text = "  অনুরোধ করুন";
+            this.passwordResetRequestButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.passwordResetRequestButton.UseVisualStyleBackColor = false;
             // 
             // MainUi
             // 
@@ -894,19 +894,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.leftPannel.ResumeLayout(false);
-            this.loginTabControl.ResumeLayout(false);
-            this.userIdTabPage.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.metroTabPage2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.metroTabPage3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.helpDeskPanel.ResumeLayout(false);
-            this.helpDeskPanel.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -918,6 +905,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.helpDeskPanel.ResumeLayout(false);
+            this.helpDeskPanel.PerformLayout();
+            this.leftPannel.ResumeLayout(false);
+            this.loginTabControl.ResumeLayout(false);
+            this.userIdTabPage.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.metroTabPage2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.metroTabPage3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

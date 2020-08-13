@@ -83,6 +83,9 @@
     <Compile Include="Interface\IManager\IDakInboxManager.cs" />
     <Compile Include="Manager\DakInboxManager.cs" />
     <Compile Include="Models\ModulePendingCount.cs" />
+    <Compile Include="Ui\CustomControl\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Ui\CustomUserControl\DashBoardHeader.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,7 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
-    <Folder Include="Ui\CustomControl\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-nothi.59f8d850.png" />

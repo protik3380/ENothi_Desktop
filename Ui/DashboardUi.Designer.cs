@@ -43,12 +43,14 @@
             this.button12 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
+            this.profilerButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.profilerButton);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button13);
             this.panel1.Controls.Add(this.label6);
@@ -65,7 +67,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1175, 49);
+            this.panel1.Size = new System.Drawing.Size(1346, 49);
             this.panel1.TabIndex = 0;
             // 
             // reportCounterLabel
@@ -253,12 +255,29 @@
             this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button13.UseVisualStyleBackColor = false;
             // 
+            // profilerButton
+            // 
+            this.profilerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.profilerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.profilerButton.FlatAppearance.BorderSize = 0;
+            this.profilerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profilerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profilerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.profilerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.profilerButton.Location = new System.Drawing.Point(941, 3);
+            this.profilerButton.Name = "profilerButton";
+            this.profilerButton.Size = new System.Drawing.Size(364, 41);
+            this.profilerButton.TabIndex = 18;
+            this.profilerButton.Text = "মোঃ হাসানুজ্জামান (সল্যুশন আর্কিটেক্ট, টেকনোলজি )\r\n";
+            this.profilerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.profilerButton.UseVisualStyleBackColor = false;
+            // 
             // DashboardUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1175, 621);
+            this.ClientSize = new System.Drawing.Size(1346, 621);
             this.Controls.Add(this.panel1);
             this.Name = "DashboardUi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -287,5 +306,6 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button profilerButton;
     }
 }
