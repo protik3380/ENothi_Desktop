@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Models;
+using ENothi_Desktop.Models.DakInbox;
 
 namespace ENothi_Desktop.Interface.IManager
 {
     public  interface IDakInboxManager
     {
         ModulePendingCount GetPendingModuleCount(ModuleCountDto moduleCountRequest, string token);
+        DakInbox GetDakInboxListData(DakInboxDto request);
     }
 }

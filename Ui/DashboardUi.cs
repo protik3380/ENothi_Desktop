@@ -2,10 +2,12 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ENothi_Desktop.ApiUtility;
 using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Interface.IManager;
 using ENothi_Desktop.Manager;
 using ENothi_Desktop.Models;
+using ENothi_Desktop.Models.DakInbox;
 using ENothi_Desktop.Utilities;
 
 namespace ENothi_Desktop.Ui
@@ -14,6 +16,7 @@ namespace ENothi_Desktop.Ui
     {
         private readonly IDakInboxManager _dakInboxManager;
         private readonly LoginResponse _loginResponse;
+        private DakInbox _dakInbox;
         public DashboardUi()
         {
             InitializeComponent();
@@ -32,11 +35,30 @@ namespace ENothi_Desktop.Ui
                 dakUploadButtonPannel.Height = dakUploadButton.Height;
                 LoadModulePendingCount();
                 LoadProfileName();
+                SetParameterHelper();
+                GetDakInboxListData();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+
+        private void SetParameterHelper()
+        {
+            ParameterHelper.OfficeId = _loginResponse.Data.OfficeInfo.FirstOrDefault().OfficeId;
+            ParameterHelper.DesignationId = _loginResponse.Data.OfficeInfo.FirstOrDefault().OfficeUnitOrganogramId;
+            ParameterHelper.Token = _loginResponse.Data.Token;
+        }
+        private void GetDakInboxListData()
+        {
+            DakInboxDto request = new DakInboxDto();
+            request.DesignationId = ParameterHelper.DesignationId;
+            request.OfficeId = ParameterHelper.OfficeId;
+            request.PageNo = 1;
+            request.Limit = 10;
+            _dakInbox= _dakInboxManager.GetDakInboxListData(request);
         }
 
         private void LoadProfileName()

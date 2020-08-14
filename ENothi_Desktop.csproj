@@ -79,9 +79,21 @@
     <Compile Include="ApiUtility\DakInboxApiHelper.cs" />
     <Compile Include="ApiUtility\HttpClientDemo.cs" />
     <Compile Include="ApiUtility\LoginApiHelper.cs" />
+    <Compile Include="ApiUtility\ParameterHelper.cs" />
+    <Compile Include="Dto\RequestDto\DakInboxDto.cs" />
     <Compile Include="Dto\RequestDto\ModuleCountDto.cs" />
     <Compile Include="Interface\IManager\IDakInboxManager.cs" />
     <Compile Include="Manager\DakInboxManager.cs" />
+    <Compile Include="Models\DakInbox\DakInbox.cs" />
+    <Compile Include="Models\DakInbox\DakInboxData.cs" />
+    <Compile Include="Models\DakInbox\DakInboxRecord.cs" />
+    <Compile Include="Models\DakInbox\DakOrigin.cs" />
+    <Compile Include="Models\DakInbox\DakUser.cs" />
+    <Compile Include="Models\DakInbox\From.cs" />
+    <Compile Include="Models\DakInbox\MovementStatus.cs" />
+    <Compile Include="Models\DakInbox\Nothi.cs" />
+    <Compile Include="Models\DakInbox\Other.cs" />
+    <Compile Include="Models\DakInbox\To.cs" />
     <Compile Include="Models\ModulePendingCount.cs" />
     <Compile Include="Ui\CustomControl\CircularPictureBox.cs">
       <SubType>Component</SubType>

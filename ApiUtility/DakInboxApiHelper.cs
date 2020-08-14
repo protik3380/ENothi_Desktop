@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Models;
+using ENothi_Desktop.Models.DakInbox;
 
 namespace ENothi_Desktop.ApiUtility
 {
@@ -44,6 +45,27 @@ namespace ENothi_Desktop.ApiUtility
                 }
             }
             return modulePendingCount;
+        }
+
+
+        public static DakInbox GetDakInboxData(DakInboxDto requestDto)
+        {
+            DakInbox data = null;
+            using (var client = new HttpClientDemo())
+            {
+                client.DefaultRequestHeaders.Add("api-version", "2");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ParameterHelper.Token);
+
+                var postTask = client.PostAsJsonAsync("/api/dak/inbox", requestDto);
+                postTask.Wait();
+                var result = postTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    data = result.Content.ReadAsAsync<DakInbox>().Result;
+
+                }
+            }
+            return data;
         }
     }
 }
