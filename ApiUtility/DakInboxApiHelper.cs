@@ -36,8 +36,7 @@ namespace ENothi_Desktop.ApiUtility
                    var totalModel = data["data"]["total"];
                    modulePendingCount.TotalDakNo = totalModel["dak"];
                    modulePendingCount.TotalOwnOfficeNothiNo = totalModel["own_office_nothi"]; 
-                   modulePendingCount.TotalOtherOfficeNothiNo = totalModel["other_office_nothi"];
-                   
+                   modulePendingCount.TotalOtherOfficeNothiNo = totalModel["other_office_nothi"];           
                 }
                 else
                 {
@@ -62,7 +61,6 @@ namespace ENothi_Desktop.ApiUtility
                 if (result.IsSuccessStatusCode)
                 {
                     data = result.Content.ReadAsAsync<DakInbox>().Result;
-
                 }
             }
             return data;

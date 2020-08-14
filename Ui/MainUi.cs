@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENothi_Desktop.Manager;
 using ENothi_Desktop.Models;
@@ -87,7 +81,6 @@ namespace ENothi_Desktop
         {
             try
             {
-
                 LoginCredential credential = new LoginCredential();
                 credential.Username = userIdTextBox.Text;
                 credential.Password = passwordUserIdTextBox.Text;

@@ -95,6 +95,9 @@
     <Compile Include="Models\DakInbox\Other.cs" />
     <Compile Include="Models\DakInbox\To.cs" />
     <Compile Include="Models\ModulePendingCount.cs" />
+    <Compile Include="Ui\CustomControl\CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Ui\CustomControl\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -275,6 +278,7 @@
     <None Include="Resources\Capture21.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_attach_15px.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\upload.png" />
     <None Include="Resources\terms-and-conditions.png" />
