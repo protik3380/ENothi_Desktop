@@ -244,6 +244,18 @@
   <ItemGroup>
     <None Include="Resources\ezgif.com-webp-to-png1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_plus_math_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture21.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

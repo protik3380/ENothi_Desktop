@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using ENothi_Desktop.Dto.RequestDto;
@@ -28,6 +29,7 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
+                dakUploadButtonPannel.Height = dakUploadButton.Height;
                 LoadModulePendingCount();
                 LoadProfileName();
             }
@@ -50,11 +52,37 @@ namespace ENothi_Desktop.Ui
             moduleCountRequest.OfficeId = _loginResponse.Data.OfficeInfo.FirstOrDefault().OfficeId;
             moduleCountRequest.DesignationId = _loginResponse.Data.OfficeInfo.FirstOrDefault().OfficeUnitOrganogramId;
             string token = _loginResponse.Data.Token;
-            var pendingCount = _dakInboxManager.GetPendingModuleCount(moduleCountRequest,token);
+            var pendingCount = _dakInboxManager.GetPendingModuleCount(moduleCountRequest, token);
             dakCounterLabel.Text = BengaliTextFormatter.ConvertToBengali(pendingCount.DesignationWiseDakNo.ToString());
             nothiCounterLabel.Text = BengaliTextFormatter.ConvertToBengali(
                 (pendingCount.DesignationWiseOtherOfficeNothiNo + pendingCount.DesignationWiseOwnOfficeNothiNo)
                 .ToString());
+        }
+
+        private void dakUploadButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ExpandOrCollapseDakUploadButton();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ExpandOrCollapseDakUploadButton()
+        {
+            dakUploadButtonPannel.Height = dakUploadButtonPannel.Height == dakUploadButtonPannel.MinimumSize.Height ? dakUploadButtonPannel.MaximumSize.Height : dakUploadButton.Height;
+        }
+
+        private void paginationPanel_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, paginationPanel.ClientRectangle,
+                Color.White, 1, ButtonBorderStyle.Solid, // left
+                Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // top
+                Color.White, 1, ButtonBorderStyle.Solid, // right
+                Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid);// bottom
         }
 
 
