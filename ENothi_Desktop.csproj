@@ -278,6 +278,12 @@
     <None Include="Resources\Capture21.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_tags_25px.png" />
+    <None Include="Resources\icons8_archive_folder_25px.png" />
+    <None Include="Resources\icons8_folder_25px.png" />
+    <None Include="Resources\icons8_opened_folder_25px.png" />
+    <None Include="Resources\icons8_forward_arrow_25px.png" />
+    <None Include="Resources\icons8_data_transfer_25px.png" />
     <None Include="Resources\icons8_attach_15px.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\upload.png" />

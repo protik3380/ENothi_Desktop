@@ -4,200 +4,97 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENothi_Desktop.Models.DakInbox;
+using ENothi_Desktop.Utilities;
 
 namespace ENothi_Desktop.Ui.CustomUserControl
 {
     public partial class ListItem : UserControl
     {
-        public ListItem()
-        {
-            InitializeComponent();
-        }
-
+        private bool _isButtonPanelView=false;
         [Category("Custom Props")]
         public DakInbox DakInbox { get; set; }
         [Category("Custom Props")]
         public DakInboxRecord Records { get; set; }
-        //private string _sourceName;
-        //private string _senderName;
-        //private string _receiverName;
-        //private string _subject;
-        //private string _decesion;
-
-        //private string _onulipiOrPrapok;
-        //private string _security;
-        //private string _priority;
-        //private string _nothiOrigin;
-        //private string _dakType;
-        //private Image _dakTypeIcon;
-        //private string _dakViewStatus;
-
-        //private string _tooltipText;
-
-        //[Category("Custom Props")]
-        //public string DakViewStatus
-        //{
-        //    get { return _dakViewStatus; }
-        //    set
-        //    {
-        //        _dakViewStatus = value;
-
-        //       if (_dakViewStatus == "New")
-        //       {
-        //           newLabel.Visible = true;
-        //       }       
-        //    }
-        //}
-
-
-
-        //[Category("Custom Props")]
-        //public string TooltipText
-        //{
-        //    get { return _tooltipText; }
-        //    set
-        //    {
-        //        _tooltipText = value;              
-        //    }
-        //}
-
-
-        //[Category("Custom Props")]
-        //public string OnulipiOrPrapok
-        //{
-        //    get { return _onulipiOrPrapok; }
-        //    set
-        //    {
-        //        _onulipiOrPrapok = value;
-        //        praporkOrOnulipiLabel.Text = value;
-        //    }
-        //}
-
-        //[Category("Custom Props")]
-        //public string Priority
-        //{
-        //    get { return _priority; }
-        //    set
-        //    {
-        //        _priority = value;
-        //        priorityLabel.Text = value;
-        //    }
-        //}
-
-        //[Category("Custom Props")]
-        //public string NothiOrigin
-        //{
-        //    get { return _nothiOrigin; }
-        //    set
-        //    {
-        //        _nothiOrigin = value;
-        //        nothiLabel.Text = value;
-        //    }
-        //}
-
-        //[Category("Custom Props")]
-        //public string Security
-        //{
-        //    get { return _security; }
-        //    set
-        //    {
-        //        _security = value;
-        //        securityLabel.Text = value;
-        //    }
-        //}
-
-        //[Category("Custom Props")]
-        //public string DakType
-        //{
-        //    get { return _dakType; }
-        //    set
-        //    {
-        //        _dakType = value;
-        //        nagorikOrdaptorikLabel.Text = value;
-        //    }
-        //}
-
-        //[Category("Custom Props")]
-        //public Image DakTypeIcon
-        //{
-        //    get { return _dakTypeIcon; }
-        //    set
-        //    {
-        //        _dakTypeIcon = value;
-        //        dakTypeIcon.Image = _dakTypeIcon;
-        //    }
-        //}
-
-
-        //[Category("Custom Props")]
-        //public string SourceName
-        //{
-        //    get { return _sourceName; }
-        //    set { _sourceName = value;
-        //        utshoName.Text = value;
-
-        //    }
-        //}
-
-        //[Category("Custom Props")]
-        //public string SenderName
-        //{
-        //    get { return _senderName; }
-        //    set
-        //    {
-        //        _senderName = value;
-        //        prerokLabel.Text = value;
-        //    }
-        //}
-        //[Category("Custom Props")]
-        //public string ReceiverName
-        //{
-        //    get { return _receiverName; }
-        //    set
-        //    {
-        //        _receiverName = value;
-        //        PraprokLabel.Text = value;
-        //    }
-        //}
-        //[Category("Custom Props")]
-        //public string Subject
-        //{
-        //    get { return _subject; }
-        //    set
-        //    {
-        //        _subject = value;
-        //        if (_subject.Length>70)
-        //        {
-        //            var firstPart = _subject.Substring(0, 70);
-        //            var secPart = _subject.Substring(70, _subject.Length-70);
-        //            var subject = firstPart + '\n' + secPart;
-        //            subjectLabel.Text = subject;
-        //        }
-        //        else
-        //        {
-        //            subjectLabel.Text = value;
-        //        }
-
-        //    }
-        //}
-        //[Category("Custom Props")]
-        //public string Decision
-        //{
-        //    get { return _decesion; }
-        //    set
-        //    {
-        //        _decesion = value;
-        //        decesionLabel.Text = value;
-        //    }
-        //}
-
+        public ListItem()
+        {
+            InitializeComponent();
+        }    
         private void ListItem_Load(object sender, EventArgs e)
         {
-            var a = Records;
+            try
+            {
+                LoadRowData();
+                HideDakActionButton();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void HideDakActionButton()
+        {
+            dakMovementButton.Visible = false;
+            dakSendButton.Visible = false;
+            nothiUposthaponButton.Visible = false;
+            nothiJatButton.Visible = false;
+            archiveButton.Visible = false;
+            dakTagButton.Visible = false;
+        }
+
+        private void ShowDakActionButton()
+        {
+            dakMovementButton.Visible = true;
+            dakSendButton.Visible = true;
+            nothiUposthaponButton.Visible = true;
+            nothiJatButton.Visible = true;
+            archiveButton.Visible = true;
+            dakTagButton.Visible = true;
+        }
+
+
+        private void LoadRowData()
+        {
+            if (Records.AttachmentCount>0)
+            {
+                attachmentButton.Text = BengaliTextFormatter.ConvertToBengali(Records.AttachmentCount.ToString());
+                attachmentButton.Visible = true;
+            }
+            else
+            {
+                attachmentButton.Visible = false;
+            }        
+            utshoName.Text = Records.DakOrigin.SenderName;
+            PraprokLabel.Text = Records.MovementStatus.To.FirstOrDefault(x => x.AttentionType == "1")?.Officer;
+            if (Records.DakUser.DakSubject.Length > 70)
+            {
+                var firstPart = Records.DakUser.DakSubject.Substring(0, 70);
+                var secPart = Records.DakUser.DakSubject.Substring(70, Records.DakUser.DakSubject.Length - 70);
+                var subject = firstPart + '\n' + secPart;
+                subjectLabel.Text = subject;
+            }
+            else
+            {
+                subjectLabel.Text = Records.DakUser.DakSubject;
+            }
+            decesionLabel.Text = Records.DakUser.DakDecision;
+            praporkOrOnulipiLabel.Text = Records.DakUser.AttentionType == "0" ? "অনুলিপি" : "মুল প্রাপক";
+            securityLabel.Text = SecurityLevelGenerator.GenerateSecurityLevel(Records.DakUser.DakSecurity);
+            priorityLabel.Text = PriorityLevelGenerator.GeneratePriorityLevel(Records.DakUser.DakPriority);
+            nothiLabel.Text = Records.DakUser.DakOrigin.ToUpper();
+            nagorikOrdaptorikLabel.Text = Records.DakUser.DakType == "Daptorik" ? "দাপ্তরিক" : "নাগরিক";
+            dakTypeIcon.Image = Records.DakUser.DakType == "Daptorik"
+                ? Properties.Resources.building
+                : Properties.Resources.user;
+            if (Records.DakUser.DakViewStatus == "New")
+            {
+                newLabel.Visible = true;
+            }                                   
         }
 
         private void label4_Paint(object sender, PaintEventArgs e)
@@ -213,6 +110,50 @@ namespace ENothi_Desktop.Ui.CustomUserControl
           //  yourToolTip.ShowAlways = true;
 
           //  yourToolTip.SetToolTip(utshoName, _tooltipText);
-        }       
+        }
+
+        private void ListItem_MouseHover(object sender, EventArgs e)
+        {
+            //if (!_isButtonPanelView)
+            //{
+            //   ShowDakActionButton();
+            //   _isButtonPanelView = true;
+            //}
+            //else
+            //{
+            //    HideDakActionButton();
+            //    _isButtonPanelView = false;
+            //}
+            //ShowDakActionButton();
+        }
+
+        private void ListItem_MouseLeave(object sender, EventArgs e)
+        {
+            //if (_isButtonPanelView)
+            //{
+            //    ShowDakActionButton();
+            //    _isButtonPanelView = true;
+            //}
+            //else
+            //{
+            //    HideDakActionButton();
+            //    _isButtonPanelView = false;
+            //}
+            HideDakActionButton();
+        }
+
+        private void dakActionPanel_MouseEnter(object sender, EventArgs e)
+        {
+            //if (!_isButtonPanelView)
+            //{
+                ShowDakActionButton();
+            //    _isButtonPanelView = true;
+            //}
+        }
+
+        private void ListItem_MouseEnter(object sender, EventArgs e)
+        {
+            ShowDakActionButton();
+        }
     }
 }

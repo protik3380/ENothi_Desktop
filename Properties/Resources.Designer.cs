@@ -223,6 +223,16 @@ namespace ENothi_Desktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_archive_folder_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_archive_folder_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_attach_15px {
             get {
                 object obj = ResourceManager.GetObject("icons8_attach_15px", resourceCulture);
@@ -263,9 +273,59 @@ namespace ENothi_Desktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_data_transfer_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_data_transfer_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_folder_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_folder_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_forward_arrow_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_forward_arrow_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_opened_folder_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_opened_folder_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_plus_math_20px {
             get {
                 object obj = ResourceManager.GetObject("icons8_plus_math_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_tags_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_tags_25px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

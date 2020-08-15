@@ -59,7 +59,7 @@ namespace ENothi_Desktop.Ui
             request.DesignationId = ParameterHelper.DesignationId;
             request.OfficeId = ParameterHelper.OfficeId;
             request.PageNo = 1;
-            request.Limit = 10;
+            request.Limit = 100;
             _dakInbox= _dakInboxManager.GetDakInboxListData(request);
         }
         private void PopulateDakList()
@@ -70,23 +70,6 @@ namespace ENothi_Desktop.Ui
                 listItems[i] = new ListItem();
                 listItems[i].DakInbox = _dakInbox;
                 listItems[i].Records = _dakInbox.Data.Records[i];
-                //listItems[i].SourceName = _dakInboxResponse.DakInboxData.Records[i].SenderName;
-                //listItems[i].SenderName = _dakInboxResponse.DakInboxData.Records[i].CurrentDesk.FromOfficerName;
-                //listItems[i].ReceiverName = _dakInboxResponse.DakInboxData.Records[i].CurrentDesk.ToOfficerName;
-                //listItems[i].Subject = _dakInboxResponse.DakInboxData.Records[i].DakSubject;
-                //listItems[i].Decision = _dakInboxResponse.DakInboxData.Records[i].CurrentDesk.DakActions;
-
-                //listItems[i].OnulipiOrPrapok = _dakInboxResponse.DakInboxData.Records[i].AttentionType == "0" ? "অনুলিপি" : "মুল প্রাপক";
-                //listItems[i].NothiOrigin = _dakInboxResponse.DakInboxData.Records[i].CurrentDesk.DakOrigin.ToUpper();
-                //listItems[i].DakType = _dakInboxResponse.DakInboxData.Records[i].DakType == "Daptorik" ? "দাপ্তরিক" : "নাগরিক";
-                //listItems[i].DakTypeIcon = _dakInboxResponse.DakInboxData.Records[i].DakType == "Daptorik"
-                //    ? Properties.Resources.building
-                //    : Properties.Resources.user;
-
-                //listItems[i].DakViewStatus = _dakInboxResponse.DakInboxData.Records[i].DakViewStatus;
-
-                //string tooltipText = "উৎস:" + listItems[i].SourceName + ", " + _dakInboxResponse.DakInboxData.Records[i].SenderOfficerDesignationLabel + ", " + _dakInboxResponse.DakInboxData.Records[i].SenderOfficeUnitName + ", " + _dakInboxResponse.DakInboxData.Records[i].SenderOfficeName;
-                //listItems[i].TooltipText = tooltipText;
                 if (DakListFlowPanel.Controls.Count < 0)
                 {
                     DakListFlowPanel.Controls.Clear();
@@ -94,6 +77,7 @@ namespace ENothi_Desktop.Ui
                 else
                 {
                     DakListFlowPanel.Controls.Add(listItems[i]);
+                   
                 }
             }
 
