@@ -107,6 +107,12 @@
     <Compile Include="Ui\CustomUserControl\DashBoardHeader.Designer.cs">
       <DependentUpon>DashBoardHeader.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\CustomUserControl\DesignationListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\CustomUserControl\DesignationListItem.Designer.cs">
+      <DependentUpon>DesignationListItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\CustomUserControl\ListItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     <Compile Include="Utilities\SecurityLevelGenerator.cs" />
     <EmbeddedResource Include="Ui\CustomUserControl\DashBoardHeader.resx">
       <DependentUpon>DashBoardHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\CustomUserControl\DesignationListItem.resx">
+      <DependentUpon>DesignationListItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\CustomUserControl\ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
@@ -287,6 +296,7 @@
     <None Include="Resources\Capture21.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_identification_documents_50px.png" />
     <None Include="Resources\icons8_user_male_20px.png" />
     <None Include="Resources\icons8_help_20px.png" />
     <None Include="Resources\icons8_exit_20px.png" />
