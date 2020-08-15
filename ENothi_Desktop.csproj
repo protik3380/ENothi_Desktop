@@ -119,6 +119,12 @@
     <Compile Include="Ui\DashboardUi.Designer.cs">
       <DependentUpon>DashboardUi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\DesignationSelectionUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\DesignationSelectionUi.Designer.cs">
+      <DependentUpon>DesignationSelectionUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\MainUi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\DashboardUi.resx">
       <DependentUpon>DashboardUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\DesignationSelectionUi.resx">
+      <DependentUpon>DesignationSelectionUi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\MainUi.resx">
       <DependentUpon>MainUi.cs</DependentUpon>
@@ -278,6 +287,11 @@
     <None Include="Resources\Capture21.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_user_male_20px.png" />
+    <None Include="Resources\icons8_help_20px.png" />
+    <None Include="Resources\icons8_exit_20px.png" />
+    <None Include="Resources\icons8_delete_25px_1.png" />
+    <None Include="Resources\icons8_delete_25px.png" />
     <None Include="Resources\icons8_tags_25px.png" />
     <None Include="Resources\icons8_archive_folder_25px.png" />
     <None Include="Resources\icons8_folder_25px.png" />

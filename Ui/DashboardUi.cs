@@ -129,6 +129,30 @@ namespace ENothi_Desktop.Ui
                 Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid);// bottom
         }
 
+        private void profilerButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //DesignationSelectionUi designationSelectionUi = new DesignationSelectionUi(false,true);
+                //designationSelectionUi.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
+        private void profileImage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DesignationSelectionUi designationSelectionUi = new DesignationSelectionUi(true, false);
+                designationSelectionUi.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

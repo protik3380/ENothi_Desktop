@@ -74,7 +74,7 @@
             this.dakModuleButton = new System.Windows.Forms.Button();
             this.nothiModuleButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.circularPictureBox1 = new ENothi_Desktop.Ui.CustomControl.CircularPictureBox();
+            this.profileImage = new ENothi_Desktop.Ui.CustomControl.CircularPictureBox();
             this.topPanel.SuspendLayout();
             this.dakUploadButtonPannel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -83,12 +83,12 @@
             this.paginationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
             // 
-            this.topPanel.Controls.Add(this.circularPictureBox1);
+            this.topPanel.Controls.Add(this.profileImage);
             this.topPanel.Controls.Add(this.profilerButton);
             this.topPanel.Controls.Add(this.label7);
             this.topPanel.Controls.Add(this.button13);
@@ -113,6 +113,7 @@
             // 
             this.profilerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.profilerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.profilerButton.Enabled = false;
             this.profilerButton.FlatAppearance.BorderSize = 0;
             this.profilerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profilerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,6 +126,7 @@
             this.profilerButton.Text = "মোঃ হাসানুজ্জামান (সল্যুশন আর্কিটেক্ট, টেকনোলজি )\r\n";
             this.profilerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.profilerButton.UseVisualStyleBackColor = false;
+            this.profilerButton.Click += new System.EventHandler(this.profilerButton_Click);
             // 
             // label7
             // 
@@ -747,16 +749,17 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // circularPictureBox1
+            // profileImage
             // 
-            this.circularPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.circularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.Image")));
-            this.circularPictureBox1.Location = new System.Drawing.Point(1301, 5);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 1;
-            this.circularPictureBox1.TabStop = false;
+            this.profileImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.profileImage.Image = ((System.Drawing.Image)(resources.GetObject("profileImage.Image")));
+            this.profileImage.Location = new System.Drawing.Point(1304, 5);
+            this.profileImage.Name = "profileImage";
+            this.profileImage.Size = new System.Drawing.Size(35, 35);
+            this.profileImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profileImage.TabIndex = 1;
+            this.profileImage.TabStop = false;
+            this.profileImage.Click += new System.EventHandler(this.profileImage_Click);
             // 
             // DashboardUi
             // 
@@ -785,7 +788,7 @@
             this.paginationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -807,7 +810,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button profilerButton;
-        private CustomControl.CircularPictureBox circularPictureBox1;
+        private CustomControl.CircularPictureBox profileImage;
         private System.Windows.Forms.Panel dakUploadButtonPannel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button2;
