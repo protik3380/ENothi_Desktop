@@ -91,7 +91,7 @@ namespace ENothi_Desktop.Ui
             request.DesignationId = ParameterHelper.DesignationId;
             request.OfficeId = ParameterHelper.OfficeId;
             request.PageNo = 1;
-            request.Limit = 100;
+            request.Limit = 20;
             _dakInbox = _dakInboxManager.GetDakInboxListData(request);
         }
         private void PopulateDakList()

@@ -62,7 +62,8 @@ namespace ENothi_Desktop.ApiUtility
                 var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    data = result.Content.ReadAsAsync<DakInbox>().Result;
+                   // var d = result.Content.ReadAsAsync<dynamic>().Result;
+                      data = result.Content.ReadAsAsync<DakInbox>().Result;
                 }
             }
             return data;

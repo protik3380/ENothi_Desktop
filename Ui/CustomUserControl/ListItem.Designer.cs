@@ -111,22 +111,26 @@
             // prerokLabel
             // 
             this.prerokLabel.AutoSize = true;
+            this.prerokLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.prerokLabel.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prerokLabel.Location = new System.Drawing.Point(89, 26);
             this.prerokLabel.Name = "prerokLabel";
             this.prerokLabel.Size = new System.Drawing.Size(85, 18);
             this.prerokLabel.TabIndex = 0;
             this.prerokLabel.Text = " ইমরুল হোসেন";
+            this.prerokLabel.MouseEnter += new System.EventHandler(this.prerokLabel_MouseEnter);
             // 
             // PraprokLabel
             // 
             this.PraprokLabel.AutoSize = true;
+            this.PraprokLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PraprokLabel.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PraprokLabel.Location = new System.Drawing.Point(269, 27);
             this.PraprokLabel.Name = "PraprokLabel";
             this.PraprokLabel.Size = new System.Drawing.Size(97, 18);
             this.PraprokLabel.TabIndex = 0;
             this.PraprokLabel.Text = " মোঃ হাসানুজ্জামান";
+            this.PraprokLabel.MouseEnter += new System.EventHandler(this.PraprokLabel_MouseEnter);
             // 
             // label6
             // 

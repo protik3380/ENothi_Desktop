@@ -71,6 +71,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             }        
             utshoName.Text = Records.DakOrigin.SenderName;
             PraprokLabel.Text = Records.MovementStatus.To.FirstOrDefault(x => x.AttentionType == "1")?.Officer;
+            prerokLabel.Text = Records.MovementStatus.From.Officer;
             if (Records.DakUser.DakSubject.Length > 70)
             {
                 var firstPart = Records.DakUser.DakSubject.Substring(0, 70);
@@ -104,12 +105,20 @@ namespace ENothi_Desktop.Ui.CustomUserControl
 
         private void utshoName_MouseEnter(object sender, EventArgs e)
         {
-          //  var yourToolTip = new ToolTip();
-          ////  yourToolTip.ToolTipIcon = ToolTipIcon.Info;
-          //  yourToolTip.IsBalloon = true;
-          //  yourToolTip.ShowAlways = true;
+            var yourToolTip = new ToolTip();
+            yourToolTip.IsBalloon = true;
+            yourToolTip.ShowAlways = true;
+            string toolTipText = GetToolTipTextForUtshoName();
+            yourToolTip.SetToolTip(utshoName, toolTipText);
+        }
 
-          //  yourToolTip.SetToolTip(utshoName, _tooltipText);
+        private string GetToolTipTextForUtshoName()
+        {
+            string toolTip = @"মূল প্রাপক:" + Records.DakOrigin.ReceivingOfficerName + '\n'
+                             + Records.DakOrigin.ReceivingOfficerDesignationLabel + @"," +
+                             Records.DakOrigin.ReceivingOfficeUnitName + '\n'
+                             + Records.DakOrigin.ReceivingOfficeName;
+            return toolTip;
         }
 
         private void ListItem_MouseHover(object sender, EventArgs e)
@@ -154,6 +163,38 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         private void ListItem_MouseEnter(object sender, EventArgs e)
         {
             ShowDakActionButton();
+        }
+
+        private void prerokLabel_MouseEnter(object sender, EventArgs e)
+        {
+            var yourToolTip = new ToolTip();
+            yourToolTip.IsBalloon = true;
+            yourToolTip.ShowAlways = true;
+            string toolTipText = GetToolTipTextForPrerokName();
+            yourToolTip.SetToolTip(prerokLabel, toolTipText);
+        }
+        private string GetToolTipTextForPrerokName()
+        {
+            string toolTip = Records.MovementStatus.From.Designation + '\n'
+                                                                     + Records.MovementStatus.From.OfficeUnit + @"," +
+                                                                     Records.MovementStatus.From.Office;
+            return toolTip;
+        }
+
+        private void PraprokLabel_MouseEnter(object sender, EventArgs e)
+        {
+            var yourToolTip = new ToolTip();
+            yourToolTip.IsBalloon = true;
+            yourToolTip.ShowAlways = true;
+            string toolTipText = GetToolTipTextForPrapokName();
+            yourToolTip.SetToolTip(PraprokLabel, toolTipText);
+        }
+        private string GetToolTipTextForPrapokName()
+        {
+            var data = Records.MovementStatus.To.FirstOrDefault(x => x.AttentionType == "1");
+            string toolTip = data?.Designation + @"," + data?.OfficeUnit + '\n'
+                             + data?.Office;
+            return toolTip;
         }
     }
 }
