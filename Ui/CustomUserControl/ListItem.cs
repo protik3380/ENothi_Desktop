@@ -201,8 +201,21 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         {
             try
             {
-                DakMovementShowUi dakMovementShowUi = new DakMovementShowUi();
+                DakMovementShowUi dakMovementShowUi = new DakMovementShowUi(Records);
                 dakMovementShowUi.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void attachmentButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ShowDakAttachmentUi showDakAttachmentUi = new ShowDakAttachmentUi();
+                showDakAttachmentUi.ShowDialog();
             }
             catch (Exception ex)
             {

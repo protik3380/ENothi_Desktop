@@ -7,33 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ENothi_Desktop.Models.DakInbox;
 
 namespace ENothi_Desktop.Ui
 {
-    public partial class DakMovementShowUi : Form
+    public partial class ShowDakAttachmentUi : Form
     {
-        public DakMovementShowUi()
+        public ShowDakAttachmentUi()
         {
             InitializeComponent();
         }
 
-        public DakMovementShowUi(DakInboxRecord records) : this()
-        {
-            var a = records;
-        }
-
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void DakMovementShowUi_Load(object sender, EventArgs e)
+        private void ShowDakAttachmentUi_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void DakMovementShowUi_Paint(object sender, PaintEventArgs e)
+        private void ShowDakAttachmentUi_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle,
                 Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // left
@@ -59,8 +48,8 @@ namespace ENothi_Desktop.Ui
             //        rightmost = screen;
             //}
 
-            this.Left = rightmost.WorkingArea.Right - (this.Width+8);
-            this.Top = rightmost.WorkingArea.Bottom - (this.Height+10);
+            this.Left = rightmost.WorkingArea.Right - (this.Width + 8);
+            this.Top = rightmost.WorkingArea.Bottom - (this.Height + 10);
         }
 
         private void topPanel_Paint(object sender, PaintEventArgs e)
@@ -70,6 +59,11 @@ namespace ENothi_Desktop.Ui
                 Color.White, 1, ButtonBorderStyle.Solid, // top
                 Color.White, 1, ButtonBorderStyle.Solid, // right
                 Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid);// bottom
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

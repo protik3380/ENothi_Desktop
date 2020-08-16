@@ -1,6 +1,6 @@
 ﻿namespace ENothi_Desktop.Ui
 {
-    partial class DakMovementShowUi
+    partial class ShowDakAttachmentUi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.closeButton = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.closeButton = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.label1);
+            this.topPanel.Controls.Add(this.closeButton);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(559, 61);
+            this.topPanel.TabIndex = 2;
+            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("SolaimanLipi", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ডাক সংযুক্তিসমূহ";
             // 
             // closeButton
             // 
@@ -48,27 +68,7 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // topPanel
-            // 
-            this.topPanel.Controls.Add(this.label1);
-            this.topPanel.Controls.Add(this.closeButton);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(559, 61);
-            this.topPanel.TabIndex = 1;
-            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("SolaimanLipi", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ডাক গতিবিধি";
-            // 
-            // DakMovementShowUi
+            // ShowDakAttachmentUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -76,10 +76,10 @@
             this.ClientSize = new System.Drawing.Size(559, 715);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DakMovementShowUi";
-            this.Text = "DakMovementShowUi";
-            this.Load += new System.EventHandler(this.DakMovementShowUi_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.DakMovementShowUi_Paint);
+            this.Name = "ShowDakAttachmentUi";
+            this.Text = "ShowDakAttachmentUi";
+            this.Load += new System.EventHandler(this.ShowDakAttachmentUi_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ShowDakAttachmentUi_Paint);
             this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -87,8 +87,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button closeButton;
     }
 }

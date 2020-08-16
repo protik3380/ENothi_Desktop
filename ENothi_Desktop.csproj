@@ -166,6 +166,12 @@
     <Compile Include="Ui\LoginUi.Designer.cs">
       <DependentUpon>LoginUi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\ShowDakAttachmentUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\ShowDakAttachmentUi.Designer.cs">
+      <DependentUpon>ShowDakAttachmentUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\BengaliTextFormatter.cs" />
     <Compile Include="Utilities\EnglishTextFormatter.cs" />
     <Compile Include="Utilities\PriorityLevelGenerator.cs" />
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\LoginUi.resx">
       <DependentUpon>LoginUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\ShowDakAttachmentUi.resx">
+      <DependentUpon>ShowDakAttachmentUi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
