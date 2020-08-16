@@ -513,6 +513,7 @@
             this.dakMovementButton.Size = new System.Drawing.Size(38, 30);
             this.dakMovementButton.TabIndex = 17;
             this.dakMovementButton.UseVisualStyleBackColor = false;
+            this.dakMovementButton.Click += new System.EventHandler(this.dakMovementButton_Click);
             // 
             // ListItem
             // 

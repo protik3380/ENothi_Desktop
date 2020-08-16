@@ -120,6 +120,12 @@
     <Compile Include="Ui\CustomUserControl\ListItem.Designer.cs">
       <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\DakMovementShowUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\DakMovementShowUi.Designer.cs">
+      <DependentUpon>DakMovementShowUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\DashboardUi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\CustomUserControl\ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\DakMovementShowUi.resx">
+      <DependentUpon>DakMovementShowUi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\DashboardUi.resx">
       <DependentUpon>DashboardUi.cs</DependentUpon>

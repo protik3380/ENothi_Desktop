@@ -196,5 +196,18 @@ namespace ENothi_Desktop.Ui.CustomUserControl
                              + data?.Office;
             return toolTip;
         }
+
+        private void dakMovementButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DakMovementShowUi dakMovementShowUi = new DakMovementShowUi();
+                dakMovementShowUi.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
