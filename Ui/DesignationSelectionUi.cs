@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENothi_Desktop.ApiUtility;
 using ENothi_Desktop.Models;
 using ENothi_Desktop.Ui.CustomUserControl;
 
@@ -17,13 +18,13 @@ namespace ENothi_Desktop.Ui
         private bool _isButtonClick;
         private bool _isImageClick;
         private List<DesignationVm> _designationList;
-        
+
         public DesignationSelectionUi()
         {
             InitializeComponent();
         }
 
-        public DesignationSelectionUi(bool isImageClick,bool isButtonClick,List<DesignationVm>designationList) : this()
+        public DesignationSelectionUi(bool isImageClick, bool isButtonClick, List<DesignationVm> designationList) : this()
         {
             _isButtonClick = isButtonClick;
             _isImageClick = isImageClick;
@@ -35,12 +36,12 @@ namespace ENothi_Desktop.Ui
             if (_isImageClick)
             {
                 Top = point.Y + 30;
-                Left = point.X  - this.Width;
+                Left = point.X - this.Width;
             }
             if (_isButtonClick)
             {
                 Top = point.Y + 30;
-                Left = point.X - this.Width/2;
+                Left = point.X - this.Width / 2;
             }
 
             LoadDesignationUserControl();
@@ -95,5 +96,33 @@ namespace ENothi_Desktop.Ui
                 Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // right
                 Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid);// bottom
         }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ParameterHelper.OfficeId = 0;
+                ParameterHelper.DesignationId = 0;
+                ParameterHelper.Token = String.Empty;
+
+                List<Form> openForms = new List<Form>();
+
+                foreach (Form f in Application.OpenForms)
+                    openForms.Add(f);
+
+                foreach (Form f in openForms)
+                {
+                    if (f.Name != "MainUi")
+                    {
+                        f.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
+
 }
