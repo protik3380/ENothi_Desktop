@@ -11,7 +11,7 @@ namespace ENothi_Desktop.Interface.IManager
 {
     public  interface IDakInboxManager
     {
-        ModulePendingCount GetPendingModuleCount(ModuleCountDto moduleCountRequest, string token);
+        ModulePendingCount GetPendingModuleCount(ModuleCountDto moduleCountRequest);
         DakInbox GetDakInboxListData(DakInboxDto request);
     }
 }

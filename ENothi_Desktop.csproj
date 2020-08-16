@@ -94,6 +94,7 @@
     <Compile Include="Models\DakInbox\Nothi.cs" />
     <Compile Include="Models\DakInbox\Other.cs" />
     <Compile Include="Models\DakInbox\To.cs" />
+    <Compile Include="Models\DesignationVm.cs" />
     <Compile Include="Models\ModulePendingCount.cs" />
     <Compile Include="Ui\CustomControl\CircularButton.cs">
       <SubType>Component</SubType>

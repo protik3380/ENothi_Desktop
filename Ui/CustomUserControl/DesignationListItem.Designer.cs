@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.DakCountButton = new System.Windows.Forms.Button();
-            this.nothiCountButton = new System.Windows.Forms.Button();
-            this.designationNameLabel = new System.Windows.Forms.Label();
-            this.officeName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.officeName = new System.Windows.Forms.Label();
+            this.designationNameLabel = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.nothiCountButton = new System.Windows.Forms.Button();
+            this.DakCountButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,6 +52,42 @@
             this.panel1.Size = new System.Drawing.Size(322, 46);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ENothi_Desktop.Properties.Resources.icons8_identification_documents_50px;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // officeName
+            // 
+            this.officeName.AutoSize = true;
+            this.officeName.Font = new System.Drawing.Font("SolaimanLipi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.officeName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(119)))), ((int)(((byte)(132)))));
+            this.officeName.Location = new System.Drawing.Point(58, 24);
+            this.officeName.Margin = new System.Windows.Forms.Padding(0);
+            this.officeName.Name = "officeName";
+            this.officeName.Size = new System.Drawing.Size(212, 17);
+            this.officeName.TabIndex = 2;
+            this.officeName.Text = "সচিব এর দপ্তর,টেস্ট পিএমও সচিব এর দপ্তর";
+            this.officeName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // designationNameLabel
+            // 
+            this.designationNameLabel.AutoSize = true;
+            this.designationNameLabel.Font = new System.Drawing.Font("SolaimanLipi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.designationNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(119)))), ((int)(((byte)(132)))));
+            this.designationNameLabel.Location = new System.Drawing.Point(57, 6);
+            this.designationNameLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.designationNameLabel.Name = "designationNameLabel";
+            this.designationNameLabel.Size = new System.Drawing.Size(244, 17);
+            this.designationNameLabel.TabIndex = 1;
+            this.designationNameLabel.Text = "জুনিয়র কনসালটেন্ট-ইমপ্লিমেন্টেশন সচিব এর দপ্তর";
+            this.designationNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -62,22 +98,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(142, 46);
             this.panel2.TabIndex = 1;
-            // 
-            // DakCountButton
-            // 
-            this.DakCountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(80)))), ((int)(((byte)(252)))));
-            this.DakCountButton.Enabled = false;
-            this.DakCountButton.FlatAppearance.BorderSize = 0;
-            this.DakCountButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
-            this.DakCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DakCountButton.Font = new System.Drawing.Font("SolaimanLipi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DakCountButton.ForeColor = System.Drawing.Color.White;
-            this.DakCountButton.Location = new System.Drawing.Point(3, 6);
-            this.DakCountButton.Name = "DakCountButton";
-            this.DakCountButton.Size = new System.Drawing.Size(68, 21);
-            this.DakCountButton.TabIndex = 0;
-            this.DakCountButton.Text = "10 টি ডাক";
-            this.DakCountButton.UseVisualStyleBackColor = false;
             // 
             // nothiCountButton
             // 
@@ -93,44 +113,24 @@
             this.nothiCountButton.Name = "nothiCountButton";
             this.nothiCountButton.Size = new System.Drawing.Size(68, 21);
             this.nothiCountButton.TabIndex = 1;
-            this.nothiCountButton.Text = "10 টি ডাক";
+            this.nothiCountButton.Text = "0 টি ডাক";
             this.nothiCountButton.UseVisualStyleBackColor = false;
             // 
-            // designationNameLabel
+            // DakCountButton
             // 
-            this.designationNameLabel.AutoSize = true;
-            this.designationNameLabel.Font = new System.Drawing.Font("SolaimanLipi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.designationNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(119)))), ((int)(((byte)(132)))));
-            this.designationNameLabel.Location = new System.Drawing.Point(57, 6);
-            this.designationNameLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.designationNameLabel.Name = "designationNameLabel";
-            this.designationNameLabel.Size = new System.Drawing.Size(244, 17);
-            this.designationNameLabel.TabIndex = 1;
-            this.designationNameLabel.Text = "জুনিয়র কনসালটেন্ট-ইমপ্লিমেন্টেশন সচিব এর দপ্তর";
-            this.designationNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // officeName
-            // 
-            this.officeName.AutoSize = true;
-            this.officeName.Font = new System.Drawing.Font("SolaimanLipi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.officeName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(119)))), ((int)(((byte)(132)))));
-            this.officeName.Location = new System.Drawing.Point(58, 24);
-            this.officeName.Margin = new System.Windows.Forms.Padding(0);
-            this.officeName.Name = "officeName";
-            this.officeName.Size = new System.Drawing.Size(212, 17);
-            this.officeName.TabIndex = 2;
-            this.officeName.Text = "সচিব এর দপ্তর,টেস্ট পিএমও সচিব এর দপ্তর";
-            this.officeName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ENothi_Desktop.Properties.Resources.icons8_identification_documents_50px;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.DakCountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(80)))), ((int)(((byte)(252)))));
+            this.DakCountButton.Enabled = false;
+            this.DakCountButton.FlatAppearance.BorderSize = 0;
+            this.DakCountButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+            this.DakCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DakCountButton.Font = new System.Drawing.Font("SolaimanLipi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DakCountButton.ForeColor = System.Drawing.Color.White;
+            this.DakCountButton.Location = new System.Drawing.Point(3, 6);
+            this.DakCountButton.Name = "DakCountButton";
+            this.DakCountButton.Size = new System.Drawing.Size(68, 21);
+            this.DakCountButton.TabIndex = 0;
+            this.DakCountButton.Text = "0 টি ডাক";
+            this.DakCountButton.UseVisualStyleBackColor = false;
             // 
             // DesignationListItem
             // 
@@ -142,10 +142,11 @@
             this.Font = new System.Drawing.Font("SolaimanLipi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DesignationListItem";
             this.Size = new System.Drawing.Size(469, 52);
+            this.Load += new System.EventHandler(this.DesignationListItem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

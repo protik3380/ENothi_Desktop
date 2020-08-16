@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENothi_Desktop.Models;
+using ENothi_Desktop.Ui.CustomUserControl;
 
 namespace ENothi_Desktop.Ui
 {
@@ -14,31 +16,56 @@ namespace ENothi_Desktop.Ui
     {
         private bool _isButtonClick;
         private bool _isImageClick;
+        private List<DesignationVm> _designationList;
         
         public DesignationSelectionUi()
         {
             InitializeComponent();
         }
 
-        public DesignationSelectionUi(bool isImageClick,bool isButtonClick) : this()
+        public DesignationSelectionUi(bool isImageClick,bool isButtonClick,List<DesignationVm>designationList) : this()
         {
             _isButtonClick = isButtonClick;
             _isImageClick = isImageClick;
+            _designationList = designationList;
         }
         private void DesignationSelectionUi_Load(object sender, EventArgs e)
         {
-            var _point = new System.Drawing.Point(Cursor.Position.X, Cursor.Position.Y);
+            var point = new System.Drawing.Point(Cursor.Position.X, Cursor.Position.Y);
             if (_isImageClick)
             {
-                Top = _point.Y + 30;
-                Left = _point.X  - this.Width;
+                Top = point.Y + 30;
+                Left = point.X  - this.Width;
             }
             if (_isButtonClick)
             {
-                Top = _point.Y + 30;
-                Left = _point.X - this.Width/2;
+                Top = point.Y + 30;
+                Left = point.X - this.Width/2;
             }
 
+            LoadDesignationUserControl();
+
+        }
+
+        private void LoadDesignationUserControl()
+        {
+            if (_designationList != null)
+            {
+                DesignationListItem[] listItems = new DesignationListItem[_designationList.Count];
+                for (int i = 0; i < listItems.Length; i++)
+                {
+                    listItems[i] = new DesignationListItem();
+                    listItems[i].DesignationVm = _designationList[i];
+                    if (flowLayoutPanel1.Controls.Count < 0)
+                    {
+                        flowLayoutPanel1.Controls.Clear();
+                    }
+                    else
+                    {
+                        flowLayoutPanel1.Controls.Add(listItems[i]);
+                    }
+                }
+            }
         }
 
         private void DesignationSelectionUi_Deactivate(object sender, EventArgs e)

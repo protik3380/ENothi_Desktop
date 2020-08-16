@@ -13,9 +13,9 @@ namespace ENothi_Desktop.Manager
 {
    public class DakInboxManager : IDakInboxManager
     {
-        public ModulePendingCount GetPendingModuleCount(ModuleCountDto moduleCountRequest, string token)
+        public ModulePendingCount GetPendingModuleCount(ModuleCountDto moduleCountRequest)
         {          
-            var response = DakInboxApiHelper.GetModulePendingCount(token,moduleCountRequest);
+            var response = DakInboxApiHelper.GetModulePendingCount(moduleCountRequest);
             return response;
         }
 
