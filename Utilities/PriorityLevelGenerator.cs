@@ -14,19 +14,19 @@ namespace ENothi_Desktop.Utilities
 
             switch (code)
             {
-                case "2":
+                case "4":
                     securityLevel = "জরুরি";
                     break;
-                case "3":
+                case "5":
                     securityLevel = "অবিলম্বে";
                     break;
-                case "4":
+                case "6":
                     securityLevel = "সর্বোচ্চ অগ্রাধিকার";
                     break;
-                case "5":
+                case "3":
                     securityLevel = "তাগিদপত্র";
                     break;
-                case "6":
+                case "2":
                     securityLevel = "দৃষ্টি আকর্ষণ";
                     break;
             }
@@ -34,3 +34,10 @@ namespace ENothi_Desktop.Utilities
         }
     }
 }
+
+
+//"6": "সর্বোচ্চ অগ্রাধিকার",
+//"5": "অবিলম্বে",
+//"4": "জরুরি",
+//"3": "তাগিদপত্র",
+//"2": "দৃষ্টি আকর্ষণ"

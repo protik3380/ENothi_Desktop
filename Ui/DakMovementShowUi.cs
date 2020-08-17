@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENothi_Desktop.Models;
 using ENothi_Desktop.Models.DakInbox;
+using ENothi_Desktop.Ui.CustomUserControl;
 
 namespace ENothi_Desktop.Ui
 {
@@ -32,7 +33,36 @@ namespace ENothi_Desktop.Ui
 
         private void DakMovementShowUi_Load(object sender, EventArgs e)
         {
+            try
+            {
+                LoadMovementRowData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
+        private void LoadMovementRowData()
+        {
+            if (MovementStatusVm.Records.Count > 0)
+            {
+                DakMovementList[] listItems = new DakMovementList[MovementStatusVm.TotalRecords];
+                for (int i = 0; i < listItems.Length; i++)
+                {
+                    listItems[i] = new DakMovementList();
+                    listItems[i].Records = MovementStatusVm.Records[i];
+                    if (contentFlowLayoutPanel.Controls.Count < 0)
+                    {
+                        contentFlowLayoutPanel.Controls.Clear();
+                    }
+                    else
+                    {
+                        contentFlowLayoutPanel.Controls.Add(listItems[i]);
+
+                    }
+                }
+            }
         }
 
         private void DakMovementShowUi_Paint(object sender, PaintEventArgs e)
@@ -61,8 +91,8 @@ namespace ENothi_Desktop.Ui
             //        rightmost = screen;
             //}
 
-            this.Left = rightmost.WorkingArea.Right - (this.Width+8);
-            this.Top = rightmost.WorkingArea.Bottom - (this.Height+10);
+            this.Left = rightmost.WorkingArea.Right - (this.Width + 8);
+            this.Top = rightmost.WorkingArea.Bottom - (this.Height + 10);
         }
 
         private void topPanel_Paint(object sender, PaintEventArgs e)

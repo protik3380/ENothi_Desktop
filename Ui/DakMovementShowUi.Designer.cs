@@ -28,25 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.closeButton = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.contentFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.closeButton = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // closeButton
-            // 
-            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_delete_25px_1;
-            this.closeButton.Location = new System.Drawing.Point(518, 6);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(33, 30);
-            this.closeButton.TabIndex = 0;
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // topPanel
             // 
@@ -68,12 +55,36 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "ডাক গতিবিধি";
             // 
+            // contentFlowLayoutPanel
+            // 
+            this.contentFlowLayoutPanel.AutoScroll = true;
+            this.contentFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentFlowLayoutPanel.Location = new System.Drawing.Point(0, 61);
+            this.contentFlowLayoutPanel.Name = "contentFlowLayoutPanel";
+            this.contentFlowLayoutPanel.Size = new System.Drawing.Size(559, 654);
+            this.contentFlowLayoutPanel.TabIndex = 2;
+            // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_delete_25px_1;
+            this.closeButton.Location = new System.Drawing.Point(518, 6);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(33, 30);
+            this.closeButton.TabIndex = 0;
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // DakMovementShowUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(559, 715);
+            this.Controls.Add(this.contentFlowLayoutPanel);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DakMovementShowUi";
@@ -90,5 +101,6 @@
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel contentFlowLayoutPanel;
     }
 }

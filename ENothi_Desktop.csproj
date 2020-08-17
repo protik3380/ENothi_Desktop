@@ -104,6 +104,12 @@
     <Compile Include="Ui\CustomControl\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Ui\CustomUserControl\DakMovementList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\CustomUserControl\DakMovementList.Designer.cs">
+      <DependentUpon>DakMovementList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\CustomUserControl\DashBoardHeader.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     <Compile Include="Utilities\EnglishTextFormatter.cs" />
     <Compile Include="Utilities\PriorityLevelGenerator.cs" />
     <Compile Include="Utilities\SecurityLevelGenerator.cs" />
+    <EmbeddedResource Include="Ui\CustomUserControl\DakMovementList.resx">
+      <DependentUpon>DakMovementList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ui\CustomUserControl\DashBoardHeader.resx">
       <DependentUpon>DashBoardHeader.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +345,7 @@
     <None Include="Resources\defense.png" />
     <None Include="Resources\certificate.png" />
     <None Include="Resources\building.png" />
+    <None Include="Resources\300_15.jpg" />
     <Content Include="Resources\ezgif.com-webp-to-png.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

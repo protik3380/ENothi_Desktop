@@ -12,6 +12,7 @@ using ENothi_Desktop.ApiUtility;
 using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Interface.IManager;
 using ENothi_Desktop.Manager;
+using ENothi_Desktop.Models;
 using ENothi_Desktop.Models.DakInbox;
 using ENothi_Desktop.Utilities;
 
@@ -215,8 +216,8 @@ namespace ENothi_Desktop.Ui.CustomUserControl
                     DakType = Records.DakUser.DakType,
                     IsCopiedDak = Records.DakUser.IsCopiedDak
                 };
-                var dakMovementStatus = _dakInboxManager.GetDakMovementStatusByDakId(request);
-                DakMovementShowUi dakMovementShowUi = new DakMovementShowUi(Records);
+                MovementStatusVm dakMovementStatus = _dakInboxManager.GetDakMovementStatusByDakId(request);
+                DakMovementShowUi dakMovementShowUi = new DakMovementShowUi(dakMovementStatus);
                 dakMovementShowUi.ShowDialog();
             }
             catch (Exception ex)

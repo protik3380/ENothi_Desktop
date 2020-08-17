@@ -63,6 +63,16 @@ namespace ENothi_Desktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _300_15 {
+            get {
+                object obj = ResourceManager.GetObject("300_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap a2i {
             get {
                 object obj = ResourceManager.GetObject("a2i", resourceCulture);
