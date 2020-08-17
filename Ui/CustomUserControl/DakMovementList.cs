@@ -43,6 +43,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             if (Records.Other.OperationType== "Forward")
             {
                 LoadMulPrapokNameAndDesignationInfo();
+                LoadOnulipiPrapokListAndDesignationInfo();
             }
             else
             {
@@ -53,6 +54,50 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             }
            
             prerokNameLabel.Text = Records.From.Officer;
+        }
+
+        private void LoadOnulipiPrapokListAndDesignationInfo()
+        {
+            var onulipiPrapokList = Records.To.Where(x => x.AttentionType == "0").ToList();
+            if (onulipiPrapokList.Count>0)
+            {
+                int i = 0;
+                int yPoint = 217;
+                foreach (var onulipiPrapok in onulipiPrapokList)
+                {
+                    if (i != 0)
+                    {
+                        this.Height += 55;
+                        contentPanel.Height += 53;
+                    }
+
+                    Label onulipiPrapokLabel = new Label();
+                    onulipiPrapokLabel.Name = "onulipiPrapokName" + i.ToString();
+                    onulipiPrapokLabel.Location = new Point(81, yPoint);
+                    onulipiPrapokLabel.Font = new Font("SolaimanLipi", 12, FontStyle.Regular);
+                    onulipiPrapokLabel.Text = onulipiPrapok.Officer;
+                    contentPanel.Controls.Add(onulipiPrapokLabel);
+                    yPoint += 25;
+                    Label onulipiPrapokDesignationLabel = new Label();
+                    onulipiPrapokDesignationLabel.Name = "onulipiPrapokDesignationName" + i.ToString();
+                    onulipiPrapokDesignationLabel.Location = new Point(81, yPoint);
+                    onulipiPrapokDesignationLabel.Font = new Font("SolaimanLipi", 9, FontStyle.Regular);
+                    onulipiPrapokDesignationLabel.AutoSize = false;
+                    onulipiPrapokDesignationLabel.Size = new Size(290, 33);
+                    string designationInfo = onulipiPrapok.Designation + "," + onulipiPrapok.OfficeUnit + "," +
+                                             onulipiPrapok.Office;
+                    onulipiPrapokDesignationLabel.Text = designationInfo;
+                    contentPanel.Controls.Add(onulipiPrapokDesignationLabel);
+                    yPoint += 40;
+                    i++;
+                }
+            }
+            else
+            {
+                onulipiPrapokLabelInfo.Visible = false;
+                contentPanel.Height = 167;
+                this.Height = 215;
+            }
         }
 
         private void LoadMulPrapokNameAndDesignationInfo()

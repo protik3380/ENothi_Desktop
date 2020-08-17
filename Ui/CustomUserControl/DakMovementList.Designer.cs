@@ -216,7 +216,7 @@
             this.Controls.Add(this.circularPictureBox1);
             this.Controls.Add(this.contentPanel);
             this.Name = "DakMovementList";
-            this.Size = new System.Drawing.Size(544, 358);
+            this.Size = new System.Drawing.Size(536, 357);
             this.Load += new System.EventHandler(this.DakMovementList_Load);
             this.contentPanel.ResumeLayout(false);
             this.contentPanel.PerformLayout();
