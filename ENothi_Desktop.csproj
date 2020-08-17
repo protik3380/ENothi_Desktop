@@ -81,6 +81,7 @@
     <Compile Include="ApiUtility\LoginApiHelper.cs" />
     <Compile Include="ApiUtility\ParameterHelper.cs" />
     <Compile Include="Dto\RequestDto\DakInboxDto.cs" />
+    <Compile Include="Dto\RequestDto\DakMovementDto.cs" />
     <Compile Include="Dto\RequestDto\ModuleCountDto.cs" />
     <Compile Include="Interface\IManager\IDakInboxManager.cs" />
     <Compile Include="Manager\DakInboxManager.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Models\DakInbox\To.cs" />
     <Compile Include="Models\DesignationVm.cs" />
     <Compile Include="Models\ModulePendingCount.cs" />
+    <Compile Include="Models\MovementStatusVm.cs" />
     <Compile Include="Ui\CustomControl\CircularButton.cs">
       <SubType>Component</SubType>
     </Compile>

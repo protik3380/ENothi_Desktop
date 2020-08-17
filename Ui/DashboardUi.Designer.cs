@@ -45,7 +45,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.searchPanel = new System.Windows.Forms.Panel();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.paginationPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.dakUploadButtonPannel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.searchPanel.SuspendLayout();
             this.paginationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -303,17 +303,17 @@
             this.label8.TabIndex = 5;
             this.label8.Text = " © Copyright ২০১৯,";
             // 
-            // panel2
+            // searchPanel
             // 
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.metroTextBox1);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(219, 49);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1127, 39);
-            this.panel2.TabIndex = 8;
+            this.searchPanel.Controls.Add(this.button5);
+            this.searchPanel.Controls.Add(this.button4);
+            this.searchPanel.Controls.Add(this.metroTextBox1);
+            this.searchPanel.Controls.Add(this.button3);
+            this.searchPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchPanel.Location = new System.Drawing.Point(219, 49);
+            this.searchPanel.Name = "searchPanel";
+            this.searchPanel.Size = new System.Drawing.Size(1127, 39);
+            this.searchPanel.TabIndex = 8;
             // 
             // metroTextBox1
             // 
@@ -571,6 +571,7 @@
             this.agatoDakButton.Text = "    আগাত ডাক                ";
             this.agatoDakButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.agatoDakButton.UseVisualStyleBackColor = false;
+            this.agatoDakButton.Click += new System.EventHandler(this.agatoDakButton_Click);
             // 
             // button1
             // 
@@ -769,7 +770,7 @@
             this.ClientSize = new System.Drawing.Size(1346, 621);
             this.Controls.Add(this.DakListFlowPanel);
             this.Controls.Add(this.paginationPanel);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.topPanel);
@@ -783,7 +784,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.searchPanel.ResumeLayout(false);
             this.paginationPanel.ResumeLayout(false);
             this.paginationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -826,7 +827,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel searchPanel;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;

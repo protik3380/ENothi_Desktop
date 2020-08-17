@@ -222,5 +222,15 @@ namespace ENothi_Desktop.Ui.CustomUserControl
                 MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void dakSendButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

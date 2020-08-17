@@ -184,5 +184,11 @@ namespace ENothi_Desktop.Ui
                 MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void agatoDakButton_Click(object sender, EventArgs e)
+        {
+            paginationPanel.Visible = false;
+            searchPanel.Controls.Clear();
+        }
     }
 }

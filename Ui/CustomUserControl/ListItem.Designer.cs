@@ -427,6 +427,7 @@
             this.dakSendButton.Size = new System.Drawing.Size(38, 30);
             this.dakSendButton.TabIndex = 16;
             this.dakSendButton.UseVisualStyleBackColor = false;
+            this.dakSendButton.Click += new System.EventHandler(this.dakSendButton_Click);
             // 
             // dakMovementButton
             // 
@@ -528,6 +529,7 @@
             this.Name = "ListItem";
             this.Size = new System.Drawing.Size(1121, 120);
             this.Load += new System.EventHandler(this.ListItem_Load);
+            this.Click += new System.EventHandler(this.ListItem_Click);
             this.MouseEnter += new System.EventHandler(this.ListItem_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ListItem_MouseLeave);
             this.MouseHover += new System.EventHandler(this.ListItem_MouseHover);
