@@ -17,7 +17,7 @@ namespace ENothi_Desktop.Ui
     {
         private bool _isButtonClick;
         private bool _isImageClick;
-        private List<DesignationVm> _designationList;
+        private readonly List<DesignationVm> _designationList;
 
         public DesignationSelectionUi()
         {
@@ -44,6 +44,11 @@ namespace ENothi_Desktop.Ui
                 Left = point.X - this.Width / 2;
             }
 
+            if (_designationList.Count==1)
+            {
+                flowLayoutPanel1.Height = 65;
+                this.Height = 153;
+            }
             LoadDesignationUserControl();
 
         }
