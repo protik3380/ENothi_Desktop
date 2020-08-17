@@ -7,20 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENothi_Desktop.Models;
 using ENothi_Desktop.Models.DakInbox;
 
 namespace ENothi_Desktop.Ui
 {
     public partial class DakMovementShowUi : Form
     {
+        public MovementStatusVm MovementStatusVm;
         public DakMovementShowUi()
         {
             InitializeComponent();
         }
 
-        public DakMovementShowUi(DakInboxRecord records) : this()
+        public DakMovementShowUi(MovementStatusVm dakMovementStatusVm) : this()
         {
-            var a = records;
+            MovementStatusVm = dakMovementStatusVm;
         }
 
         private void closeButton_Click(object sender, EventArgs e)

@@ -1,8 +1,11 @@
-﻿using System.Net.Http;
+﻿using System.Collections.Generic;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Models;
 using ENothi_Desktop.Models.DakInbox;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ENothi_Desktop.ApiUtility
 {
@@ -62,11 +65,41 @@ namespace ENothi_Desktop.ApiUtility
                 var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                   // var d = result.Content.ReadAsAsync<dynamic>().Result;
-                      data = result.Content.ReadAsAsync<DakInbox>().Result;
+                    // var d = result.Content.ReadAsAsync<dynamic>().Result;
+                    data = result.Content.ReadAsAsync<DakInbox>().Result;
                 }
             }
             return data;
+        }
+
+        public static MovementStatusVm GetDakMovementStatusByDakId(DakMovementDto request)
+        {
+            MovementStatusVm movementStatusVm = new MovementStatusVm();
+            using (var client = new HttpClientDemo())
+            {
+                client.DefaultRequestHeaders.Add("api-version", "1");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ParameterHelper.Token);
+
+                var postTask = client.PostAsJsonAsync("/api/dak/movements", request);
+                postTask.Wait();
+                var result = postTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var data = result.Content.ReadAsStringAsync().Result;
+                    JObject responseData = JObject.Parse(data);
+                    var clientArray = responseData["data"]["records"].Value<JArray>();
+                    var clients = clientArray.ToObject<List<MovementStatus>>();
+
+                    movementStatusVm.Records = clients;
+                    movementStatusVm.TotalRecords = (int)responseData["data"]["total_records"];
+
+                    //var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                    //JObject result = JObject.Parse(responseData);
+                    //var clientarray = result["items"].Value<JArray>();
+                    //List<Client> clients = clientarray.ToObject<List<Client>>();
+                }
+            }
+            return movementStatusVm;
         }
     }
 }

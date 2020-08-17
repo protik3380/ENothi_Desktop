@@ -8,6 +8,10 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENothi_Desktop.ApiUtility;
+using ENothi_Desktop.Dto.RequestDto;
+using ENothi_Desktop.Interface.IManager;
+using ENothi_Desktop.Manager;
 using ENothi_Desktop.Models.DakInbox;
 using ENothi_Desktop.Utilities;
 
@@ -19,10 +23,12 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         [Category("Custom Props")]
         public DakInbox DakInbox { get; set; }
         [Category("Custom Props")]
-        public DakInboxRecord Records { get; set; }
+        public DakInboxRecord Records { get; set; }  
+        private readonly IDakInboxManager _dakInboxManager;
         public ListItem()
         {
             InitializeComponent();
+            _dakInboxManager = new DakInboxManager();
         }    
         private void ListItem_Load(object sender, EventArgs e)
         {
@@ -201,6 +207,15 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         {
             try
             {
+                DakMovementDto request = new DakMovementDto
+                {
+                    DesignationId = ParameterHelper.DesignationId,
+                    OfficeId = ParameterHelper.OfficeId,
+                    DakId = Records.DakUser.DakId,
+                    DakType = Records.DakUser.DakType,
+                    IsCopiedDak = Records.DakUser.IsCopiedDak
+                };
+                var dakMovementStatus = _dakInboxManager.GetDakMovementStatusByDakId(request);
                 DakMovementShowUi dakMovementShowUi = new DakMovementShowUi(Records);
                 dakMovementShowUi.ShowDialog();
             }
