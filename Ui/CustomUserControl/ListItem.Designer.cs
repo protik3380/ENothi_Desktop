@@ -39,14 +39,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.attachmentButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.newLabel = new System.Windows.Forms.Label();
             this.nagorikOrdaptorikLabel = new System.Windows.Forms.Label();
+            this.dakTypeIcon = new System.Windows.Forms.PictureBox();
             this.uploadDakhLabel = new System.Windows.Forms.Label();
+            this.upOrSysDakPicBox = new System.Windows.Forms.PictureBox();
             this.nothiLabel = new System.Windows.Forms.Label();
+            this.dakOriginPicBox = new System.Windows.Forms.PictureBox();
             this.priorityLabel = new System.Windows.Forms.Label();
+            this.priorityPicBox = new System.Windows.Forms.PictureBox();
             this.securityLabel = new System.Windows.Forms.Label();
+            this.securityPicBox = new System.Windows.Forms.PictureBox();
             this.praporkOrOnulipiLabel = new System.Windows.Forms.Label();
+            this.mainSenderPicBox = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.subjectLabel = new System.Windows.Forms.Label();
             this.utshoName = new System.Windows.Forms.LinkLabel();
@@ -57,22 +64,15 @@
             this.nothiUposthaponButton = new System.Windows.Forms.Button();
             this.dakSendButton = new System.Windows.Forms.Button();
             this.dakMovementButton = new System.Windows.Forms.Button();
-            this.attachmentButton = new System.Windows.Forms.Button();
-            this.dakTypeIcon = new System.Windows.Forms.PictureBox();
-            this.upOrSysDakPicBox = new System.Windows.Forms.PictureBox();
-            this.dakOriginPicBox = new System.Windows.Forms.PictureBox();
-            this.priorityPicBox = new System.Windows.Forms.PictureBox();
-            this.securityPicBox = new System.Windows.Forms.PictureBox();
-            this.mainSenderPicBox = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.dakActionPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dakTypeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upOrSysDakPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dakOriginPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priorityPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securityPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainSenderPicBox)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.dakActionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -206,6 +206,25 @@
             this.panel2.Size = new System.Drawing.Size(641, 65);
             this.panel2.TabIndex = 4;
             // 
+            // attachmentButton
+            // 
+            this.attachmentButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.attachmentButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.attachmentButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(243)))));
+            this.attachmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.attachmentButton.Font = new System.Drawing.Font("SolaimanLipi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attachmentButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(78)))), ((int)(((byte)(96)))));
+            this.attachmentButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_attach_15px;
+            this.attachmentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.attachmentButton.Location = new System.Drawing.Point(448, 35);
+            this.attachmentButton.Name = "attachmentButton";
+            this.attachmentButton.Size = new System.Drawing.Size(56, 26);
+            this.attachmentButton.TabIndex = 15;
+            this.attachmentButton.Text = "50";
+            this.attachmentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.attachmentButton.UseVisualStyleBackColor = false;
+            this.attachmentButton.Click += new System.EventHandler(this.attachmentButton_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -241,6 +260,15 @@
             this.nagorikOrdaptorikLabel.TabIndex = 11;
             this.nagorikOrdaptorikLabel.Text = "নাগরিক";
             // 
+            // dakTypeIcon
+            // 
+            this.dakTypeIcon.Image = global::ENothi_Desktop.Properties.Resources.user;
+            this.dakTypeIcon.Location = new System.Drawing.Point(566, 7);
+            this.dakTypeIcon.Name = "dakTypeIcon";
+            this.dakTypeIcon.Size = new System.Drawing.Size(27, 21);
+            this.dakTypeIcon.TabIndex = 10;
+            this.dakTypeIcon.TabStop = false;
+            // 
             // uploadDakhLabel
             // 
             this.uploadDakhLabel.AutoSize = true;
@@ -251,6 +279,15 @@
             this.uploadDakhLabel.Size = new System.Drawing.Size(78, 18);
             this.uploadDakhLabel.TabIndex = 9;
             this.uploadDakhLabel.Text = "আপলোড ডাক";
+            // 
+            // upOrSysDakPicBox
+            // 
+            this.upOrSysDakPicBox.Image = global::ENothi_Desktop.Properties.Resources.upload;
+            this.upOrSysDakPicBox.Location = new System.Drawing.Point(452, 8);
+            this.upOrSysDakPicBox.Name = "upOrSysDakPicBox";
+            this.upOrSysDakPicBox.Size = new System.Drawing.Size(24, 21);
+            this.upOrSysDakPicBox.TabIndex = 8;
+            this.upOrSysDakPicBox.TabStop = false;
             // 
             // nothiLabel
             // 
@@ -263,6 +300,15 @@
             this.nothiLabel.TabIndex = 7;
             this.nothiLabel.Text = "NOTHI";
             // 
+            // dakOriginPicBox
+            // 
+            this.dakOriginPicBox.Image = global::ENothi_Desktop.Properties.Resources.certificate;
+            this.dakOriginPicBox.Location = new System.Drawing.Point(377, 7);
+            this.dakOriginPicBox.Name = "dakOriginPicBox";
+            this.dakOriginPicBox.Size = new System.Drawing.Size(16, 21);
+            this.dakOriginPicBox.TabIndex = 6;
+            this.dakOriginPicBox.TabStop = false;
+            // 
             // priorityLabel
             // 
             this.priorityLabel.AutoSize = true;
@@ -273,6 +319,15 @@
             this.priorityLabel.Size = new System.Drawing.Size(95, 18);
             this.priorityLabel.TabIndex = 5;
             this.priorityLabel.Text = "সর্বোচ্চ অগ্রাধিকার";
+            // 
+            // priorityPicBox
+            // 
+            this.priorityPicBox.Image = global::ENothi_Desktop.Properties.Resources.terms_and_conditions;
+            this.priorityPicBox.Location = new System.Drawing.Point(245, 7);
+            this.priorityPicBox.Name = "priorityPicBox";
+            this.priorityPicBox.Size = new System.Drawing.Size(25, 21);
+            this.priorityPicBox.TabIndex = 4;
+            this.priorityPicBox.TabStop = false;
             // 
             // securityLabel
             // 
@@ -285,6 +340,15 @@
             this.securityLabel.TabIndex = 3;
             this.securityLabel.Text = "অতি গোপনীয়";
             // 
+            // securityPicBox
+            // 
+            this.securityPicBox.Image = global::ENothi_Desktop.Properties.Resources.defense;
+            this.securityPicBox.Location = new System.Drawing.Point(141, 7);
+            this.securityPicBox.Name = "securityPicBox";
+            this.securityPicBox.Size = new System.Drawing.Size(16, 21);
+            this.securityPicBox.TabIndex = 2;
+            this.securityPicBox.TabStop = false;
+            // 
             // praporkOrOnulipiLabel
             // 
             this.praporkOrOnulipiLabel.AutoSize = true;
@@ -295,6 +359,15 @@
             this.praporkOrOnulipiLabel.Size = new System.Drawing.Size(59, 18);
             this.praporkOrOnulipiLabel.TabIndex = 1;
             this.praporkOrOnulipiLabel.Text = "মূল প্রাপক";
+            // 
+            // mainSenderPicBox
+            // 
+            this.mainSenderPicBox.Image = global::ENothi_Desktop.Properties.Resources.email;
+            this.mainSenderPicBox.Location = new System.Drawing.Point(55, 7);
+            this.mainSenderPicBox.Name = "mainSenderPicBox";
+            this.mainSenderPicBox.Size = new System.Drawing.Size(23, 20);
+            this.mainSenderPicBox.TabIndex = 0;
+            this.mainSenderPicBox.TabStop = false;
             // 
             // panel3
             // 
@@ -385,6 +458,7 @@
             this.archiveButton.Size = new System.Drawing.Size(38, 30);
             this.archiveButton.TabIndex = 13;
             this.archiveButton.UseVisualStyleBackColor = false;
+            this.archiveButton.Click += new System.EventHandler(this.archiveButton_Click);
             // 
             // nothiJatButton
             // 
@@ -444,79 +518,6 @@
             this.dakMovementButton.UseVisualStyleBackColor = false;
             this.dakMovementButton.Click += new System.EventHandler(this.dakMovementButton_Click);
             // 
-            // attachmentButton
-            // 
-            this.attachmentButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.attachmentButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.attachmentButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(243)))));
-            this.attachmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.attachmentButton.Font = new System.Drawing.Font("SolaimanLipi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attachmentButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(78)))), ((int)(((byte)(96)))));
-            this.attachmentButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_attach_15px;
-            this.attachmentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.attachmentButton.Location = new System.Drawing.Point(448, 35);
-            this.attachmentButton.Name = "attachmentButton";
-            this.attachmentButton.Size = new System.Drawing.Size(56, 26);
-            this.attachmentButton.TabIndex = 15;
-            this.attachmentButton.Text = "50";
-            this.attachmentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.attachmentButton.UseVisualStyleBackColor = false;
-            this.attachmentButton.Click += new System.EventHandler(this.attachmentButton_Click);
-            // 
-            // dakTypeIcon
-            // 
-            this.dakTypeIcon.Image = global::ENothi_Desktop.Properties.Resources.user;
-            this.dakTypeIcon.Location = new System.Drawing.Point(566, 7);
-            this.dakTypeIcon.Name = "dakTypeIcon";
-            this.dakTypeIcon.Size = new System.Drawing.Size(27, 21);
-            this.dakTypeIcon.TabIndex = 10;
-            this.dakTypeIcon.TabStop = false;
-            // 
-            // upOrSysDakPicBox
-            // 
-            this.upOrSysDakPicBox.Image = global::ENothi_Desktop.Properties.Resources.upload;
-            this.upOrSysDakPicBox.Location = new System.Drawing.Point(452, 8);
-            this.upOrSysDakPicBox.Name = "upOrSysDakPicBox";
-            this.upOrSysDakPicBox.Size = new System.Drawing.Size(24, 21);
-            this.upOrSysDakPicBox.TabIndex = 8;
-            this.upOrSysDakPicBox.TabStop = false;
-            // 
-            // dakOriginPicBox
-            // 
-            this.dakOriginPicBox.Image = global::ENothi_Desktop.Properties.Resources.certificate;
-            this.dakOriginPicBox.Location = new System.Drawing.Point(377, 7);
-            this.dakOriginPicBox.Name = "dakOriginPicBox";
-            this.dakOriginPicBox.Size = new System.Drawing.Size(16, 21);
-            this.dakOriginPicBox.TabIndex = 6;
-            this.dakOriginPicBox.TabStop = false;
-            // 
-            // priorityPicBox
-            // 
-            this.priorityPicBox.Image = global::ENothi_Desktop.Properties.Resources.terms_and_conditions;
-            this.priorityPicBox.Location = new System.Drawing.Point(245, 7);
-            this.priorityPicBox.Name = "priorityPicBox";
-            this.priorityPicBox.Size = new System.Drawing.Size(25, 21);
-            this.priorityPicBox.TabIndex = 4;
-            this.priorityPicBox.TabStop = false;
-            // 
-            // securityPicBox
-            // 
-            this.securityPicBox.Image = global::ENothi_Desktop.Properties.Resources.defense;
-            this.securityPicBox.Location = new System.Drawing.Point(141, 7);
-            this.securityPicBox.Name = "securityPicBox";
-            this.securityPicBox.Size = new System.Drawing.Size(16, 21);
-            this.securityPicBox.TabIndex = 2;
-            this.securityPicBox.TabStop = false;
-            // 
-            // mainSenderPicBox
-            // 
-            this.mainSenderPicBox.Image = global::ENothi_Desktop.Properties.Resources.email;
-            this.mainSenderPicBox.Location = new System.Drawing.Point(55, 7);
-            this.mainSenderPicBox.Name = "mainSenderPicBox";
-            this.mainSenderPicBox.Size = new System.Drawing.Size(23, 20);
-            this.mainSenderPicBox.TabIndex = 0;
-            this.mainSenderPicBox.TabStop = false;
-            // 
             // ListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -535,15 +536,15 @@
             this.MouseHover += new System.EventHandler(this.ListItem_MouseHover);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.dakActionPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dakTypeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upOrSysDakPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dakOriginPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.priorityPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securityPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainSenderPicBox)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.dakActionPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

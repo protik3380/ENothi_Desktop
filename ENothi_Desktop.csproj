@@ -134,6 +134,12 @@
     <Compile Include="Ui\CustomUserControl\ListItem.Designer.cs">
       <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\DakArchiveAlertUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\DakArchiveAlertUi.Designer.cs">
+      <DependentUpon>DakArchiveAlertUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\DakMovementShowUi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\CustomUserControl\ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\DakArchiveAlertUi.resx">
+      <DependentUpon>DakArchiveAlertUi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\DakMovementShowUi.resx">
       <DependentUpon>DakMovementShowUi.cs</DependentUpon>
@@ -335,6 +344,8 @@
     <None Include="Resources\Capture21.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_close_window_15px.png" />
+    <None Include="Resources\icons8_checkmark_15px.png" />
     <None Include="Resources\icons8_identification_documents_50px.png" />
     <None Include="Resources\icons8_user_male_20px.png" />
     <None Include="Resources\icons8_help_20px.png" />

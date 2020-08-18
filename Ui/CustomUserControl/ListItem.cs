@@ -60,8 +60,16 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             dakSendButton.Visible = true;
             nothiUposthaponButton.Visible = true;
             nothiJatButton.Visible = true;
-            archiveButton.Visible = true;
+            archiveButton.Visible = true;                   
             dakTagButton.Visible = true;
+            if (Records.DakUser.AttentionType == "0")
+            {
+                archiveButton.Enabled = true;
+            }
+            else
+            {
+                archiveButton.Enabled = false;
+            }
         }
 
 
@@ -247,6 +255,19 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         private void ListItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void archiveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DakArchiveAlertUi dakArchiveAlertUi = new DakArchiveAlertUi();
+                dakArchiveAlertUi.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
