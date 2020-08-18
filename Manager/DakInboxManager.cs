@@ -30,5 +30,11 @@ namespace ENothi_Desktop.Manager
             var response = DakInboxApiHelper.GetDakMovementStatusByDakId(request);
             return response;
         }
+
+        public DakInbox GetArchiveDakListData(DakInboxDto request)
+        {
+            var response = DakInboxApiHelper.GetArchiveDakListData(request);
+            return response;
+        }
     }
 }

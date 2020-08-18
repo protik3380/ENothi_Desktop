@@ -14,5 +14,6 @@ namespace ENothi_Desktop.Interface.IManager
         ModulePendingCount GetPendingModuleCount(ModuleCountDto moduleCountRequest);
         DakInbox GetDakInboxListData(DakInboxDto request);
         MovementStatusVm GetDakMovementStatusByDakId(DakMovementDto request);
+        DakInbox GetArchiveDakListData(DakInboxDto request);
     }
 }

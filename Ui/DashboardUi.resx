@@ -1187,7 +1187,7 @@
         5hNXXIagQ89LzAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="agatoDakButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="agatoDakViewSidePanelButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         fQAAAH0Bx0gPAAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE3SURBVDhPpdI9
@@ -1199,7 +1199,7 @@
         5hNXXIagQ89LzAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bachaikritoDakViewSidePanelButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         fQAAAH0Bx0gPAAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE3SURBVDhPpdI9
@@ -1236,6 +1236,30 @@
 </value>
   </data>
   <data name="nothijatDak.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        fQAAAH0Bx0gPAAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE3SURBVDhPpdI9
+        S0MxFMbxqKXgC8XBwaKCk+ios6ODYwfB0S+gIKKLIA4OQt3aglJwUgTBycG3qQ6im4hjcXKwg9DBD3D9
+        P5fExphixQM/aJKTc5OTmiRJ/qX1w5gFPKP2iwdsxQqsouDG7RDjOPgaewvrKKAfFZSQdetengpUvbHp
+        wjIaSE9AjGHUJfkIFWhiGxlNXNrBGtwJznEVMYn0CljCLcw7blCECnRjDvMRA1CBYxxCe9POTqMOXaUX
+        K1BTQyOYxQtmoL2mZu+Wwyl20BPe3ebo2CcYtONWAS9JX79G3pvrQxUbQe7PAnZhE3oV9WIKTyhH8r4X
+        IPQC+zjCBC6g7utZ9VJnGI4WINScO7T9NxKucYt2nBa4xx7UnKFwU4jIYtfmP2riFR9Qtb94QzP6lc4l
+        5hNXXIagQ89LzAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="archiveDakViewSidePanelButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        fQAAAH0Bx0gPAAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE3SURBVDhPpdI9
+        S0MxFMbxqKXgC8XBwaKCk+ios6ODYwfB0S+gIKKLIA4OQt3aglJwUgTBycG3qQ6im4hjcXKwg9DBD3D9
+        P5fExphixQM/aJKTc5OTmiRJ/qX1w5gFPKP2iwdsxQqsouDG7RDjOPgaewvrKKAfFZSQdetengpUvbHp
+        wjIaSE9AjGHUJfkIFWhiGxlNXNrBGtwJznEVMYn0CljCLcw7blCECnRjDvMRA1CBYxxCe9POTqMOXaUX
+        K1BTQyOYxQtmoL2mZu+Wwyl20BPe3ebo2CcYtONWAS9JX79G3pvrQxUbQe7PAnZhE3oV9WIKTyhH8r4X
+        IPQC+zjCBC6g7utZ9VJnGI4WINScO7T9NxKucYt2nBa4xx7UnKFwU4jIYtfmP2riFR9Qtb94QzP6lc4l
+        5hNXXIagQ89LzAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         fQAAAH0Bx0gPAAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE3SURBVDhPpdI9

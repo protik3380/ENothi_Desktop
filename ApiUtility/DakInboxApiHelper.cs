@@ -101,5 +101,27 @@ namespace ENothi_Desktop.ApiUtility
             }
             return movementStatusVm;
         }
+
+
+
+        public static DakInbox GetArchiveDakListData(DakInboxDto requestDto)
+        {
+            DakInbox data = null;
+            using (var client = new HttpClientDemo())
+            {
+                client.DefaultRequestHeaders.Add("api-version", "2");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ParameterHelper.Token);
+
+                var postTask = client.PostAsJsonAsync("/api/dak/onulipi", requestDto);
+                postTask.Wait();
+                var result = postTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    // var d = result.Content.ReadAsAsync<dynamic>().Result;
+                    data = result.Content.ReadAsAsync<DakInbox>().Result;
+                }
+            }
+            return data;
+        }
     }
 }

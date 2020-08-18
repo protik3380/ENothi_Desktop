@@ -25,3 +25,4 @@ C:\Users\Protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desk
 C:\Users\Protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.Ui.DakMovementShowUi.resources
 C:\Users\Protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.Ui.ShowDakAttachmentUi.resources
 C:\Users\Protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.Ui.CustomUserControl.DakMovementList.resources
+C:\Users\Protik\documents\visual studio 2015\Projects\ENothi_Desktop\ENothi_Desktop\obj\Debug\ENothi_Desktop.Ui.CustomUserControl.ArchiveDakListItem.resources

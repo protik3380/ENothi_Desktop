@@ -187,8 +187,76 @@ namespace ENothi_Desktop.Ui
 
         private void agatoDakButton_Click(object sender, EventArgs e)
         {
-            paginationPanel.Visible = false;
-            searchPanel.Controls.Clear();
+            try
+            {
+                ActiveAgatoDakButton();
+                DakListFlowPanel.Controls.Clear();
+                //GetDakInboxListData();
+                PopulateDakList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
+        private void archiveDakViewSidePanelButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ActiveArchiveDakButton();
+                DakListFlowPanel.Controls.Clear();
+
+                DakInboxDto request = new DakInboxDto();
+                request.DesignationId = ParameterHelper.DesignationId;
+                request.OfficeId = ParameterHelper.OfficeId;
+                request.PageNo = 1;
+                request.Limit = 20;
+                var archiveDakListData = _dakInboxManager.GetArchiveDakListData(request);
+                PopulateArchiveDakListData(archiveDakListData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void PopulateArchiveDakListData(DakInbox archiveDakListData)
+        {
+            if (archiveDakListData.Data != null)
+            {
+                ArchiveDakListItem[] listItems = new ArchiveDakListItem[archiveDakListData.Data.Records.Count];
+                for (int i = 0; i < listItems.Length; i++)
+                {
+                    listItems[i] = new ArchiveDakListItem();
+                    listItems[i].DakInbox = archiveDakListData;
+                    listItems[i].Records = archiveDakListData.Data.Records[i];
+                    if (DakListFlowPanel.Controls.Count < 0)
+                    {
+                        DakListFlowPanel.Controls.Clear();
+                    }
+                    else
+                    {
+                        DakListFlowPanel.Controls.Add(listItems[i]);
+
+                    }
+                }
+            }
+        }
+
+        private void ActiveArchiveDakButton()
+        {
+            agatoDakViewSidePanelButton.ForeColor = DefaultForeColor;
+            archiveDakViewSidePanelButton.ForeColor = Color.FromArgb(113, 182, 253);
+            bachaikritoDakViewSidePanelButton.ForeColor = DefaultForeColor;
+        }
+
+        private void ActiveAgatoDakButton()
+        {
+            agatoDakViewSidePanelButton.ForeColor = Color.FromArgb(113, 182, 253); 
+            archiveDakViewSidePanelButton.ForeColor = DefaultForeColor;
+            bachaikritoDakViewSidePanelButton.ForeColor = DefaultForeColor;
+        }
+
     }
 }

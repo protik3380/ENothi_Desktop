@@ -104,6 +104,12 @@
     <Compile Include="Ui\CustomControl\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Ui\CustomUserControl\ArchiveDakListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\CustomUserControl\ArchiveDakListItem.Designer.cs">
+      <DependentUpon>ArchiveDakListItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\CustomUserControl\DakMovementList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     <Compile Include="Utilities\EnglishTextFormatter.cs" />
     <Compile Include="Utilities\PriorityLevelGenerator.cs" />
     <Compile Include="Utilities\SecurityLevelGenerator.cs" />
+    <EmbeddedResource Include="Ui\CustomUserControl\ArchiveDakListItem.resx">
+      <DependentUpon>ArchiveDakListItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ui\CustomUserControl\DakMovementList.resx">
       <DependentUpon>DakMovementList.cs</DependentUpon>
     </EmbeddedResource>
