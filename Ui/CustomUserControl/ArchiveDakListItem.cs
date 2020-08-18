@@ -81,11 +81,16 @@ namespace ENothi_Desktop.Ui.CustomUserControl
                 newLabel.Visible = true;
             }
 
-            if (Records.Nothi!=null)
+            if (Records.Nothi.NothiNo!=null)
             {
                 nlabel.Visible = true;
                 nothiNoLabel.Visible = true;
                 nothiNoLabel.Text = Records.Nothi.NothiNo;
+            }
+            else
+            {
+                nlabel.Visible = false;
+                nothiNoLabel.Visible = false;
             }
         }
 

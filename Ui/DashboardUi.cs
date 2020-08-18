@@ -36,6 +36,11 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
+
+                firstCombo.SelectedIndex = 0;
+                comboBox2.SelectedIndex = 0;
+                comboBox3.SelectedIndex = 0;
+                comboBox4.SelectedIndex = 0;
                 dakUploadButtonPannel.Height = dakUploadButton.Height;
                 SetParameterHelper();
                 GetAllDesignationData();
@@ -258,5 +263,22 @@ namespace ENothi_Desktop.Ui
             bachaikritoDakViewSidePanelButton.ForeColor = DefaultForeColor;
         }
 
+        private void firstCombo_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            var combo = sender as ComboBox;
+
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            {
+                e.Graphics.FillRectangle(new SolidBrush(Color.White), e.Bounds);
+            }
+            else
+            {
+                e.Graphics.FillRectangle(new SolidBrush(SystemColors.Window), e.Bounds);
+            }
+            e.Graphics.DrawString(combo.Items[e.Index].ToString(),
+                e.Font,
+                new SolidBrush(Color.Black),
+                new Point(e.Bounds.X, e.Bounds.Y));
+        }
     }
 }
