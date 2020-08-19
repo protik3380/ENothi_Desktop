@@ -85,6 +85,8 @@
     <Compile Include="Dto\RequestDto\ModuleCountDto.cs" />
     <Compile Include="Interface\IManager\IDakInboxManager.cs" />
     <Compile Include="Manager\DakInboxManager.cs" />
+    <Compile Include="Models\DakAttachmentVm.cs" />
+    <Compile Include="Models\DakAttachment\DakAttachment.cs" />
     <Compile Include="Models\DakInbox\DakInbox.cs" />
     <Compile Include="Models\DakInbox\DakInboxData.cs" />
     <Compile Include="Models\DakInbox\DakInboxRecord.cs" />
