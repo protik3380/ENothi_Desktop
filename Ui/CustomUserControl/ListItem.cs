@@ -20,17 +20,17 @@ namespace ENothi_Desktop.Ui.CustomUserControl
 {
     public partial class ListItem : UserControl
     {
-        private bool _isButtonPanelView=false;
+        private bool _isButtonPanelView = false;
         [Category("Custom Props")]
         public DakInbox DakInbox { get; set; }
         [Category("Custom Props")]
-        public DakInboxRecord Records { get; set; }  
+        public DakInboxRecord Records { get; set; }
         private readonly IDakInboxManager _dakInboxManager;
         public ListItem()
         {
             InitializeComponent();
             _dakInboxManager = new DakInboxManager();
-        }    
+        }
         private void ListItem_Load(object sender, EventArgs e)
         {
             try
@@ -60,7 +60,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             dakSendButton.Visible = true;
             nothiUposthaponButton.Visible = true;
             nothiJatButton.Visible = true;
-            archiveButton.Visible = true;                   
+            archiveButton.Visible = true;
             dakTagButton.Visible = true;
             if (Records.DakUser.AttentionType == "0")
             {
@@ -75,7 +75,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
 
         private void LoadRowData()
         {
-            if (Records.AttachmentCount>0)
+            if (Records.AttachmentCount > 0)
             {
                 attachmentButton.Text = BengaliTextFormatter.ConvertToBengali(Records.AttachmentCount.ToString());
                 attachmentButton.Visible = true;
@@ -83,8 +83,8 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             else
             {
                 attachmentButton.Visible = false;
-            }        
-            utshoName.Text = Records.DakOrigin.SenderName;
+            }
+            utshoName.Text = Records.DakUser.DakType == "Daptorik" ? Records.DakOrigin.SenderName : Records.DakOrigin.NameBng;
             PraprokLabel.Text = Records.MovementStatus.To.FirstOrDefault(x => x.AttentionType == "1")?.Officer;
             prerokLabel.Text = Records.MovementStatus.From.Officer;
             if (Records.DakUser.DakSubject.Length > 70)
@@ -110,11 +110,11 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             if (Records.DakUser.DakViewStatus == "New")
             {
                 newLabel.Visible = true;
-            }                                   
+            }
         }
 
         private void label4_Paint(object sender, PaintEventArgs e)
-        {         
+        {
             ControlPaint.DrawBorder(e.Graphics, newLabel.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
         }
 
@@ -129,10 +129,24 @@ namespace ENothi_Desktop.Ui.CustomUserControl
 
         private string GetToolTipTextForUtshoName()
         {
-            string toolTip = @"মূল প্রাপক:" + Records.DakOrigin.ReceivingOfficerName + '\n'
-                             + Records.DakOrigin.ReceivingOfficerDesignationLabel + @"," +
-                             Records.DakOrigin.ReceivingOfficeUnitName + '\n'
-                             + Records.DakOrigin.ReceivingOfficeName;
+            string toolTip = String.Empty;
+            if (Records.DakUser.DakType == "Daptorik")
+            {
+                toolTip = @"উৎস:" + Records.DakOrigin.SenderName + "," + Records.DakOrigin.SenderOfficerDesignationLabel + '\n'
+                          + Records.DakOrigin.SenderOfficeUnitName + "," + Records.DakOrigin.SenderOfficeName + '\n'+
+                          @"মূল প্রাপক:" + Records.DakOrigin.ReceivingOfficerName + '\n'
+                          + Records.DakOrigin.ReceivingOfficerDesignationLabel + @"," +
+                          Records.DakOrigin.ReceivingOfficeUnitName + '\n'
+                          + Records.DakOrigin.ReceivingOfficeName;
+            }
+            else
+            {
+                toolTip = @"মূল প্রাপক:" + Records.DakOrigin.ReceivingOfficerName + '\n'
+                          + Records.DakOrigin.ReceivingOfficerDesignationLabel + @"," +
+                          Records.DakOrigin.ReceivingOfficeUnitName + '\n'
+                          + Records.DakOrigin.ReceivingOfficeName;
+            }
+
             return toolTip;
         }
 
@@ -170,7 +184,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         {
             //if (!_isButtonPanelView)
             //{
-                ShowDakActionButton();
+            ShowDakActionButton();
             //    _isButtonPanelView = true;
             //}
         }

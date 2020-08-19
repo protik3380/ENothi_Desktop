@@ -53,7 +53,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             {
                 attachmentButton.Visible = false;
             }
-            utshoName.Text = Records.DakOrigin.SenderName;
+            utshoName.Text = Records.DakUser.DakType == "Daptorik" ? Records.DakOrigin.SenderName : Records.DakOrigin.NameBng;
             PraprokLabel.Text = Records.MovementStatus.To.FirstOrDefault(x => x.AttentionType == "1")?.Officer;
             prerokLabel.Text = Records.MovementStatus.From.Officer;
             if (Records.DakUser.DakSubject.Length > 70)
@@ -109,10 +109,24 @@ namespace ENothi_Desktop.Ui.CustomUserControl
 
         private string GetToolTipTextForUtshoName()
         {
-            string toolTip = @"মূল প্রাপক:" + Records.DakOrigin.ReceivingOfficerName + '\n'
-                             + Records.DakOrigin.ReceivingOfficerDesignationLabel + @"," +
-                             Records.DakOrigin.ReceivingOfficeUnitName + '\n'
-                             + Records.DakOrigin.ReceivingOfficeName;
+            string toolTip = String.Empty;
+            if (Records.DakUser.DakType == "Daptorik")
+            {
+                toolTip = @"উৎস:" + Records.DakOrigin.SenderName + "," + Records.DakOrigin.SenderOfficerDesignationLabel + '\n'
+                          + Records.DakOrigin.SenderOfficeUnitName + "," + Records.DakOrigin.SenderOfficeName + '\n' +
+                          @"মূল প্রাপক:" + Records.DakOrigin.ReceivingOfficerName + '\n'
+                          + Records.DakOrigin.ReceivingOfficerDesignationLabel + @"," +
+                          Records.DakOrigin.ReceivingOfficeUnitName + '\n'
+                          + Records.DakOrigin.ReceivingOfficeName;
+            }
+            else
+            {
+                toolTip = @"মূল প্রাপক:" + Records.DakOrigin.ReceivingOfficerName + '\n'
+                          + Records.DakOrigin.ReceivingOfficerDesignationLabel + @"," +
+                          Records.DakOrigin.ReceivingOfficeUnitName + '\n'
+                          + Records.DakOrigin.ReceivingOfficeName;
+            }
+
             return toolTip;
         }
         private void prerokLabel_MouseEnter(object sender, EventArgs e)
