@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.topPanel = new System.Windows.Forms.Panel();
-            this.bottomPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.bottomPanel = new System.Windows.Forms.Panel();
             this.noButton = new System.Windows.Forms.Button();
             this.yesButton = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
@@ -47,16 +47,6 @@
             this.topPanel.TabIndex = 0;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
-            // bottomPanel
-            // 
-            this.bottomPanel.Controls.Add(this.noButton);
-            this.bottomPanel.Controls.Add(this.yesButton);
-            this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bottomPanel.Location = new System.Drawing.Point(0, 53);
-            this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(281, 70);
-            this.bottomPanel.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -67,6 +57,16 @@
             this.label1.Size = new System.Drawing.Size(242, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "আপনি কি ডাকটি আর্কাইভ করতে চান ?";
+            // 
+            // bottomPanel
+            // 
+            this.bottomPanel.Controls.Add(this.noButton);
+            this.bottomPanel.Controls.Add(this.yesButton);
+            this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bottomPanel.Location = new System.Drawing.Point(0, 53);
+            this.bottomPanel.Name = "bottomPanel";
+            this.bottomPanel.Size = new System.Drawing.Size(281, 70);
+            this.bottomPanel.TabIndex = 1;
             // 
             // noButton
             // 
@@ -101,6 +101,7 @@
             this.yesButton.Text = "হ্যা";
             this.yesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.yesButton.UseVisualStyleBackColor = false;
+            this.yesButton.Click += new System.EventHandler(this.yesButton_Click);
             // 
             // DakArchiveAlertUi
             // 

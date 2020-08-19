@@ -43,11 +43,31 @@ namespace ENothi_Desktop.Ui
                 comboBox4.SelectedIndex = 0;
                 dakUploadButtonPannel.Height = dakUploadButton.Height;
                 SetParameterHelper();
-                GetAllDesignationData();
-                LoadModulePendingCount();
-                LoadProfileName();                                              
-                GetDakInboxListData();
-                PopulateDakList();
+                DesignationVm=GetAllDesignationData();
+                LoadModulePendingCount(DesignationVm);
+                LoadProfileName();
+                _dakInbox=GetDakInboxListData();
+                PopulateDakList(_dakInbox);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void DashboardUi_Activated(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ReloadHelper.IsArchive)
+                {
+                    DakListFlowPanel.Controls.Clear();
+                    var designationList=GetAllDesignationData();
+                    LoadModulePendingCount(designationList);
+                    //LoadProfileName();
+                    var dakListData = GetDakInboxListData();
+                    PopulateDakList(dakListData);
+                    ResetReloadHelper();
+                }              
             }
             catch (Exception ex)
             {
@@ -55,8 +75,14 @@ namespace ENothi_Desktop.Ui
             }
         }
 
-        private void GetAllDesignationData()
+        private void ResetReloadHelper()
         {
+            ReloadHelper.IsArchive = false;
+        }
+
+        private List<DesignationVm> GetAllDesignationData()
+        {
+            List<DesignationVm> designationList = new List<DesignationVm>();
             foreach (var officeInfo in _loginResponse.Data.OfficeInfo)
             {
                 ModuleCountDto requestDto = new ModuleCountDto
@@ -79,9 +105,11 @@ namespace ENothi_Desktop.Ui
                     designationVm.TotalDakNo = count.TotalDakNo;
                     designationVm.TotalOwnOfficeNothiNo = count.TotalOwnOfficeNothiNo;
                     designationVm.TotalOtherOfficeNothiNo = count.TotalOtherOfficeNothiNo;
-                }               
-                DesignationVm.Add(designationVm);
+                }
+                designationList.Add(designationVm);
             }
+
+            return designationList;
         }
 
         private void SetParameterHelper()
@@ -90,25 +118,26 @@ namespace ENothi_Desktop.Ui
             ParameterHelper.DesignationId = _loginResponse.Data.OfficeInfo.FirstOrDefault().OfficeUnitOrganogramId;
             ParameterHelper.Token = _loginResponse.Data.Token;
         }
-        private void GetDakInboxListData()
+        private DakInbox GetDakInboxListData()
         {
             DakInboxDto request = new DakInboxDto();
             request.DesignationId = ParameterHelper.DesignationId;
             request.OfficeId = ParameterHelper.OfficeId;
             request.PageNo = 1;
             request.Limit = 20;
-            _dakInbox = _dakInboxManager.GetDakInboxListData(request);
+            var response = _dakInboxManager.GetDakInboxListData(request);
+            return response; 
         }
-        private void PopulateDakList()
+        private void PopulateDakList(DakInbox dakInbox)
         {
-            if (_dakInbox.Data!=null)
+            if (dakInbox.Data!=null)
             {
-                ListItem[] listItems = new ListItem[_dakInbox.Data.Records.Count];
+                ListItem[] listItems = new ListItem[dakInbox.Data.Records.Count];
                 for (int i = 0; i < listItems.Length; i++)
                 {
                     listItems[i] = new ListItem();
-                    listItems[i].DakInbox = _dakInbox;
-                    listItems[i].Records = _dakInbox.Data.Records[i];
+                    listItems[i].DakInbox = dakInbox;
+                    listItems[i].Records = dakInbox.Data.Records[i];
                     if (DakListFlowPanel.Controls.Count < 0)
                     {
                         DakListFlowPanel.Controls.Clear();
@@ -129,12 +158,12 @@ namespace ENothi_Desktop.Ui
                                       _loginResponse.Data.OfficeInfo.FirstOrDefault().UnitNameBn + " )";
             profilerButton.Text = nameWithDesignation;
         }
-        private void LoadModulePendingCount()
+        private void LoadModulePendingCount(List<DesignationVm>designationList)
         {
 
-            dakCounterLabel.Text = BengaliTextFormatter.ConvertToBengali(DesignationVm.FirstOrDefault().DesignationWiseDakNo.ToString());
+            dakCounterLabel.Text = BengaliTextFormatter.ConvertToBengali(designationList.FirstOrDefault().DesignationWiseDakNo.ToString());
             nothiCounterLabel.Text = BengaliTextFormatter.ConvertToBengali(
-                (DesignationVm.FirstOrDefault().DesignationWiseOtherOfficeNothiNo + DesignationVm.FirstOrDefault().DesignationWiseOwnOfficeNothiNo)
+                (designationList.FirstOrDefault().DesignationWiseOtherOfficeNothiNo + designationList.FirstOrDefault().DesignationWiseOwnOfficeNothiNo)
                 .ToString());
         }
 
@@ -181,7 +210,8 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
-                DesignationSelectionUi designationSelectionUi = new DesignationSelectionUi(true, false,DesignationVm);
+                var designationList = GetAllDesignationData();
+                DesignationSelectionUi designationSelectionUi = new DesignationSelectionUi(true, false, designationList);
                 designationSelectionUi.Show();
             }
             catch (Exception ex)
@@ -196,8 +226,12 @@ namespace ENothi_Desktop.Ui
             {
                 ActiveAgatoDakButton();
                 DakListFlowPanel.Controls.Clear();
-                //GetDakInboxListData();
-                PopulateDakList();
+
+                var designationList = GetAllDesignationData();
+                LoadModulePendingCount(designationList);
+
+                var dakListInbox = GetDakInboxListData();
+                PopulateDakList(dakListInbox);
             }
             catch (Exception ex)
             {
@@ -280,5 +314,7 @@ namespace ENothi_Desktop.Ui
                 new SolidBrush(Color.Black),
                 new Point(e.Bounds.X, e.Bounds.Y));
         }
+
+
     }
 }

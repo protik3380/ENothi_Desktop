@@ -284,7 +284,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         {
             try
             {
-                DakArchiveAlertUi dakArchiveAlertUi = new DakArchiveAlertUi();
+                DakArchiveAlertUi dakArchiveAlertUi = new DakArchiveAlertUi(Records);
                 dakArchiveAlertUi.Show();
             }
             catch (Exception ex)

@@ -76,15 +76,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiUtility\BaseUrl.cs" />
+    <Compile Include="ApiUtility\DakActionApiHelper.cs" />
     <Compile Include="ApiUtility\DakInboxApiHelper.cs" />
     <Compile Include="ApiUtility\HttpClientDemo.cs" />
     <Compile Include="ApiUtility\LoginApiHelper.cs" />
     <Compile Include="ApiUtility\ParameterHelper.cs" />
+    <Compile Include="Dto\RequestDto\DakActionArchiveDto.cs" />
     <Compile Include="Dto\RequestDto\DakAttachmentDto.cs" />
     <Compile Include="Dto\RequestDto\DakInboxDto.cs" />
     <Compile Include="Dto\RequestDto\DakMovementDto.cs" />
     <Compile Include="Dto\RequestDto\ModuleCountDto.cs" />
+    <Compile Include="Interface\IManager\IDakActionManager.cs" />
     <Compile Include="Interface\IManager\IDakInboxManager.cs" />
+    <Compile Include="Manager\DakActionManager.cs" />
     <Compile Include="Manager\DakInboxManager.cs" />
     <Compile Include="Models\DakAttachmentVm.cs" />
     <Compile Include="Models\DakAttachment\DakAttachment.cs" />
@@ -101,6 +105,13 @@
     <Compile Include="Models\DesignationVm.cs" />
     <Compile Include="Models\ModulePendingCount.cs" />
     <Compile Include="Models\MovementStatusVm.cs" />
+    <Compile Include="Models\ReloadHelper.cs" />
+    <Compile Include="Ui\AlertUi\Form_Success.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\AlertUi\Form_Success.Designer.cs">
+      <DependentUpon>Form_Success.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\CustomControl\CircularButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -205,6 +216,9 @@
     <Compile Include="Utilities\EnglishTextFormatter.cs" />
     <Compile Include="Utilities\PriorityLevelGenerator.cs" />
     <Compile Include="Utilities\SecurityLevelGenerator.cs" />
+    <EmbeddedResource Include="Ui\AlertUi\Form_Success.resx">
+      <DependentUpon>Form_Success.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ui\CustomUserControl\ArchiveDakListItem.resx">
       <DependentUpon>ArchiveDakListItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +370,7 @@
     <None Include="Resources\Capture21.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_checkmark_45px.png" />
     <None Include="Resources\icons8_html_20px.png" />
     <None Include="Resources\imageFileAttachment.png" />
     <None Include="Resources\icons8_downloading_updates_25px.png" />

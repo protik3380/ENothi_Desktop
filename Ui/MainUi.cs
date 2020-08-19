@@ -90,6 +90,7 @@ namespace ENothi_Desktop
 
                     if (response != null)
                     {
+                        SetRefreshHelper();
                         DashboardUi dashboardUi = new DashboardUi(response);
                         dashboardUi.Show();
 
@@ -108,6 +109,11 @@ namespace ENothi_Desktop
             {
                 MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void SetRefreshHelper()
+        {
+            ReloadHelper.IsArchive = false;
         }
     }
 }

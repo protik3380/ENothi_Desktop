@@ -55,6 +55,7 @@ namespace ENothi_Desktop.Ui
 
         private void LoadDesignationUserControl()
         {
+            flowLayoutPanel1.Controls.Clear();
             if (_designationList != null)
             {
                 DesignationListItem[] listItems = new DesignationListItem[_designationList.Count];
