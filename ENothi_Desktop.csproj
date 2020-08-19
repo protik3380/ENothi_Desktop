@@ -113,6 +113,12 @@
     <Compile Include="Ui\CustomUserControl\ArchiveDakListItem.Designer.cs">
       <DependentUpon>ArchiveDakListItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\CustomUserControl\DakAttachmentList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\CustomUserControl\DakAttachmentList.Designer.cs">
+      <DependentUpon>DakAttachmentList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\CustomUserControl\DakMovementList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     <Compile Include="Utilities\SecurityLevelGenerator.cs" />
     <EmbeddedResource Include="Ui\CustomUserControl\ArchiveDakListItem.resx">
       <DependentUpon>ArchiveDakListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\CustomUserControl\DakAttachmentList.resx">
+      <DependentUpon>DakAttachmentList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\CustomUserControl\DakMovementList.resx">
       <DependentUpon>DakMovementList.cs</DependentUpon>
@@ -347,6 +356,9 @@
     <None Include="Resources\Capture21.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_html_20px.png" />
+    <None Include="Resources\imageFileAttachment.png" />
+    <None Include="Resources\icons8_downloading_updates_25px.png" />
     <None Include="Resources\icons8_share_25px.png" />
     <None Include="Resources\icons8_insert_20px.png" />
     <None Include="Resources\icons8_attach_25px.png" />
@@ -372,6 +384,7 @@
     <None Include="Resources\certificate.png" />
     <None Include="Resources\building.png" />
     <None Include="Resources\300_15.jpg" />
+    <None Include="Resources\attachmentPdf.png" />
     <Content Include="Resources\ezgif.com-webp-to-png.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

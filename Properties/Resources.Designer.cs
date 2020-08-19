@@ -83,6 +83,16 @@ namespace ENothi_Desktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap attachmentPdf {
+            get {
+                object obj = ResourceManager.GetObject("attachmentPdf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bd {
             get {
                 object obj = ResourceManager.GetObject("bd", resourceCulture);
@@ -343,6 +353,16 @@ namespace ENothi_Desktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_downloading_updates_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_downloading_updates_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_exit_20px {
             get {
                 object obj = ResourceManager.GetObject("icons8_exit_20px", resourceCulture);
@@ -376,6 +396,16 @@ namespace ENothi_Desktop.Properties {
         internal static System.Drawing.Bitmap icons8_help_20px {
             get {
                 object obj = ResourceManager.GetObject("icons8_help_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_html_20px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_html_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -486,6 +516,16 @@ namespace ENothi_Desktop.Properties {
         internal static System.Drawing.Bitmap ict_division_bangladesh {
             get {
                 object obj = ResourceManager.GetObject("ict-division-bangladesh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imageFileAttachment {
+            get {
+                object obj = ResourceManager.GetObject("imageFileAttachment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

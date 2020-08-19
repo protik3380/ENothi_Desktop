@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENothi_Desktop.Models;
+using ENothi_Desktop.Ui.CustomUserControl;
 using ENothi_Desktop.Utilities;
 
 namespace ENothi_Desktop.Ui
@@ -40,16 +41,34 @@ namespace ENothi_Desktop.Ui
         private void LoadRowData()
         {
             totalAttachmentsLabel.Text = @" মোট সংযুক্তি (" + BengaliTextFormatter.ConvertToBengali(_attachmentCount) +@")";
+            if (_attachmentVm.Records != null)
+            {
+                DakAttachmentList[] listItems = new DakAttachmentList[_attachmentVm.Records.Count];
+                for (int i = 0; i < listItems.Length; i++)
+                {
+                    listItems[i] = new DakAttachmentList();
+                    listItems[i].Record = _attachmentVm.Records[i];                    
+                    if (dakAttachmentFlowPanel.Controls.Count < 0)
+                    {
+                        dakAttachmentFlowPanel.Controls.Clear();
+                    }
+                    else
+                    {
+                        dakAttachmentFlowPanel.Controls.Add(listItems[i]);
+
+                    }
+                }
+            }
 
         }
 
         private void ShowDakAttachmentUi_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle,
-                Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // left
-                Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // top
-                Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // right
-                Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid);// bottom
+            //ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle,
+            //    Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // left
+            //    Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // top
+            //    Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid, // right
+            //    Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid);// bottom
         }
 
         protected override void OnLoad(EventArgs e)

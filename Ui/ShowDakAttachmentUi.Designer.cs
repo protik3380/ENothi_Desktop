@@ -32,11 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.totalAttachmentPanel = new System.Windows.Forms.Panel();
             this.totalAttachmentsLabel = new System.Windows.Forms.Label();
+            this.dakAttachmentFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.topPanel.SuspendLayout();
             this.totalAttachmentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,6 +85,14 @@
             this.totalAttachmentsLabel.Size = new System.Drawing.Size(125, 24);
             this.totalAttachmentsLabel.TabIndex = 0;
             this.totalAttachmentsLabel.Text = " মোট সংযুক্তি (৩)";
+            // 
+            // dakAttachmentFlowPanel
+            // 
+            this.dakAttachmentFlowPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dakAttachmentFlowPanel.Location = new System.Drawing.Point(21, 137);
+            this.dakAttachmentFlowPanel.Name = "dakAttachmentFlowPanel";
+            this.dakAttachmentFlowPanel.Size = new System.Drawing.Size(501, 577);
+            this.dakAttachmentFlowPanel.TabIndex = 4;
             // 
             // button2
             // 
@@ -145,21 +153,13 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 134);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(559, 581);
-            this.flowLayoutPanel1.TabIndex = 4;
-            // 
             // ShowDakAttachmentUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(559, 715);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.dakAttachmentFlowPanel);
             this.Controls.Add(this.totalAttachmentPanel);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -185,6 +185,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label totalAttachmentsLabel;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel dakAttachmentFlowPanel;
     }
 }
