@@ -7,18 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENothi_Desktop.Models;
+using ENothi_Desktop.Utilities;
 
 namespace ENothi_Desktop.Ui
 {
     public partial class ShowDakAttachmentUi : Form
     {
+        private readonly DakAttachmentVm _attachmentVm;
+        private readonly string _attachmentCount;
         public ShowDakAttachmentUi()
         {
             InitializeComponent();
         }
-
+        public ShowDakAttachmentUi(DakAttachmentVm attachmentVm,string attachmentCount) :this()
+        {
+            _attachmentVm = attachmentVm;
+            _attachmentCount = attachmentCount;
+        }
         private void ShowDakAttachmentUi_Load(object sender, EventArgs e)
         {
+            try
+            {
+                LoadRowData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void LoadRowData()
+        {
+            totalAttachmentsLabel.Text = @" মোট সংযুক্তি (" + BengaliTextFormatter.ConvertToBengali(_attachmentCount) +@")";
 
         }
 
@@ -64,6 +85,15 @@ namespace ENothi_Desktop.Ui
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void totalAttachmentPanel_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, totalAttachmentPanel.ClientRectangle,
+                Color.White, 1, ButtonBorderStyle.Solid, // left
+                Color.White, 1, ButtonBorderStyle.Solid, // top
+                Color.White, 1, ButtonBorderStyle.Solid, // right
+                Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid);// bottom
         }
     }
 }

@@ -30,8 +30,16 @@
         {
             this.topPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.totalAttachmentPanel = new System.Windows.Forms.Panel();
+            this.totalAttachmentsLabel = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.topPanel.SuspendLayout();
+            this.totalAttachmentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -54,6 +62,75 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "ডাক সংযুক্তিসমূহ";
             // 
+            // totalAttachmentPanel
+            // 
+            this.totalAttachmentPanel.Controls.Add(this.button2);
+            this.totalAttachmentPanel.Controls.Add(this.pictureBox1);
+            this.totalAttachmentPanel.Controls.Add(this.button1);
+            this.totalAttachmentPanel.Controls.Add(this.totalAttachmentsLabel);
+            this.totalAttachmentPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.totalAttachmentPanel.Location = new System.Drawing.Point(0, 61);
+            this.totalAttachmentPanel.Name = "totalAttachmentPanel";
+            this.totalAttachmentPanel.Size = new System.Drawing.Size(559, 73);
+            this.totalAttachmentPanel.TabIndex = 3;
+            this.totalAttachmentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.totalAttachmentPanel_Paint);
+            // 
+            // totalAttachmentsLabel
+            // 
+            this.totalAttachmentsLabel.AutoSize = true;
+            this.totalAttachmentsLabel.Font = new System.Drawing.Font("SolaimanLipi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAttachmentsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(145)))), ((int)(((byte)(156)))));
+            this.totalAttachmentsLabel.Location = new System.Drawing.Point(39, 30);
+            this.totalAttachmentsLabel.Name = "totalAttachmentsLabel";
+            this.totalAttachmentsLabel.Size = new System.Drawing.Size(125, 24);
+            this.totalAttachmentsLabel.TabIndex = 0;
+            this.totalAttachmentsLabel.Text = " মোট সংযুক্তি (৩)";
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
+            this.button2.Image = global::ENothi_Desktop.Properties.Resources.icons8_share_25px;
+            this.button2.Location = new System.Drawing.Point(480, 22);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(41, 32);
+            this.button2.TabIndex = 3;
+            this.button2.Text = " ";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ENothi_Desktop.Properties.Resources.icons8_attach_25px;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
+            this.button1.Image = global::ENothi_Desktop.Properties.Resources.icons8_insert_20px;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(308, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 32);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "সকল সংযুক্তি ডাউনলোড ";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // closeButton
             // 
             this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -68,12 +145,22 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 134);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(559, 581);
+            this.flowLayoutPanel1.TabIndex = 4;
+            // 
             // ShowDakAttachmentUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(559, 715);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.totalAttachmentPanel);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ShowDakAttachmentUi";
@@ -81,6 +168,9 @@
             this.Load += new System.EventHandler(this.ShowDakAttachmentUi_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.ShowDakAttachmentUi_Paint);
             this.topPanel.ResumeLayout(false);
+            this.totalAttachmentPanel.ResumeLayout(false);
+            this.totalAttachmentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -90,5 +180,11 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Panel totalAttachmentPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label totalAttachmentsLabel;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

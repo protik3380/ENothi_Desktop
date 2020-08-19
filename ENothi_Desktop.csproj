@@ -347,6 +347,9 @@
     <None Include="Resources\Capture21.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_share_25px.png" />
+    <None Include="Resources\icons8_insert_20px.png" />
+    <None Include="Resources\icons8_attach_25px.png" />
     <None Include="Resources\icons8_close_window_15px.png" />
     <None Include="Resources\icons8_checkmark_15px.png" />
     <None Include="Resources\icons8_identification_documents_50px.png" />

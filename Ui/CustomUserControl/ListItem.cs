@@ -261,8 +261,8 @@ namespace ENothi_Desktop.Ui.CustomUserControl
                     IsCopiedDak = Records.DakUser.IsCopiedDak
                 };
                 DakAttachmentVm attachmentVm = _dakInboxManager.GetDakAttachmentListByDakId(request);
-                //ShowDakAttachmentUi showDakAttachmentUi = new ShowDakAttachmentUi();
-                //showDakAttachmentUi.ShowDialog();
+                ShowDakAttachmentUi showDakAttachmentUi = new ShowDakAttachmentUi(attachmentVm,Records.AttachmentCount.ToString());
+                showDakAttachmentUi.ShowDialog();
             }
             catch (Exception ex)
             {
