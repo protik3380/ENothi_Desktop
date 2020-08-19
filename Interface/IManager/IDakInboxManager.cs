@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Models;
+using ENothi_Desktop.Models.DakAttachment;
 using ENothi_Desktop.Models.DakInbox;
 
 namespace ENothi_Desktop.Interface.IManager
@@ -15,5 +16,6 @@ namespace ENothi_Desktop.Interface.IManager
         DakInbox GetDakInboxListData(DakInboxDto request);
         MovementStatusVm GetDakMovementStatusByDakId(DakMovementDto request);
         DakInbox GetArchiveDakListData(DakInboxDto request);
+        DakAttachmentVm GetDakAttachmentListByDakId(DakAttachmentDto request);
     }
 }

@@ -7,6 +7,7 @@ using ENothi_Desktop.ApiUtility;
 using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Interface.IManager;
 using ENothi_Desktop.Models;
+using ENothi_Desktop.Models.DakAttachment;
 using ENothi_Desktop.Models.DakInbox;
 
 namespace ENothi_Desktop.Manager
@@ -34,6 +35,12 @@ namespace ENothi_Desktop.Manager
         public DakInbox GetArchiveDakListData(DakInboxDto request)
         {
             var response = DakInboxApiHelper.GetArchiveDakListData(request);
+            return response;
+        }
+
+        public DakAttachmentVm GetDakAttachmentListByDakId(DakAttachmentDto request)
+        {
+            var response = DakInboxApiHelper.GetDakAttachmentListByDakId(request);
             return response;
         }
     }

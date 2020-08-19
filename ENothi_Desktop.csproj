@@ -80,6 +80,7 @@
     <Compile Include="ApiUtility\HttpClientDemo.cs" />
     <Compile Include="ApiUtility\LoginApiHelper.cs" />
     <Compile Include="ApiUtility\ParameterHelper.cs" />
+    <Compile Include="Dto\RequestDto\DakAttachmentDto.cs" />
     <Compile Include="Dto\RequestDto\DakInboxDto.cs" />
     <Compile Include="Dto\RequestDto\DakMovementDto.cs" />
     <Compile Include="Dto\RequestDto\ModuleCountDto.cs" />

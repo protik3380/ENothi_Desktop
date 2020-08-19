@@ -252,8 +252,17 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         {
             try
             {
-                ShowDakAttachmentUi showDakAttachmentUi = new ShowDakAttachmentUi();
-                showDakAttachmentUi.ShowDialog();
+                DakAttachmentDto request = new DakAttachmentDto
+                {
+                    DesignationId = ParameterHelper.DesignationId,
+                    OfficeId = ParameterHelper.OfficeId,
+                    DakId = Records.DakUser.DakId,
+                    DakType = Records.DakUser.DakType,
+                    IsCopiedDak = Records.DakUser.IsCopiedDak
+                };
+                DakAttachmentVm attachmentVm = _dakInboxManager.GetDakAttachmentListByDakId(request);
+                //ShowDakAttachmentUi showDakAttachmentUi = new ShowDakAttachmentUi();
+                //showDakAttachmentUi.ShowDialog();
             }
             catch (Exception ex)
             {

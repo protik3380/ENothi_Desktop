@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Models;
+using ENothi_Desktop.Models.DakAttachment;
 using ENothi_Desktop.Models.DakInbox;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -122,6 +123,30 @@ namespace ENothi_Desktop.ApiUtility
                 }
             }
             return data;
+        }
+
+        public static DakAttachmentVm GetDakAttachmentListByDakId(DakAttachmentDto request)
+        {
+            DakAttachmentVm attachmentVm = new DakAttachmentVm();
+            using (var client = new HttpClientDemo())
+            {
+                client.DefaultRequestHeaders.Add("api-version", "1");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ParameterHelper.Token);
+
+                var postTask = client.PostAsJsonAsync("/api/dak/attachments", request);
+                postTask.Wait();
+                var result = postTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var data = result.Content.ReadAsStringAsync().Result;
+                    JObject responseData = JObject.Parse(data);
+                    var clientArray = responseData["data"].Value<JArray>();
+                    var clients = clientArray.ToObject<List<DakAttachment>>();
+                    attachmentVm.Records = clients;
+                    attachmentVm.Status = (string) responseData["status"];
+                }
+            }
+            return attachmentVm;
         }
     }
 }
