@@ -106,6 +106,7 @@
     <Compile Include="Models\DesignationVm.cs" />
     <Compile Include="Models\ModulePendingCount.cs" />
     <Compile Include="Models\MovementStatusVm.cs" />
+    <Compile Include="Models\Page.cs" />
     <Compile Include="Models\ReloadHelper.cs" />
     <Compile Include="Ui\AlertUi\Form_Success.cs">
       <SubType>Form</SubType>

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardUi));
             this.topPanel = new System.Windows.Forms.Panel();
-            this.profileImage = new ENothi_Desktop.Ui.CustomControl.CircularPictureBox();
             this.profilerButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
@@ -77,8 +76,8 @@
             this.firstCombo = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.DakListFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.profileImage = new ENothi_Desktop.Ui.CustomControl.CircularPictureBox();
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.dakUploadButtonPannel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -86,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.searchPanel.SuspendLayout();
             this.paginationPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -110,19 +110,6 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1346, 49);
             this.topPanel.TabIndex = 0;
-            // 
-            // profileImage
-            // 
-            this.profileImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.profileImage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.profileImage.Image = ((System.Drawing.Image)(resources.GetObject("profileImage.Image")));
-            this.profileImage.Location = new System.Drawing.Point(1304, 5);
-            this.profileImage.Name = "profileImage";
-            this.profileImage.Size = new System.Drawing.Size(35, 35);
-            this.profileImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.profileImage.TabIndex = 1;
-            this.profileImage.TabStop = false;
-            this.profileImage.Click += new System.EventHandler(this.profileImage_Click);
             // 
             // profilerButton
             // 
@@ -711,11 +698,13 @@
             this.nextPageButton.Size = new System.Drawing.Size(35, 41);
             this.nextPageButton.TabIndex = 7;
             this.nextPageButton.UseVisualStyleBackColor = false;
+            this.nextPageButton.Click += new System.EventHandler(this.nextPageButton_Click);
             // 
             // previousPageButton
             // 
             this.previousPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.previousPageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
+            this.previousPageButton.Enabled = false;
             this.previousPageButton.FlatAppearance.BorderSize = 0;
             this.previousPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previousPageButton.Image = ((System.Drawing.Image)(resources.GetObject("previousPageButton.Image")));
@@ -724,6 +713,7 @@
             this.previousPageButton.Size = new System.Drawing.Size(35, 41);
             this.previousPageButton.TabIndex = 6;
             this.previousPageButton.UseVisualStyleBackColor = false;
+            this.previousPageButton.Click += new System.EventHandler(this.previousPageButton_Click);
             // 
             // comboBox4
             // 
@@ -824,6 +814,19 @@
             this.DakListFlowPanel.Size = new System.Drawing.Size(1127, 459);
             this.DakListFlowPanel.TabIndex = 10;
             // 
+            // profileImage
+            // 
+            this.profileImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.profileImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profileImage.Image = ((System.Drawing.Image)(resources.GetObject("profileImage.Image")));
+            this.profileImage.Location = new System.Drawing.Point(1304, 5);
+            this.profileImage.Name = "profileImage";
+            this.profileImage.Size = new System.Drawing.Size(35, 35);
+            this.profileImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profileImage.TabIndex = 1;
+            this.profileImage.TabStop = false;
+            this.profileImage.Click += new System.EventHandler(this.profileImage_Click);
+            // 
             // DashboardUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -843,7 +846,6 @@
             this.Load += new System.EventHandler(this.DashboardUi_Load);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.dakUploadButtonPannel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -853,6 +855,7 @@
             this.searchPanel.ResumeLayout(false);
             this.paginationPanel.ResumeLayout(false);
             this.paginationPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImage)).EndInit();
             this.ResumeLayout(false);
 
         }
