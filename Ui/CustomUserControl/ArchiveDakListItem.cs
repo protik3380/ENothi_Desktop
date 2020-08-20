@@ -7,8 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENothi_Desktop.ApiUtility;
+using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Interface.IManager;
 using ENothi_Desktop.Manager;
+using ENothi_Desktop.Models;
 using ENothi_Desktop.Models.DakInbox;
 using ENothi_Desktop.Utilities;
 
@@ -34,12 +37,26 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             try
             {
                 LoadRowData();
-                //HideDakActionButton();
+                HideArchiveActionButton();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void HideArchiveActionButton()
+        {
+            dakMovementButton.Visible = false;
+            archiveRevertBackButton.Visible = false;
+            dakTagButton.Visible = false;
+        }
+
+        private void ShowArchiveActionButton()
+        {
+            dakMovementButton.Visible = true;
+            archiveRevertBackButton.Visible = true;
+            dakTagButton.Visible = true;
         }
 
         private void LoadRowData()
@@ -165,13 +182,59 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         {
             try
             {
-                ShowDakAttachmentUi showDakAttachmentUi = new ShowDakAttachmentUi();
+                DakAttachmentDto request = new DakAttachmentDto
+                {
+                    DesignationId = ParameterHelper.DesignationId,
+                    OfficeId = ParameterHelper.OfficeId,
+                    DakId = Records.DakUser.DakId,
+                    DakType = Records.DakUser.DakType,
+                    IsCopiedDak = Records.DakUser.IsCopiedDak
+                };
+                DakAttachmentVm attachmentVm = _dakInboxManager.GetDakAttachmentListByDakId(request);
+                ShowDakAttachmentUi showDakAttachmentUi = new ShowDakAttachmentUi(attachmentVm, Records.AttachmentCount.ToString());
                 showDakAttachmentUi.ShowDialog();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void dakMovementButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DakMovementDto request = new DakMovementDto
+                {
+                    DesignationId = ParameterHelper.DesignationId,
+                    OfficeId = ParameterHelper.OfficeId,
+                    DakId = Records.DakUser.DakId,
+                    DakType = Records.DakUser.DakType,
+                    IsCopiedDak = Records.DakUser.IsCopiedDak
+                };
+                MovementStatusVm dakMovementStatus = _dakInboxManager.GetDakMovementStatusByDakId(request);
+                DakMovementShowUi dakMovementShowUi = new DakMovementShowUi(dakMovementStatus);
+                dakMovementShowUi.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ArchiveDakListItem_MouseLeave(object sender, EventArgs e)
+        {
+            HideArchiveActionButton();
+        }
+
+        private void ArchiveDakListItem_MouseEnter(object sender, EventArgs e)
+        {
+            ShowArchiveActionButton();
+        }
+
+        private void dakActionPanel_MouseEnter(object sender, EventArgs e)
+        {
+            ShowArchiveActionButton();
         }
     }
 }

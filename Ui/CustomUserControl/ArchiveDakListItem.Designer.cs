@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.nothiNoLabel = new System.Windows.Forms.LinkLabel();
             this.subjectLabel = new System.Windows.Forms.Label();
             this.utshoName = new System.Windows.Forms.LinkLabel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -36,6 +37,7 @@
             this.PraprokLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.decesionLabel = new System.Windows.Forms.Label();
+            this.nlabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +51,11 @@
             this.priorityLabel = new System.Windows.Forms.Label();
             this.securityLabel = new System.Windows.Forms.Label();
             this.praporkOrOnulipiLabel = new System.Windows.Forms.Label();
+            this.dakActionPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dakTagButton = new System.Windows.Forms.Button();
+            this.archiveRevertBackButton = new System.Windows.Forms.Button();
+            this.dakMovementButton = new System.Windows.Forms.Button();
             this.attachmentButton = new System.Windows.Forms.Button();
             this.dakTypeIcon = new System.Windows.Forms.PictureBox();
             this.upOrSysDakPicBox = new System.Windows.Forms.PictureBox();
@@ -56,25 +63,15 @@
             this.priorityPicBox = new System.Windows.Forms.PictureBox();
             this.securityPicBox = new System.Windows.Forms.PictureBox();
             this.mainSenderPicBox = new System.Windows.Forms.PictureBox();
-            this.dakActionPanel = new System.Windows.Forms.Panel();
-            this.dakTagButton = new System.Windows.Forms.Button();
-            this.archiveButton = new System.Windows.Forms.Button();
-            this.nothiJatButton = new System.Windows.Forms.Button();
-            this.nothiUposthaponButton = new System.Windows.Forms.Button();
-            this.dakSendButton = new System.Windows.Forms.Button();
-            this.dakMovementButton = new System.Windows.Forms.Button();
-            this.nlabel = new System.Windows.Forms.Label();
-            this.nothiNoLabel = new System.Windows.Forms.LinkLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.dakActionPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dakTypeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upOrSysDakPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dakOriginPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priorityPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.securityPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainSenderPicBox)).BeginInit();
-            this.dakActionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -96,6 +93,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(477, 129);
             this.panel3.TabIndex = 6;
+            // 
+            // nothiNoLabel
+            // 
+            this.nothiNoLabel.AutoSize = true;
+            this.nothiNoLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.nothiNoLabel.Location = new System.Drawing.Point(73, 107);
+            this.nothiNoLabel.Name = "nothiNoLabel";
+            this.nothiNoLabel.Size = new System.Drawing.Size(168, 13);
+            this.nothiNoLabel.TabIndex = 6;
+            this.nothiNoLabel.TabStop = true;
+            this.nothiNoLabel.Text = "৫৬.৪২.০০০০.০০৪.৩৫.০১৩.১৮";
+            this.nothiNoLabel.Visible = false;
             // 
             // subjectLabel
             // 
@@ -181,6 +190,18 @@
             this.decesionLabel.Size = new System.Drawing.Size(78, 18);
             this.decesionLabel.TabIndex = 0;
             this.decesionLabel.Text = "নথিজাত করুন";
+            // 
+            // nlabel
+            // 
+            this.nlabel.AutoSize = true;
+            this.nlabel.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nlabel.ForeColor = System.Drawing.Color.Gray;
+            this.nlabel.Location = new System.Drawing.Point(46, 106);
+            this.nlabel.Name = "nlabel";
+            this.nlabel.Size = new System.Drawing.Size(30, 18);
+            this.nlabel.TabIndex = 0;
+            this.nlabel.Text = "নথি:";
+            this.nlabel.Visible = false;
             // 
             // label8
             // 
@@ -339,6 +360,69 @@
             this.praporkOrOnulipiLabel.TabIndex = 1;
             this.praporkOrOnulipiLabel.Text = "মূল প্রাপক";
             // 
+            // dakActionPanel
+            // 
+            this.dakActionPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dakActionPanel.Controls.Add(this.dakTagButton);
+            this.dakActionPanel.Controls.Add(this.archiveRevertBackButton);
+            this.dakActionPanel.Controls.Add(this.dakMovementButton);
+            this.dakActionPanel.Location = new System.Drawing.Point(890, 74);
+            this.dakActionPanel.Name = "dakActionPanel";
+            this.dakActionPanel.Size = new System.Drawing.Size(229, 40);
+            this.dakActionPanel.TabIndex = 13;
+            this.dakActionPanel.MouseEnter += new System.EventHandler(this.dakActionPanel_MouseEnter);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Location = new System.Drawing.Point(3, 132);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1126, 10);
+            this.panel1.TabIndex = 14;
+            // 
+            // dakTagButton
+            // 
+            this.dakTagButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dakTagButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.dakTagButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dakTagButton.FlatAppearance.BorderSize = 0;
+            this.dakTagButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dakTagButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_tags_25px;
+            this.dakTagButton.Location = new System.Drawing.Point(179, 5);
+            this.dakTagButton.Name = "dakTagButton";
+            this.dakTagButton.Size = new System.Drawing.Size(38, 30);
+            this.dakTagButton.TabIndex = 12;
+            this.dakTagButton.UseVisualStyleBackColor = false;
+            // 
+            // archiveRevertBackButton
+            // 
+            this.archiveRevertBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.archiveRevertBackButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.archiveRevertBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.archiveRevertBackButton.FlatAppearance.BorderSize = 0;
+            this.archiveRevertBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.archiveRevertBackButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_undo_25px_1;
+            this.archiveRevertBackButton.Location = new System.Drawing.Point(135, 5);
+            this.archiveRevertBackButton.Name = "archiveRevertBackButton";
+            this.archiveRevertBackButton.Size = new System.Drawing.Size(38, 30);
+            this.archiveRevertBackButton.TabIndex = 13;
+            this.archiveRevertBackButton.UseVisualStyleBackColor = false;
+            // 
+            // dakMovementButton
+            // 
+            this.dakMovementButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dakMovementButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.dakMovementButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dakMovementButton.FlatAppearance.BorderSize = 0;
+            this.dakMovementButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dakMovementButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_data_transfer_25px;
+            this.dakMovementButton.Location = new System.Drawing.Point(90, 5);
+            this.dakMovementButton.Name = "dakMovementButton";
+            this.dakMovementButton.Size = new System.Drawing.Size(38, 30);
+            this.dakMovementButton.TabIndex = 17;
+            this.dakMovementButton.UseVisualStyleBackColor = false;
+            this.dakMovementButton.Click += new System.EventHandler(this.dakMovementButton_Click);
+            // 
             // attachmentButton
             // 
             this.attachmentButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -412,136 +496,6 @@
             this.mainSenderPicBox.TabIndex = 0;
             this.mainSenderPicBox.TabStop = false;
             // 
-            // dakActionPanel
-            // 
-            this.dakActionPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dakActionPanel.Controls.Add(this.dakTagButton);
-            this.dakActionPanel.Controls.Add(this.archiveButton);
-            this.dakActionPanel.Controls.Add(this.nothiJatButton);
-            this.dakActionPanel.Controls.Add(this.nothiUposthaponButton);
-            this.dakActionPanel.Controls.Add(this.dakSendButton);
-            this.dakActionPanel.Controls.Add(this.dakMovementButton);
-            this.dakActionPanel.Location = new System.Drawing.Point(814, 74);
-            this.dakActionPanel.Name = "dakActionPanel";
-            this.dakActionPanel.Size = new System.Drawing.Size(305, 40);
-            this.dakActionPanel.TabIndex = 13;
-            // 
-            // dakTagButton
-            // 
-            this.dakTagButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dakTagButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.dakTagButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dakTagButton.FlatAppearance.BorderSize = 0;
-            this.dakTagButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dakTagButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_tags_25px;
-            this.dakTagButton.Location = new System.Drawing.Point(255, 5);
-            this.dakTagButton.Name = "dakTagButton";
-            this.dakTagButton.Size = new System.Drawing.Size(38, 30);
-            this.dakTagButton.TabIndex = 12;
-            this.dakTagButton.UseVisualStyleBackColor = false;
-            // 
-            // archiveButton
-            // 
-            this.archiveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.archiveButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.archiveButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.archiveButton.FlatAppearance.BorderSize = 0;
-            this.archiveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.archiveButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_archive_folder_25px;
-            this.archiveButton.Location = new System.Drawing.Point(211, 5);
-            this.archiveButton.Name = "archiveButton";
-            this.archiveButton.Size = new System.Drawing.Size(38, 30);
-            this.archiveButton.TabIndex = 13;
-            this.archiveButton.UseVisualStyleBackColor = false;
-            // 
-            // nothiJatButton
-            // 
-            this.nothiJatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.nothiJatButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.nothiJatButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nothiJatButton.FlatAppearance.BorderSize = 0;
-            this.nothiJatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nothiJatButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_folder_25px;
-            this.nothiJatButton.Location = new System.Drawing.Point(167, 5);
-            this.nothiJatButton.Name = "nothiJatButton";
-            this.nothiJatButton.Size = new System.Drawing.Size(38, 30);
-            this.nothiJatButton.TabIndex = 14;
-            this.nothiJatButton.UseVisualStyleBackColor = false;
-            // 
-            // nothiUposthaponButton
-            // 
-            this.nothiUposthaponButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.nothiUposthaponButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.nothiUposthaponButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nothiUposthaponButton.FlatAppearance.BorderSize = 0;
-            this.nothiUposthaponButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nothiUposthaponButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_opened_folder_25px;
-            this.nothiUposthaponButton.Location = new System.Drawing.Point(123, 5);
-            this.nothiUposthaponButton.Name = "nothiUposthaponButton";
-            this.nothiUposthaponButton.Size = new System.Drawing.Size(38, 30);
-            this.nothiUposthaponButton.TabIndex = 15;
-            this.nothiUposthaponButton.UseVisualStyleBackColor = false;
-            // 
-            // dakSendButton
-            // 
-            this.dakSendButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dakSendButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.dakSendButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dakSendButton.FlatAppearance.BorderSize = 0;
-            this.dakSendButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dakSendButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_forward_arrow_25px;
-            this.dakSendButton.Location = new System.Drawing.Point(79, 5);
-            this.dakSendButton.Name = "dakSendButton";
-            this.dakSendButton.Size = new System.Drawing.Size(38, 30);
-            this.dakSendButton.TabIndex = 16;
-            this.dakSendButton.UseVisualStyleBackColor = false;
-            // 
-            // dakMovementButton
-            // 
-            this.dakMovementButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dakMovementButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.dakMovementButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dakMovementButton.FlatAppearance.BorderSize = 0;
-            this.dakMovementButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dakMovementButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_data_transfer_25px;
-            this.dakMovementButton.Location = new System.Drawing.Point(35, 5);
-            this.dakMovementButton.Name = "dakMovementButton";
-            this.dakMovementButton.Size = new System.Drawing.Size(38, 30);
-            this.dakMovementButton.TabIndex = 17;
-            this.dakMovementButton.UseVisualStyleBackColor = false;
-            // 
-            // nlabel
-            // 
-            this.nlabel.AutoSize = true;
-            this.nlabel.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nlabel.ForeColor = System.Drawing.Color.Gray;
-            this.nlabel.Location = new System.Drawing.Point(46, 106);
-            this.nlabel.Name = "nlabel";
-            this.nlabel.Size = new System.Drawing.Size(30, 18);
-            this.nlabel.TabIndex = 0;
-            this.nlabel.Text = "নথি:";
-            this.nlabel.Visible = false;
-            // 
-            // nothiNoLabel
-            // 
-            this.nothiNoLabel.AutoSize = true;
-            this.nothiNoLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.nothiNoLabel.Location = new System.Drawing.Point(73, 107);
-            this.nothiNoLabel.Name = "nothiNoLabel";
-            this.nothiNoLabel.Size = new System.Drawing.Size(168, 13);
-            this.nothiNoLabel.TabIndex = 6;
-            this.nothiNoLabel.TabStop = true;
-            this.nothiNoLabel.Text = "৫৬.৪২.০০০০.০০৪.৩৫.০১৩.১৮";
-            this.nothiNoLabel.Visible = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(3, 132);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1126, 10);
-            this.panel1.TabIndex = 14;
-            // 
             // ArchiveDakListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,17 +508,19 @@
             this.Name = "ArchiveDakListItem";
             this.Size = new System.Drawing.Size(1121, 134);
             this.Load += new System.EventHandler(this.ArchiveDakListItem_Load);
+            this.MouseEnter += new System.EventHandler(this.ArchiveDakListItem_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ArchiveDakListItem_MouseLeave);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.dakActionPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dakTypeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upOrSysDakPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dakOriginPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.priorityPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.securityPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainSenderPicBox)).EndInit();
-            this.dakActionPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -603,10 +559,7 @@
         private System.Windows.Forms.Label nlabel;
         private System.Windows.Forms.Panel dakActionPanel;
         private System.Windows.Forms.Button dakTagButton;
-        private System.Windows.Forms.Button archiveButton;
-        private System.Windows.Forms.Button nothiJatButton;
-        private System.Windows.Forms.Button nothiUposthaponButton;
-        private System.Windows.Forms.Button dakSendButton;
+        private System.Windows.Forms.Button archiveRevertBackButton;
         private System.Windows.Forms.Button dakMovementButton;
         private System.Windows.Forms.Panel panel1;
     }

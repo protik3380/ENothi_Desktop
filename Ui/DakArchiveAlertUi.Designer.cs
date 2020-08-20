@@ -75,7 +75,7 @@
             this.noButton.FlatAppearance.BorderSize = 0;
             this.noButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.noButton.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_close_window_15px;
+          //  this.noButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_close_window_15px;
             this.noButton.Location = new System.Drawing.Point(143, 11);
             this.noButton.Name = "noButton";
             this.noButton.Size = new System.Drawing.Size(75, 39);

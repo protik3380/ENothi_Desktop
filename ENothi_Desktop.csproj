@@ -370,6 +370,8 @@
     <None Include="Resources\Capture21.PNG" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_undo_25px_1.png" />
+    <None Include="Resources\icons8_undo_25px1.png" />
     <None Include="Resources\icons8_checkmark_45px.png" />
     <None Include="Resources\icons8_html_20px.png" />
     <None Include="Resources\imageFileAttachment.png" />
