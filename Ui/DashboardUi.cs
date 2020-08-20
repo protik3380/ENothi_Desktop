@@ -36,7 +36,7 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
-
+                ActiveAgatoDakButton();
                 firstCombo.SelectedIndex = 0;
                 comboBox2.SelectedIndex = 0;
                 comboBox3.SelectedIndex = 0;
@@ -60,6 +60,7 @@ namespace ENothi_Desktop.Ui
             {
                 if (ReloadHelper.IsReloadRequired)
                 {
+                    ActiveAgatoDakButton();
                     DakListFlowPanel.Controls.Clear();
                     var designationList=GetAllDesignationData();
                     LoadModulePendingCount(designationList);

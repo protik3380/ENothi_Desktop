@@ -99,6 +99,7 @@
             this.yesButton.Text = "হ্যা";
             this.yesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.yesButton.UseVisualStyleBackColor = false;
+            this.yesButton.Click += new System.EventHandler(this.yesButton_Click);
             // 
             // DakArchiveRevertAlertUi
             // 

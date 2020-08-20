@@ -34,5 +34,32 @@ namespace ENothi_Desktop.ApiUtility
             }
             return isArchive;
         }
+
+        public static bool DakArchiveRevert(DakArchiveRevertDto request)
+        {
+            
+            bool isArchiveRevert = false;
+            using (var client = new HttpClientDemo())
+            {
+                client.DefaultRequestHeaders.Add("api-version", "1");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ParameterHelper.Token);
+
+                var postTask = client.PostAsJsonAsync("/api/dak/revert/archive", request);
+                postTask.Wait();
+                var result = postTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var data = result.Content.ReadAsStringAsync().Result;
+                    JObject responseData = JObject.Parse(data);
+                                   
+                    string status = (string) responseData["status"];
+                    if (status== "success")
+                    {
+                        isArchiveRevert = true;
+                    }                
+                }
+            }
+            return isArchiveRevert;
+        }
     }
 }

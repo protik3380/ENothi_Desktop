@@ -10,5 +10,6 @@ namespace ENothi_Desktop.Interface.IManager
      public interface IDakActionManager
      {
          bool DakArchive(DakActionArchiveDto request);
+         bool DakArchiveRevert(DakArchiveRevertDto request);
      }
 }

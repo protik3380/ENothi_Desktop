@@ -7,9 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENothi_Desktop.ApiUtility;
+using ENothi_Desktop.Dto.RequestDto;
 using ENothi_Desktop.Interface.IManager;
 using ENothi_Desktop.Manager;
+using ENothi_Desktop.Models;
 using ENothi_Desktop.Models.DakInbox;
+using ENothi_Desktop.Ui.AlertUi;
 
 namespace ENothi_Desktop.Ui
 {
@@ -58,6 +62,34 @@ namespace ENothi_Desktop.Ui
         private void DakArchiveRevertAlertUi_Deactivate(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void yesButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DakArchiveRevertDto requestDto = new DakArchiveRevertDto
+                {
+                    DesignationId = ParameterHelper.DesignationId,
+                    OfficeId = ParameterHelper.OfficeId,
+                    DakId = _dakInboxRecord.DakUser.DakId,
+                    DakType = _dakInboxRecord.DakUser.DakType,
+                    IsCopiedDak = _dakInboxRecord.DakUser.IsCopiedDak
+                };
+                bool response = _dakActionManager.DakArchiveRevert(requestDto);
+                if (response)
+                {
+                    ReloadHelper.IsReloadRequired = true;
+                    this.Hide();
+                    Form_Success frm = new Form_Success(@"Dak reverted from archive successfully");
+                    frm.Show();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

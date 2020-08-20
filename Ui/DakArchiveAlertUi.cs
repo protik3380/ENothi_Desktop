@@ -80,7 +80,7 @@ namespace ENothi_Desktop.Ui
                 bool response = _dakActionManager.DakArchive(requestDto);
                 if (response)
                 {                  
-                    ReloadHelper.IsArchive = true;
+                    ReloadHelper.IsReloadRequired = true;
                     this.Hide();
                     Form_Success frm = new Form_Success(@"ডাকটি সফলভাবে আর্কাইভ করা হয়েছে");
                     frm.Show();

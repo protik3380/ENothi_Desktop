@@ -82,6 +82,7 @@
     <Compile Include="ApiUtility\LoginApiHelper.cs" />
     <Compile Include="ApiUtility\ParameterHelper.cs" />
     <Compile Include="Dto\RequestDto\DakActionArchiveDto.cs" />
+    <Compile Include="Dto\RequestDto\DakArchiveRevertDto.cs" />
     <Compile Include="Dto\RequestDto\DakAttachmentDto.cs" />
     <Compile Include="Dto\RequestDto\DakInboxDto.cs" />
     <Compile Include="Dto\RequestDto\DakMovementDto.cs" />

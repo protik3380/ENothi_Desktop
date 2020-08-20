@@ -16,5 +16,11 @@ namespace ENothi_Desktop.Manager
             var response= DakActionApiHelper.DakArchive(request);
             return response;
         }
+
+        public bool DakArchiveRevert(DakArchiveRevertDto request)
+        {
+            var response = DakActionApiHelper.DakArchiveRevert(request);
+            return response;
+        }
     }
 }
