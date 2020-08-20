@@ -20,11 +20,13 @@ namespace ENothi_Desktop.Ui
         private readonly LoginResponse _loginResponse;
         private DakInbox _dakInbox;
         public List<DesignationVm> DesignationVm;
+        public WaitFormFunc WaitForm;
         public DashboardUi()
         {
             InitializeComponent();
             _dakInboxManager = new DakInboxManager();
             DesignationVm = new List<DesignationVm>();
+            WaitForm = new WaitFormFunc();
         }
 
         public DashboardUi(LoginResponse loginResponse) : this()
@@ -42,12 +44,14 @@ namespace ENothi_Desktop.Ui
                 comboBox3.SelectedIndex = 0;
                 comboBox4.SelectedIndex = 0;
                 dakUploadButtonPannel.Height = dakUploadButton.Height;
+                WaitForm.Show(this);
                 SetParameterHelper();
-                DesignationVm=GetAllDesignationData();
+                DesignationVm = GetAllDesignationData();
                 LoadModulePendingCount(DesignationVm);
                 LoadProfileName();
-                _dakInbox=GetDakInboxListData();
+                _dakInbox = GetDakInboxListData();
                 PopulateDakList(_dakInbox);
+                WaitForm.Close();
             }
             catch (Exception ex)
             {
@@ -60,15 +64,17 @@ namespace ENothi_Desktop.Ui
             {
                 if (ReloadHelper.IsReloadRequired)
                 {
+                    WaitForm.Show(this);
                     ActiveAgatoDakButton();
                     DakListFlowPanel.Controls.Clear();
-                    var designationList=GetAllDesignationData();
+                    var designationList = GetAllDesignationData();
                     LoadModulePendingCount(designationList);
                     //LoadProfileName();
                     var dakListData = GetDakInboxListData();
                     PopulateDakList(dakListData);
                     ResetReloadHelper();
-                }              
+                    WaitForm.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -127,11 +133,11 @@ namespace ENothi_Desktop.Ui
             request.PageNo = 1;
             request.Limit = 20;
             var response = _dakInboxManager.GetDakInboxListData(request);
-            return response; 
+            return response;
         }
         private void PopulateDakList(DakInbox dakInbox)
         {
-            if (dakInbox.Data!=null)
+            if (dakInbox.Data != null)
             {
                 ListItem[] listItems = new ListItem[dakInbox.Data.Records.Count];
                 for (int i = 0; i < listItems.Length; i++)
@@ -149,7 +155,7 @@ namespace ENothi_Desktop.Ui
 
                     }
                 }
-            }            
+            }
         }
 
         private void LoadProfileName()
@@ -159,7 +165,7 @@ namespace ENothi_Desktop.Ui
                                       _loginResponse.Data.OfficeInfo.FirstOrDefault().UnitNameBn + " )";
             profilerButton.Text = nameWithDesignation;
         }
-        private void LoadModulePendingCount(List<DesignationVm>designationList)
+        private void LoadModulePendingCount(List<DesignationVm> designationList)
         {
 
             dakCounterLabel.Text = BengaliTextFormatter.ConvertToBengali(designationList.FirstOrDefault().DesignationWiseDakNo.ToString());
@@ -194,19 +200,6 @@ namespace ENothi_Desktop.Ui
                 Color.FromArgb(220, 220, 220), 1, ButtonBorderStyle.Solid);// bottom
         }
 
-        private void profilerButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //DesignationSelectionUi designationSelectionUi = new DesignationSelectionUi(false,true);
-                //designationSelectionUi.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void profileImage_Click(object sender, EventArgs e)
         {
             try
@@ -225,6 +218,7 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
+                 WaitForm.Show(this);
                 ActiveAgatoDakButton();
                 DakListFlowPanel.Controls.Clear();
 
@@ -233,6 +227,7 @@ namespace ENothi_Desktop.Ui
 
                 var dakListInbox = GetDakInboxListData();
                 PopulateDakList(dakListInbox);
+                WaitForm.Close();
             }
             catch (Exception ex)
             {
@@ -244,6 +239,7 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
+                WaitForm.Show(this);
                 ActiveArchiveDakButton();
                 DakListFlowPanel.Controls.Clear();
 
@@ -254,6 +250,7 @@ namespace ENothi_Desktop.Ui
                 request.Limit = 20;
                 var archiveDakListData = _dakInboxManager.GetArchiveDakListData(request);
                 PopulateArchiveDakListData(archiveDakListData);
+                WaitForm.Close();
             }
             catch (Exception ex)
             {
@@ -293,7 +290,7 @@ namespace ENothi_Desktop.Ui
 
         private void ActiveAgatoDakButton()
         {
-            agatoDakViewSidePanelButton.ForeColor = Color.FromArgb(113, 182, 253); 
+            agatoDakViewSidePanelButton.ForeColor = Color.FromArgb(113, 182, 253);
             archiveDakViewSidePanelButton.ForeColor = DefaultForeColor;
             bachaikritoDakViewSidePanelButton.ForeColor = DefaultForeColor;
         }
@@ -315,7 +312,5 @@ namespace ENothi_Desktop.Ui
                 new SolidBrush(Color.Black),
                 new Point(e.Bounds.X, e.Bounds.Y));
         }
-
-
     }
 }

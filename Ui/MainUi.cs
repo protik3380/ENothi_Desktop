@@ -93,6 +93,7 @@ namespace ENothi_Desktop
                         SetRefreshHelper();
                         DashboardUi dashboardUi = new DashboardUi(response);
                         dashboardUi.Show();
+                        ResetTextFieldForUserIdTab();
 
                     }
                     else
@@ -114,6 +115,12 @@ namespace ENothi_Desktop
         private void SetRefreshHelper()
         {
             ReloadHelper.IsReloadRequired = false;
+        }
+
+        private void ResetTextFieldForUserIdTab()
+        {
+            userIdTextBox.Text=String.Empty;
+            passwordUserIdTextBox.Text=String.Empty;
         }
     }
 }

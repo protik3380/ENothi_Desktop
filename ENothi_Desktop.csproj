@@ -213,6 +213,12 @@
     <Compile Include="Ui\LoginUi.Designer.cs">
       <DependentUpon>LoginUi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\Preloader\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Preloader\WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\ShowDakAttachmentUi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,7 @@
     <Compile Include="Utilities\EnglishTextFormatter.cs" />
     <Compile Include="Utilities\PriorityLevelGenerator.cs" />
     <Compile Include="Utilities\SecurityLevelGenerator.cs" />
+    <Compile Include="Utilities\WaitFormFunc.cs" />
     <EmbeddedResource Include="Ui\AlertUi\Form_Success.resx">
       <DependentUpon>Form_Success.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\LoginUi.resx">
       <DependentUpon>LoginUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\Preloader\WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\ShowDakAttachmentUi.resx">
       <DependentUpon>ShowDakAttachmentUi.cs</DependentUpon>
@@ -412,6 +422,8 @@
     <None Include="Resources\building.png" />
     <None Include="Resources\300_15.jpg" />
     <None Include="Resources\attachmentPdf.png" />
+    <None Include="Resources\6.gif" />
+    <None Include="Resources\126.gif" />
     <Content Include="Resources\ezgif.com-webp-to-png.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -141,7 +141,6 @@
             this.profilerButton.Text = "মোঃ হাসানুজ্জামান (সল্যুশন আর্কিটেক্ট, টেকনোলজি )\r\n";
             this.profilerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.profilerButton.UseVisualStyleBackColor = false;
-            this.profilerButton.Click += new System.EventHandler(this.profilerButton_Click);
             // 
             // label7
             // 
