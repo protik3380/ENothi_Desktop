@@ -68,9 +68,9 @@
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.paginationPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.pagingLabel = new System.Windows.Forms.Label();
+            this.nextPageButton = new System.Windows.Forms.Button();
+            this.previousPageButton = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -131,7 +131,7 @@
             this.profilerButton.Enabled = false;
             this.profilerButton.FlatAppearance.BorderSize = 0;
             this.profilerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profilerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profilerButton.Font = new System.Drawing.Font("SolaimanLipi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profilerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
             this.profilerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.profilerButton.Location = new System.Drawing.Point(941, 3);
@@ -673,9 +673,9 @@
             // 
             // paginationPanel
             // 
-            this.paginationPanel.Controls.Add(this.label2);
-            this.paginationPanel.Controls.Add(this.button6);
-            this.paginationPanel.Controls.Add(this.button7);
+            this.paginationPanel.Controls.Add(this.pagingLabel);
+            this.paginationPanel.Controls.Add(this.nextPageButton);
+            this.paginationPanel.Controls.Add(this.previousPageButton);
             this.paginationPanel.Controls.Add(this.comboBox4);
             this.paginationPanel.Controls.Add(this.comboBox3);
             this.paginationPanel.Controls.Add(this.comboBox2);
@@ -688,41 +688,42 @@
             this.paginationPanel.TabIndex = 9;
             this.paginationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.paginationPanel_Paint);
             // 
-            // label2
+            // pagingLabel
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(949, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "১ - ১০ সর্বমোট: ১৮";
+            this.pagingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pagingLabel.AutoSize = true;
+            this.pagingLabel.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pagingLabel.Location = new System.Drawing.Point(949, 12);
+            this.pagingLabel.Name = "pagingLabel";
+            this.pagingLabel.Size = new System.Drawing.Size(95, 18);
+            this.pagingLabel.TabIndex = 4;
+            this.pagingLabel.Text = "০ - ০ সর্বমোট: ০";
             // 
-            // button6
+            // nextPageButton
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(1090, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(35, 41);
-            this.button6.TabIndex = 7;
-            this.button6.UseVisualStyleBackColor = false;
+            this.nextPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nextPageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
+            this.nextPageButton.FlatAppearance.BorderSize = 0;
+            this.nextPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextPageButton.Image = ((System.Drawing.Image)(resources.GetObject("nextPageButton.Image")));
+            this.nextPageButton.Location = new System.Drawing.Point(1090, 0);
+            this.nextPageButton.Name = "nextPageButton";
+            this.nextPageButton.Size = new System.Drawing.Size(35, 41);
+            this.nextPageButton.TabIndex = 7;
+            this.nextPageButton.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // previousPageButton
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(1054, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(35, 41);
-            this.button7.TabIndex = 6;
-            this.button7.UseVisualStyleBackColor = false;
+            this.previousPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.previousPageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
+            this.previousPageButton.FlatAppearance.BorderSize = 0;
+            this.previousPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.previousPageButton.Image = ((System.Drawing.Image)(resources.GetObject("previousPageButton.Image")));
+            this.previousPageButton.Location = new System.Drawing.Point(1054, 0);
+            this.previousPageButton.Name = "previousPageButton";
+            this.previousPageButton.Size = new System.Drawing.Size(35, 41);
+            this.previousPageButton.TabIndex = 6;
+            this.previousPageButton.UseVisualStyleBackColor = false;
             // 
             // comboBox4
             // 
@@ -895,9 +896,9 @@
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel paginationPanel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label pagingLabel;
+        private System.Windows.Forms.Button nextPageButton;
+        private System.Windows.Forms.Button previousPageButton;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
