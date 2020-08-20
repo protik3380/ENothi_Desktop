@@ -160,6 +160,12 @@
     <Compile Include="Ui\DakArchiveAlertUi.Designer.cs">
       <DependentUpon>DakArchiveAlertUi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\DakArchiveRevertAlertUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\DakArchiveRevertAlertUi.Designer.cs">
+      <DependentUpon>DakArchiveRevertAlertUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\DakMovementShowUi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\DakArchiveAlertUi.resx">
       <DependentUpon>DakArchiveAlertUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\DakArchiveRevertAlertUi.resx">
+      <DependentUpon>DakArchiveRevertAlertUi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\DakMovementShowUi.resx">
       <DependentUpon>DakMovementShowUi.cs</DependentUpon>

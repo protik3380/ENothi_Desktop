@@ -236,5 +236,18 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         {
             ShowArchiveActionButton();
         }
+
+        private void archiveRevertBackButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DakArchiveRevertAlertUi dakArchiveRevertAlertUi = new DakArchiveRevertAlertUi(Records);
+                dakArchiveRevertAlertUi.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
