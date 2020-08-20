@@ -113,7 +113,7 @@ namespace ENothi_Desktop
 
         private void SetRefreshHelper()
         {
-            ReloadHelper.IsArchive = false;
+            ReloadHelper.IsReloadRequired = false;
         }
     }
 }

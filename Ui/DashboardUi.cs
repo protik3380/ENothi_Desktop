@@ -58,7 +58,7 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
-                if (ReloadHelper.IsArchive)
+                if (ReloadHelper.IsReloadRequired)
                 {
                     DakListFlowPanel.Controls.Clear();
                     var designationList=GetAllDesignationData();
@@ -77,7 +77,7 @@ namespace ENothi_Desktop.Ui
 
         private void ResetReloadHelper()
         {
-            ReloadHelper.IsArchive = false;
+            ReloadHelper.IsReloadRequired = false;
         }
 
         private List<DesignationVm> GetAllDesignationData()

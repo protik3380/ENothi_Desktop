@@ -8,6 +8,6 @@ namespace ENothi_Desktop.Models
 {
     public static class ReloadHelper
     {
-        public static bool IsArchive { get; set; }
+        public static bool IsReloadRequired { get; set; }
     }
 }
