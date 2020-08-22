@@ -40,17 +40,18 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             LoadDakPriorityLabelAndIcon();
             LoadDakSecurityLabelAndIcon();
             LoadPrerokDesignationInfoLabel();
+            LoadMulPrapokNameAndDesignationInfo();
             if (Records.Other.OperationType== "Forward")
             {
-                LoadMulPrapokNameAndDesignationInfo();
+                //LoadMulPrapokNameAndDesignationInfo();
                 LoadOnulipiPrapokListAndDesignationInfo();
             }
             else
             {
                 mulPrapokNameLabel.Visible = false;
                 mulPrapokDesignationInfoLabel.Visible = false;
-                contentPanel.Height = 167;
-                this.Height = 215;
+                contentPanel.Height = 218;
+                this.Height = 295;
             }
            
             prerokNameLabel.Text = Records.From.Officer;
@@ -95,8 +96,8 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             else
             {
                 onulipiPrapokLabelInfo.Visible = false;
-                contentPanel.Height = 167;
-                this.Height = 215;
+                contentPanel.Height = 218;
+                this.Height = 295;
             }
         }
 
