@@ -60,6 +60,7 @@ namespace ENothi_Desktop.Ui
                 Page.ToIndex = _dakInbox.Data.Records.Count();
                 Page.TotalRecords = _dakInbox.Data.TotalRecords;
                 SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
+                EnableDisableNextPreButton();
                 PopulateDakList(_dakInbox);
                 WaitForm.Close();
             }
@@ -67,6 +68,12 @@ namespace ENothi_Desktop.Ui
             {
                 MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void EnableDisableNextPreButton()
+        {
+            previousPageButton.Enabled = Page.CurrentPage != 1;
+            nextPageButton.Enabled = Page.CurrentPage != Page.PageCount;
         }
 
         private void SetPageLabel(decimal pageFromIndex, decimal pageToIndex, decimal pageTotalRecords)
@@ -100,6 +107,7 @@ namespace ENothi_Desktop.Ui
                     Page.ToIndex = dakListData.Data.Records.Count();
                     Page.TotalRecords = dakListData.Data.TotalRecords;
                     SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
+                    EnableDisableNextPreButton();
                     PopulateDakList(dakListData);
                     ResetReloadHelper();
                     WaitForm.Close();
@@ -258,6 +266,7 @@ namespace ENothi_Desktop.Ui
                 Page.ToIndex = dakListInbox.Data.Records.Count();
                 Page.TotalRecords = dakListInbox.Data.TotalRecords;
                 SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
+                EnableDisableNextPreButton();
                 PopulateDakList(dakListInbox);
                 WaitForm.Close();
             }
@@ -279,6 +288,7 @@ namespace ENothi_Desktop.Ui
                 Page.ToIndex = archiveDakListData.Data.Records.Count();
                 Page.TotalRecords = archiveDakListData.Data.TotalRecords;
                 SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
+                EnableDisableNextPreButton();
                 PopulateArchiveDakListData(archiveDakListData);
                 WaitForm.Close();
             }
