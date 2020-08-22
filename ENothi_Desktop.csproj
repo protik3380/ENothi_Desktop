@@ -77,6 +77,7 @@
   <ItemGroup>
     <Compile Include="ApiUtility\BaseUrl.cs" />
     <Compile Include="ApiUtility\DakActionApiHelper.cs" />
+    <Compile Include="ApiUtility\DakDetailsApiHelper.cs" />
     <Compile Include="ApiUtility\DakInboxApiHelper.cs" />
     <Compile Include="ApiUtility\HttpClientDemo.cs" />
     <Compile Include="ApiUtility\LoginApiHelper.cs" />
@@ -84,12 +85,15 @@
     <Compile Include="Dto\RequestDto\DakActionArchiveDto.cs" />
     <Compile Include="Dto\RequestDto\DakArchiveRevertDto.cs" />
     <Compile Include="Dto\RequestDto\DakAttachmentDto.cs" />
+    <Compile Include="Dto\RequestDto\DakDetailsDto.cs" />
     <Compile Include="Dto\RequestDto\DakInboxDto.cs" />
     <Compile Include="Dto\RequestDto\DakMovementDto.cs" />
     <Compile Include="Dto\RequestDto\ModuleCountDto.cs" />
     <Compile Include="Interface\IManager\IDakActionManager.cs" />
+    <Compile Include="Interface\IManager\IDakDetailsManager.cs" />
     <Compile Include="Interface\IManager\IDakInboxManager.cs" />
     <Compile Include="Manager\DakActionManager.cs" />
+    <Compile Include="Manager\DakDetailsManager.cs" />
     <Compile Include="Manager\DakInboxManager.cs" />
     <Compile Include="Models\DakAttachmentVm.cs" />
     <Compile Include="Models\DakAttachment\DakAttachment.cs" />

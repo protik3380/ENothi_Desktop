@@ -26,10 +26,12 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         [Category("Custom Props")]
         public DakInboxRecord Records { get; set; }
         private readonly IDakInboxManager _dakInboxManager;
+        private readonly IDakDetailsManager _dakDetailsManager;
         public ListItem()
         {
             InitializeComponent();
             _dakInboxManager = new DakInboxManager();
+            _dakDetailsManager = new DakDetailsManager();
         }
         private void ListItem_Load(object sender, EventArgs e)
         {
@@ -293,6 +295,18 @@ namespace ENothi_Desktop.Ui.CustomUserControl
         {
             try
             {
+
+                DakDetailsDto request = new DakDetailsDto
+                {
+                    DesignationId = ParameterHelper.DesignationId,
+                    OfficeId = ParameterHelper.OfficeId,
+                    DakId = Records.DakUser.DakId,
+                    DakType = Records.DakUser.DakType,
+                    IsCopiedDak = Records.DakUser.IsCopiedDak
+                };
+                var response = _dakDetailsManager.GetDakDetails(request);
+
+
                 DashboardUi.Instance.ContentLayoutPanel.Controls.Clear();
                 if (!DashboardUi.Instance.ContentLayoutPanel.Controls.ContainsKey("DakDetails"))
                 {
