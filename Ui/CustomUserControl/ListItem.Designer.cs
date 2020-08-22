@@ -40,7 +40,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.attachmentButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimeLabel = new System.Windows.Forms.Label();
             this.newLabel = new System.Windows.Forms.Label();
             this.nagorikOrdaptorikLabel = new System.Windows.Forms.Label();
             this.dakTypeIcon = new System.Windows.Forms.PictureBox();
@@ -187,7 +187,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.attachmentButton);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.dateTimeLabel);
             this.panel2.Controls.Add(this.newLabel);
             this.panel2.Controls.Add(this.nagorikOrdaptorikLabel);
             this.panel2.Controls.Add(this.dakTypeIcon);
@@ -216,7 +216,7 @@
             this.attachmentButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(78)))), ((int)(((byte)(96)))));
             this.attachmentButton.Image = global::ENothi_Desktop.Properties.Resources.icons8_attach_15px;
             this.attachmentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.attachmentButton.Location = new System.Drawing.Point(448, 35);
+            this.attachmentButton.Location = new System.Drawing.Point(438, 35);
             this.attachmentButton.Name = "attachmentButton";
             this.attachmentButton.Size = new System.Drawing.Size(56, 26);
             this.attachmentButton.TabIndex = 15;
@@ -225,14 +225,14 @@
             this.attachmentButton.UseVisualStyleBackColor = false;
             this.attachmentButton.Click += new System.EventHandler(this.attachmentButton_Click);
             // 
-            // label4
+            // dateTimeLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(506, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "০১-০১-১৯৭০ ০৬:০০:০০";
+            this.dateTimeLabel.AutoSize = true;
+            this.dateTimeLabel.Location = new System.Drawing.Point(499, 43);
+            this.dateTimeLabel.Name = "dateTimeLabel";
+            this.dateTimeLabel.Size = new System.Drawing.Size(126, 13);
+            this.dateTimeLabel.TabIndex = 14;
+            this.dateTimeLabel.Text = "০১-০১-১৯৭০ ০৬:০০:০০";
             // 
             // newLabel
             // 
@@ -527,6 +527,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ListItem";
             this.Size = new System.Drawing.Size(1121, 120);
             this.Load += new System.EventHandler(this.ListItem_Load);
@@ -577,7 +578,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label newLabel;
         private System.Windows.Forms.LinkLabel utshoName;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label dateTimeLabel;
         private System.Windows.Forms.Button attachmentButton;
         private System.Windows.Forms.Label subjectLabel;
         private System.Windows.Forms.Panel dakActionPanel;

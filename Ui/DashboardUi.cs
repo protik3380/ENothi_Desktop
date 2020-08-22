@@ -24,6 +24,32 @@ namespace ENothi_Desktop.Ui
         public Page Page;
         private bool _isAgatoDakActive;
         private bool _isArchiveDakActive;
+        private static DashboardUi _obj;
+
+        public static DashboardUi Instance
+        {
+            get
+            {
+                if (_obj==null)
+                {
+                    _obj = new DashboardUi();
+                }
+
+                return _obj;
+            }
+        }
+
+        public Panel PaginationPanel
+        {
+            get { return paginationPanel; }
+            set { paginationPanel = value; }
+        }
+
+        public FlowLayoutPanel ContentLayoutPanel
+        {
+            get { return DakListFlowPanel; }
+            set { DakListFlowPanel = value; }
+        }
         public DashboardUi()
         {
             InitializeComponent();
@@ -46,6 +72,7 @@ namespace ENothi_Desktop.Ui
             try
             {
                 ActiveAgatoDakButton();
+                _obj = this;
                 firstCombo.SelectedIndex = 0;
                 comboBox2.SelectedIndex = 0;
                 comboBox3.SelectedIndex = 0;
@@ -258,7 +285,7 @@ namespace ENothi_Desktop.Ui
                 WaitForm.Show(this);
                 ActiveAgatoDakButton();
                 DakListFlowPanel.Controls.Clear();
-
+                paginationPanel.Visible = true;
                 var designationList = GetAllDesignationData();
                 LoadModulePendingCount(designationList);
                 Page = new Page();
@@ -281,6 +308,7 @@ namespace ENothi_Desktop.Ui
             try
             {
                 WaitForm.Show(this);
+                paginationPanel.Visible = true;
                 ActiveArchiveDakButton();
                 DakListFlowPanel.Controls.Clear();
                 Page = new Page();

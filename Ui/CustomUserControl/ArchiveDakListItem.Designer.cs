@@ -44,7 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.attachmentButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimeLabel = new System.Windows.Forms.Label();
             this.newLabel = new System.Windows.Forms.Label();
             this.nagorikOrdaptorikLabel = new System.Windows.Forms.Label();
             this.dakTypeIcon = new System.Windows.Forms.PictureBox();
@@ -251,7 +251,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.attachmentButton);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.dateTimeLabel);
             this.panel2.Controls.Add(this.newLabel);
             this.panel2.Controls.Add(this.nagorikOrdaptorikLabel);
             this.panel2.Controls.Add(this.dakTypeIcon);
@@ -289,14 +289,14 @@
             this.attachmentButton.UseVisualStyleBackColor = false;
             this.attachmentButton.Click += new System.EventHandler(this.attachmentButton_Click);
             // 
-            // label4
+            // dateTimeLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(506, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "০১-০১-১৯৭০ ০৬:০০:০০";
+            this.dateTimeLabel.AutoSize = true;
+            this.dateTimeLabel.Location = new System.Drawing.Point(506, 43);
+            this.dateTimeLabel.Name = "dateTimeLabel";
+            this.dateTimeLabel.Size = new System.Drawing.Size(126, 13);
+            this.dateTimeLabel.TabIndex = 14;
+            this.dateTimeLabel.Text = "০১-০১-১৯৭০ ০৬:০০:০০";
             // 
             // newLabel
             // 
@@ -542,7 +542,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button attachmentButton;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label dateTimeLabel;
         private System.Windows.Forms.Label newLabel;
         private System.Windows.Forms.Label nagorikOrdaptorikLabel;
         private System.Windows.Forms.PictureBox dakTypeIcon;

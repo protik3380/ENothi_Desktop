@@ -75,6 +75,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
 
         private void LoadRowData()
         {
+            LoadDateTimeLabel();
             if (Records.AttachmentCount > 0)
             {
                 attachmentButton.Text = BengaliTextFormatter.ConvertToBengali(Records.AttachmentCount.ToString());
@@ -113,6 +114,19 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             }
         }
 
+        private void LoadDateTimeLabel()
+        {
+            if (Records.DakUser.LastMovementDate != null)
+            {
+                dateTimeLabel.Text = Records.DakUser.LastMovementDate;
+            }
+            else
+            {
+                dateTimeLabel.Text = Records.DakOrigin.ReceivingDate;
+            }
+
+        }
+
         private void label4_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, newLabel.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
@@ -133,7 +147,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             if (Records.DakUser.DakType == "Daptorik")
             {
                 toolTip = @"উৎস:" + Records.DakOrigin.SenderName + "," + Records.DakOrigin.SenderOfficerDesignationLabel + '\n'
-                          + Records.DakOrigin.SenderOfficeUnitName + "," + Records.DakOrigin.SenderOfficeName + '\n'+
+                          + Records.DakOrigin.SenderOfficeUnitName + "," + Records.DakOrigin.SenderOfficeName + '\n' +
                           @"মূল প্রাপক:" + Records.DakOrigin.ReceivingOfficerName + '\n'
                           + Records.DakOrigin.ReceivingOfficerDesignationLabel + @"," +
                           Records.DakOrigin.ReceivingOfficeUnitName + '\n'
@@ -261,7 +275,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
                     IsCopiedDak = Records.DakUser.IsCopiedDak
                 };
                 DakAttachmentVm attachmentVm = _dakInboxManager.GetDakAttachmentListByDakId(request);
-                ShowDakAttachmentUi showDakAttachmentUi = new ShowDakAttachmentUi(attachmentVm,Records.AttachmentCount.ToString());
+                ShowDakAttachmentUi showDakAttachmentUi = new ShowDakAttachmentUi(attachmentVm, Records.AttachmentCount.ToString());
                 showDakAttachmentUi.ShowDialog();
             }
             catch (Exception ex)
@@ -277,7 +291,21 @@ namespace ENothi_Desktop.Ui.CustomUserControl
 
         private void ListItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                DashboardUi.Instance.ContentLayoutPanel.Controls.Clear();
+                if (!DashboardUi.Instance.ContentLayoutPanel.Controls.ContainsKey("DakDetails"))
+                {
+                    DakDetails dakDetails = new DakDetails();
+                    DashboardUi.Instance.ContentLayoutPanel.Controls.Add(dakDetails);
+                }
+                DashboardUi.Instance.ContentLayoutPanel.Controls["DakDetails"].BringToFront();
+                DashboardUi.Instance.PaginationPanel.Visible = false;              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void archiveButton_Click(object sender, EventArgs e)

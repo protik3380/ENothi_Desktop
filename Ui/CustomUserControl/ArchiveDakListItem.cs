@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENothi_Desktop.ApiUtility;
 using ENothi_Desktop.Dto.RequestDto;
@@ -70,6 +66,8 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             {
                 attachmentButton.Visible = false;
             }
+
+            LoadDateTimeLabel();
             utshoName.Text = Records.DakUser.DakType == "Daptorik" ? Records.DakOrigin.SenderName : Records.DakOrigin.NameBng;
             PraprokLabel.Text = Records.MovementStatus.To.FirstOrDefault(x => x.AttentionType == "1")?.Officer;
             prerokLabel.Text = Records.MovementStatus.From.Officer;
@@ -108,6 +106,18 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             {
                 nlabel.Visible = false;
                 nothiNoLabel.Visible = false;
+            }
+        }
+
+        private void LoadDateTimeLabel()
+        {
+            if (Records.DakUser.LastMovementDate !=null)
+            {
+                dateTimeLabel.Text = Records.DakUser.LastMovementDate;
+            }
+            else
+            {
+                dateTimeLabel.Text = Records.DakOrigin.ReceivingDate;
             }
         }
 

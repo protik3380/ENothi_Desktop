@@ -41,6 +41,7 @@ namespace ENothi_Desktop.Ui.CustomUserControl
             LoadDakSecurityLabelAndIcon();
             LoadPrerokDesignationInfoLabel();
             LoadMulPrapokNameAndDesignationInfo();
+            movementDate.Text = Records.Other.LastMovementDate;
             if (Records.Other.OperationType== "Forward")
             {
                 //LoadMulPrapokNameAndDesignationInfo();

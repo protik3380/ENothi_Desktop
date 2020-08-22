@@ -132,6 +132,12 @@
     <Compile Include="Ui\CustomUserControl\DakAttachmentList.Designer.cs">
       <DependentUpon>DakAttachmentList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\CustomUserControl\DakDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ui\CustomUserControl\DakDetails.Designer.cs">
+      <DependentUpon>DakDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\CustomUserControl\DakMovementList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\CustomUserControl\DakAttachmentList.resx">
       <DependentUpon>DakAttachmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\CustomUserControl\DakDetails.resx">
+      <DependentUpon>DakDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\CustomUserControl\DakMovementList.resx">
       <DependentUpon>DakMovementList.cs</DependentUpon>
