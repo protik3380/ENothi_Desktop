@@ -52,7 +52,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.agatoDakViewSidePanelButton = new System.Windows.Forms.Button();
             this.bachaikritoDakViewSidePanelButton = new System.Windows.Forms.Button();
-            this.preritoDak = new System.Windows.Forms.Button();
+            this.preritoDakViewSidePanelButton = new System.Windows.Forms.Button();
             this.nothiteUposthapitoDak = new System.Windows.Forms.Button();
             this.nothijatDak = new System.Windows.Forms.Button();
             this.archiveDakViewSidePanelButton = new System.Windows.Forms.Button();
@@ -398,7 +398,7 @@
             this.flowLayoutPanel1.Controls.Add(this.dakUploadButtonPannel);
             this.flowLayoutPanel1.Controls.Add(this.agatoDakViewSidePanelButton);
             this.flowLayoutPanel1.Controls.Add(this.bachaikritoDakViewSidePanelButton);
-            this.flowLayoutPanel1.Controls.Add(this.preritoDak);
+            this.flowLayoutPanel1.Controls.Add(this.preritoDakViewSidePanelButton);
             this.flowLayoutPanel1.Controls.Add(this.nothiteUposthapitoDak);
             this.flowLayoutPanel1.Controls.Add(this.nothijatDak);
             this.flowLayoutPanel1.Controls.Add(this.archiveDakViewSidePanelButton);
@@ -444,22 +444,23 @@
             this.bachaikritoDakViewSidePanelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bachaikritoDakViewSidePanelButton.UseVisualStyleBackColor = false;
             // 
-            // preritoDak
+            // preritoDakViewSidePanelButton
             // 
-            this.preritoDak.BackColor = System.Drawing.Color.White;
-            this.preritoDak.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.preritoDak.FlatAppearance.BorderSize = 0;
-            this.preritoDak.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.preritoDak.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.preritoDak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.preritoDak.Image = ((System.Drawing.Image)(resources.GetObject("preritoDak.Image")));
-            this.preritoDak.Location = new System.Drawing.Point(3, 151);
-            this.preritoDak.Name = "preritoDak";
-            this.preritoDak.Size = new System.Drawing.Size(216, 42);
-            this.preritoDak.TabIndex = 8;
-            this.preritoDak.Text = "  প্রেরিত ডাক                    ";
-            this.preritoDak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.preritoDak.UseVisualStyleBackColor = false;
+            this.preritoDakViewSidePanelButton.BackColor = System.Drawing.Color.White;
+            this.preritoDakViewSidePanelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.preritoDakViewSidePanelButton.FlatAppearance.BorderSize = 0;
+            this.preritoDakViewSidePanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.preritoDakViewSidePanelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.preritoDakViewSidePanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.preritoDakViewSidePanelButton.Image = ((System.Drawing.Image)(resources.GetObject("preritoDakViewSidePanelButton.Image")));
+            this.preritoDakViewSidePanelButton.Location = new System.Drawing.Point(3, 151);
+            this.preritoDakViewSidePanelButton.Name = "preritoDakViewSidePanelButton";
+            this.preritoDakViewSidePanelButton.Size = new System.Drawing.Size(216, 42);
+            this.preritoDakViewSidePanelButton.TabIndex = 8;
+            this.preritoDakViewSidePanelButton.Text = "  প্রেরিত ডাক                    ";
+            this.preritoDakViewSidePanelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.preritoDakViewSidePanelButton.UseVisualStyleBackColor = false;
+            this.preritoDakViewSidePanelButton.Click += new System.EventHandler(this.preritoDakViewSidePanelButton_Click);
             // 
             // nothiteUposthapitoDak
             // 
@@ -884,7 +885,7 @@
         private System.Windows.Forms.Button dakUploadButton;
         private System.Windows.Forms.Button agatoDakViewSidePanelButton;
         private System.Windows.Forms.Button bachaikritoDakViewSidePanelButton;
-        private System.Windows.Forms.Button preritoDak;
+        private System.Windows.Forms.Button preritoDakViewSidePanelButton;
         private System.Windows.Forms.Button nothiteUposthapitoDak;
         private System.Windows.Forms.Button nothijatDak;
         private System.Windows.Forms.Panel panel5;

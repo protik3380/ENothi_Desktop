@@ -24,13 +24,14 @@ namespace ENothi_Desktop.Ui
         public Page Page;
         private bool _isAgatoDakActive;
         private bool _isArchiveDakActive;
+        private bool _isPreritoDakActive;
         private static DashboardUi _obj;
 
         public static DashboardUi Instance
         {
             get
             {
-                if (_obj==null)
+                if (_obj == null)
                 {
                     _obj = new DashboardUi();
                 }
@@ -59,6 +60,7 @@ namespace ENothi_Desktop.Ui
             Page = new Page();
             _isAgatoDakActive = false;
             _isArchiveDakActive = false;
+            _isPreritoDakActive = false;
 
         }
 
@@ -76,7 +78,7 @@ namespace ENothi_Desktop.Ui
                 firstCombo.SelectedIndex = 0;
                 comboBox2.SelectedIndex = 0;
                 comboBox3.SelectedIndex = 0;
-                comboBox4.SelectedIndex = 0;             
+                comboBox4.SelectedIndex = 0;
                 dakUploadButtonPannel.Height = dakUploadButton.Height;
                 WaitForm.Show(this);
                 SetParameterHelper();
@@ -112,7 +114,7 @@ namespace ENothi_Desktop.Ui
                                  + BengaliTextFormatter.ConvertToBengali(pageToIndex.ToString()) + " সর্বমোট: " +
                                   BengaliTextFormatter.ConvertToBengali(pageTotalRecords.ToString());
                 pagingLabel.Text = pageText;
-                
+
             }
 
         }
@@ -326,7 +328,7 @@ namespace ENothi_Desktop.Ui
             }
         }
 
-        private DakInbox GetArchiveDakListData(int currentPage,int pageSize)
+        private DakInbox GetArchiveDakListData(int currentPage, int pageSize)
         {
             DakInboxDto request = new DakInboxDto();
             request.DesignationId = ParameterHelper.DesignationId;
@@ -364,8 +366,10 @@ namespace ENothi_Desktop.Ui
             agatoDakViewSidePanelButton.ForeColor = DefaultForeColor;
             archiveDakViewSidePanelButton.ForeColor = Color.FromArgb(113, 182, 253);
             bachaikritoDakViewSidePanelButton.ForeColor = DefaultForeColor;
+            preritoDakViewSidePanelButton.ForeColor = DefaultForeColor;
             _isAgatoDakActive = false;
             _isArchiveDakActive = true;
+            _isPreritoDakActive = false;
         }
 
         private void ActiveAgatoDakButton()
@@ -373,8 +377,22 @@ namespace ENothi_Desktop.Ui
             agatoDakViewSidePanelButton.ForeColor = Color.FromArgb(113, 182, 253);
             archiveDakViewSidePanelButton.ForeColor = DefaultForeColor;
             bachaikritoDakViewSidePanelButton.ForeColor = DefaultForeColor;
+            preritoDakViewSidePanelButton.ForeColor = DefaultForeColor;
             _isAgatoDakActive = true;
             _isArchiveDakActive = false;
+            _isPreritoDakActive = false;
+        }
+
+        private void ActivePreritoDakButton()
+        {
+            agatoDakViewSidePanelButton.ForeColor = DefaultForeColor;
+            archiveDakViewSidePanelButton.ForeColor = DefaultForeColor;
+            bachaikritoDakViewSidePanelButton.ForeColor = DefaultForeColor;
+            preritoDakViewSidePanelButton.ForeColor = Color.FromArgb(113, 182, 253);
+            _isAgatoDakActive = false;
+            _isArchiveDakActive = false;
+            _isPreritoDakActive = true;
+
         }
 
         private void firstCombo_DrawItem(object sender, DrawItemEventArgs e)
@@ -405,7 +423,7 @@ namespace ENothi_Desktop.Ui
                     Page.CurrentPage += 1;
                     var dakListData = GetDakInboxListData(Convert.ToInt32(Page.CurrentPage), Convert.ToInt32(Page.PageSize));
                     Page.FromIndex = Page.ToIndex;
-                    Page.ToIndex = Page.FromIndex+dakListData.Data.Records.Count();
+                    Page.ToIndex = Page.FromIndex + dakListData.Data.Records.Count();
                     Page.TotalRecords = dakListData.Data.TotalRecords;
                     SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
                     EnableDisableNextPreButton();
@@ -417,7 +435,7 @@ namespace ENothi_Desktop.Ui
                     Page.CurrentPage += 1;
                     var archiveDakListData = GetArchiveDakListData(Convert.ToInt32(Page.CurrentPage), Convert.ToInt32(Page.PageSize));
                     Page.FromIndex = Page.ToIndex;
-                    Page.ToIndex = Page.FromIndex+archiveDakListData.Data.Records.Count();
+                    Page.ToIndex = Page.FromIndex + archiveDakListData.Data.Records.Count();
                     Page.TotalRecords = archiveDakListData.Data.TotalRecords;
                     SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
                     EnableDisableNextPreButton();
@@ -458,6 +476,18 @@ namespace ENothi_Desktop.Ui
                     EnableDisableNextPreButton();
                     PopulateArchiveDakListData(archiveDakListData);
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void preritoDakViewSidePanelButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ActivePreritoDakButton();
             }
             catch (Exception ex)
             {
