@@ -693,7 +693,7 @@
             this.pagingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pagingLabel.AutoSize = true;
             this.pagingLabel.Font = new System.Drawing.Font("SolaimanLipi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pagingLabel.Location = new System.Drawing.Point(949, 12);
+            this.pagingLabel.Location = new System.Drawing.Point(930, 12);
             this.pagingLabel.Name = "pagingLabel";
             this.pagingLabel.Size = new System.Drawing.Size(95, 18);
             this.pagingLabel.TabIndex = 4;

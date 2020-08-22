@@ -371,7 +371,30 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
-                
+                if (_isAgatoDakActive)
+                {
+                    DakListFlowPanel.Controls.Clear();
+                    Page.CurrentPage += 1;
+                    var dakListData = GetDakInboxListData(Convert.ToInt32(Page.CurrentPage), Convert.ToInt32(Page.PageSize));
+                    Page.FromIndex = Page.ToIndex;
+                    Page.ToIndex = Page.FromIndex+dakListData.Data.Records.Count();
+                    Page.TotalRecords = dakListData.Data.TotalRecords;
+                    SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
+                    EnableDisableNextPreButton();
+                    PopulateDakList(dakListData);
+                }
+                else if (_isArchiveDakActive)
+                {
+                    DakListFlowPanel.Controls.Clear();
+                    Page.CurrentPage += 1;
+                    var archiveDakListData = GetArchiveDakListData(Convert.ToInt32(Page.CurrentPage), Convert.ToInt32(Page.PageSize));
+                    Page.FromIndex = Page.ToIndex;
+                    Page.ToIndex = Page.FromIndex+archiveDakListData.Data.Records.Count();
+                    Page.TotalRecords = archiveDakListData.Data.TotalRecords;
+                    SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
+                    EnableDisableNextPreButton();
+                    PopulateArchiveDakListData(archiveDakListData);
+                }
             }
             catch (Exception ex)
             {
@@ -381,7 +404,37 @@ namespace ENothi_Desktop.Ui
 
         private void previousPageButton_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (_isAgatoDakActive)
+                {
+                    DakListFlowPanel.Controls.Clear();
+                    Page.CurrentPage -= 1;
+                    var dakListData = GetDakInboxListData(Convert.ToInt32(Page.CurrentPage), Convert.ToInt32(Page.PageSize));
+                    Page.FromIndex = Page.FromIndex - dakListData.Data.Records.Count();
+                    Page.ToIndex = Page.FromIndex + dakListData.Data.Records.Count();
+                    Page.TotalRecords = dakListData.Data.TotalRecords;
+                    SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
+                    EnableDisableNextPreButton();
+                    PopulateDakList(dakListData);
+                }
+                else if (_isArchiveDakActive)
+                {
+                    DakListFlowPanel.Controls.Clear();
+                    Page.CurrentPage -= 1;
+                    var archiveDakListData = GetArchiveDakListData(Convert.ToInt32(Page.CurrentPage), Convert.ToInt32(Page.PageSize));
+                    Page.FromIndex = Page.FromIndex - archiveDakListData.Data.Records.Count();
+                    Page.ToIndex = Page.FromIndex + archiveDakListData.Data.Records.Count();
+                    Page.TotalRecords = archiveDakListData.Data.TotalRecords;
+                    SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
+                    EnableDisableNextPreButton();
+                    PopulateArchiveDakListData(archiveDakListData);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
