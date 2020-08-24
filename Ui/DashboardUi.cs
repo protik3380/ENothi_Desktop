@@ -116,6 +116,11 @@ namespace ENothi_Desktop.Ui
                 pagingLabel.Text = pageText;
 
             }
+            else
+            {
+                pagingLabel.Text = @"০ - ০ সর্বমোট: ০";
+                nextPageButton.Enabled = false;
+            }
 
         }
 
@@ -126,7 +131,7 @@ namespace ENothi_Desktop.Ui
                 if (ReloadHelper.IsReloadRequired)
                 {
                     WaitForm.Show(this);
-                    //ActiveAgatoDakButton();
+                    ActiveAgatoDakButton();
                     DakListFlowPanel.Controls.Clear();
                     var designationList = GetAllDesignationData();
                     LoadModulePendingCount(designationList);
@@ -487,7 +492,21 @@ namespace ENothi_Desktop.Ui
         {
             try
             {
+
+                WaitForm.Show(this);
                 ActivePreritoDakButton();
+                DakListFlowPanel.Controls.Clear();
+                paginationPanel.Visible = true;
+                var designationList = GetAllDesignationData();
+                LoadModulePendingCount(designationList);
+                Page = new Page();
+                //var dakListInbox = GetDakInboxListData(Convert.ToInt32(Page.CurrentPage), Convert.ToInt32(Page.PageSize));
+                //Page.ToIndex = dakListInbox.Data.Records.Count();
+                //Page.TotalRecords = dakListInbox.Data.TotalRecords;
+                SetPageLabel(Page.FromIndex, Page.ToIndex, Page.TotalRecords);
+                //EnableDisableNextPreButton();
+                //PopulateDakList(dakListInbox);
+                WaitForm.Close();
             }
             catch (Exception ex)
             {
